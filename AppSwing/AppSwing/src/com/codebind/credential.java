@@ -9,7 +9,7 @@ public class credential {
     hash and salt password (hash_salt_password)
     verify credentials (authenticate_user)
     update_credentials / change username / change password?
-    Great ideas
+    Sorry this work was not approved
 
 
 
