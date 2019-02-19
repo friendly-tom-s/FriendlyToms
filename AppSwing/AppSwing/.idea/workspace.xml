@@ -37,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/codebind/create_account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
+            <state relative-caret-position="1190">
               <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -56,9 +56,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/codebind/login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="731">
+              <caret line="60" column="5" selection-start-line="39" selection-start-column="32" selection-end-line="60" selection-end-column="5" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#login#0;class#login#0" />
                 <element signature="method#initCompare#0;class#login#0" />
                 <element signature="method#initialiseframe#0;class#login#0" />
@@ -84,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/codebind/PBKDF2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="306">
               <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -112,6 +113,9 @@
       <find>Exception</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -128,9 +132,9 @@
         <option value="$PROJECT_DIR$/src/com/codebind/mariadb.java" />
         <option value="$PROJECT_DIR$/src/com/codebind/userParent.java" />
         <option value="$PROJECT_DIR$/src/com/codebind/userLogin.java" />
-        <option value="$PROJECT_DIR$/src/com/codebind/login.java" />
         <option value="$PROJECT_DIR$/src/com/codebind/create_account.java" />
         <option value="$PROJECT_DIR$/src/com/codebind/main.java" />
+        <option value="$PROJECT_DIR$/src/com/codebind/login.java" />
       </list>
     </option>
   </component>
@@ -140,12 +144,12 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +202,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -322,11 +327,12 @@
       <workItem from="1549441751901" duration="1288000" />
       <workItem from="1549967322237" duration="2471000" />
       <workItem from="1549979103567" duration="322000" />
+      <workItem from="1550576762128" duration="17000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8879000" />
+    <option name="totallyTimeSpent" value="8896000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -339,9 +345,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.27231467" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5008183" side_tool="true" visible="true" weight="0.27231467" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497545" visible="true" weight="0.27609682" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.502455" side_tool="true" visible="true" weight="0.27609682" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -461,7 +468,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/codebind/create_account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
+        <state relative-caret-position="1190">
           <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -486,7 +493,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/codebind/PBKDF2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="306">
           <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -496,9 +503,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/codebind/login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="731">
+          <caret line="60" column="5" selection-start-line="39" selection-start-column="32" selection-end-line="60" selection-end-column="5" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#login#0;class#login#0" />
             <element signature="method#initCompare#0;class#login#0" />
             <element signature="method#initialiseframe#0;class#login#0" />

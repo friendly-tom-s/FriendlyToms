@@ -39,6 +39,8 @@ public class login {
 
     public Boolean verifyInput(){
 
+        System.out.println("Test");
+
         boolean input_errors = false;
 
         if(Pattern.matches("[a-zA-Z0-9]{3,20}", userParent.getUsername())) {
