@@ -217,7 +217,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -327,12 +327,12 @@
       <workItem from="1549441751901" duration="1288000" />
       <workItem from="1549967322237" duration="2471000" />
       <workItem from="1549979103567" duration="322000" />
-      <workItem from="1550576762128" duration="17000" />
+      <workItem from="1550576762128" duration="972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8896000" />
+    <option name="totallyTimeSpent" value="9851000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -345,7 +345,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497545" visible="true" weight="0.27609682" />
       <window_info active="true" id="Structure" order="1" sideWeight="0.502455" side_tool="true" visible="true" weight="0.27609682" />
