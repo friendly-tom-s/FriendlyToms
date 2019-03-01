@@ -7,4 +7,6 @@ public class CreateAccount {
     private JButton btnMenu;
     private JTextField txtFirstName;
     private JTextField txtSurname;
+    private JPasswordField pswPassword;
+    private JPasswordField pswConfirm;
 }
