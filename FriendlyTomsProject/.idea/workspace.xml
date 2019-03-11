@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6baab886-1a52-4b85-adfa-12ad8c59474d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/project/FoodOrder.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/FoodOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/project/FoodMenu.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/project/FoodMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FriendlyTomsProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FriendlyTomsProject.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +20,18 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
@@ -48,6 +57,7 @@
         <option value="$PROJECT_DIR$/src/com/project/UserMenu.form" />
         <option value="$PROJECT_DIR$/src/com/project/AdminMenu.form" />
         <option value="$PROJECT_DIR$/src/com/project/FoodOrder.form" />
+        <option value="$PROJECT_DIR$/src/com/project/FoodMenu.form" />
       </list>
     </option>
   </component>
@@ -85,7 +95,7 @@
               <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="FoodOrder" type="e9f4de52:FormNode" />
+              <item name="FoodMenu" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="FriendlyToms" type="b2602c69:ProjectViewProjectNode" />
@@ -102,7 +112,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="309" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552309077906" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552309381315" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -134,7 +144,7 @@
       <workItem from="1551445117836" duration="393000" />
       <workItem from="1551524924338" duration="675000" />
       <workItem from="1551786837371" duration="1880000" />
-      <workItem from="1552308677111" duration="672000" />
+      <workItem from="1552308677111" duration="990000" />
     </task>
     <task id="LOCAL-00001" summary="Login form created">
       <created>1551183458736</created>
@@ -164,11 +174,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551525556562</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Food Order GUI">
+      <created>1552309439835</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1552309439835</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7387000" />
+    <option name="totallyTimeSpent" value="7705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -210,7 +227,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Login form created" />
     <MESSAGE value="Account Creation form created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Account Creation form created" />
+    <MESSAGE value="Food Order GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Food Order GUI" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
@@ -280,6 +298,12 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
