@@ -16,7 +16,13 @@
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="Big Tom's Breakfast"/>
+            <item value="Bacon and Egg McTommin"/>
+            <item value="Scrabled Egg on Toast"/>
+          </model>
+        </properties>
       </component>
       <component id="e5482" class="javax.swing.JLabel">
         <constraints>
@@ -32,7 +38,14 @@
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="Tom's Special Fish and Chips"/>
+            <item value="Chicken Tomma Masala"/>
+            <item value="Burger and Chips"/>
+            <item value="Salmon Sushi"/>
+          </model>
+        </properties>
       </component>
       <component id="52860" class="javax.swing.JLabel">
         <constraints>
@@ -48,7 +61,13 @@
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="Fudge Cake"/>
+            <item value="Waffles"/>
+            <item value="Ice Cream"/>
+          </model>
+        </properties>
       </component>
       <component id="9d02b" class="javax.swing.JLabel">
         <constraints>
@@ -72,7 +91,15 @@
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="Bottled Water"/>
+            <item value="Coca Cola"/>
+            <item value="Sprite"/>
+            <item value="NICE COLD BEER"/>
+            <item value="Orange Juice"/>
+          </model>
+        </properties>
       </component>
       <component id="96fdf" class="javax.swing.JButton" binding="btnMenu">
         <constraints>

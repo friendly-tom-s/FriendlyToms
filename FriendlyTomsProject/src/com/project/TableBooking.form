@@ -54,19 +54,52 @@
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="Monday"/>
+            <item value="Tuesday"/>
+            <item value="Wednesday"/>
+            <item value="Thursday"/>
+            <item value="Friday"/>
+            <item value="Saturday"/>
+            <item value="Sunday"/>
+          </model>
+        </properties>
       </component>
       <component id="b94f7" class="javax.swing.JComboBox" binding="cboTime">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="17:00"/>
+            <item value="17:30"/>
+            <item value="18:00"/>
+            <item value="18:30"/>
+            <item value="19:00"/>
+            <item value="19:30"/>
+            <item value="20:00"/>
+            <item value="20:30"/>
+            <item value="21:00"/>
+          </model>
+          <toolTipText value=""/>
+        </properties>
       </component>
       <component id="4d360" class="javax.swing.JComboBox" binding="cboPeople">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="1"/>
+            <item value="2"/>
+            <item value="3"/>
+            <item value="4"/>
+            <item value="5"/>
+            <item value="6"/>
+            <item value="6+"/>
+          </model>
+        </properties>
       </component>
       <component id="c488c" class="javax.swing.JLabel">
         <constraints>

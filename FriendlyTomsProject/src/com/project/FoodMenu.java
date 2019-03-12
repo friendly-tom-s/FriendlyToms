@@ -9,4 +9,7 @@ public class FoodMenu {
     private JList lstDessert;
     private JList lstDrinks;
     private JButton btnMenu;
+
+    public FoodMenu(){
+    }
 }

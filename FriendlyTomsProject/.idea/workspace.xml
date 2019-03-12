@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6baab886-1a52-4b85-adfa-12ad8c59474d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/project/Checkout.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/Checkout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/project/FoodMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/FoodMenu.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/project/FoodMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/FoodMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/project/TableBooking.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/TableBooking.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/project/TableBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/TableBooking.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +29,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -37,10 +43,14 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
@@ -50,7 +60,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
@@ -77,9 +87,11 @@
         <option value="$PROJECT_DIR$/src/com/project/UserMenu.form" />
         <option value="$PROJECT_DIR$/src/com/project/AdminMenu.form" />
         <option value="$PROJECT_DIR$/src/com/project/FoodOrder.form" />
-        <option value="$PROJECT_DIR$/src/com/project/FoodMenu.form" />
-        <option value="$PROJECT_DIR$/src/com/project/TableBooking.form" />
         <option value="$PROJECT_DIR$/src/com/project/Checkout.form" />
+        <option value="$PROJECT_DIR$/src/com/project/FoodMenu.java" />
+        <option value="$PROJECT_DIR$/src/com/project/TableBooking.java" />
+        <option value="$PROJECT_DIR$/src/com/project/TableBooking.form" />
+        <option value="$PROJECT_DIR$/src/com/project/FoodMenu.form" />
       </list>
     </option>
   </component>
@@ -93,7 +105,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,7 +128,7 @@
               <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="Checkout" type="e9f4de52:FormNode" />
+              <item name="TableBooking" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="FriendlyToms" type="b2602c69:ProjectViewProjectNode" />
@@ -127,6 +138,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -134,7 +146,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="309" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552310554490" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552393716476" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -151,6 +163,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="TableBooking" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.TableBooking" />
+      <module name="FriendlyTomsProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TableBooking" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -166,7 +198,10 @@
       <workItem from="1551445117836" duration="393000" />
       <workItem from="1551524924338" duration="675000" />
       <workItem from="1551786837371" duration="1880000" />
-      <workItem from="1552308677111" duration="2040000" />
+      <workItem from="1552308677111" duration="2072000" />
+      <workItem from="1552386374435" duration="191000" />
+      <workItem from="1552391098075" duration="905000" />
+      <workItem from="1552392079284" duration="1628000" />
     </task>
     <task id="LOCAL-00001" summary="Login form created">
       <created>1551183458736</created>
@@ -217,17 +252,24 @@
       <option name="project" value="LOCAL" />
       <updated>1552310108220</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Checkout Complete">
+      <created>1552310777721</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1552310777721</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8755000" />
+    <option name="totallyTimeSpent" value="11511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22692889" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2375189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -236,7 +278,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329582" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -246,6 +288,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -266,7 +309,8 @@
     <MESSAGE value="Food Order GUI" />
     <MESSAGE value="Menu GUI" />
     <MESSAGE value="Table Booking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Table Booking" />
+    <MESSAGE value="Checkout Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkout Complete" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
@@ -338,22 +382,30 @@
     <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.java">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
