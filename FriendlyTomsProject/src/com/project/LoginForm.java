@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+import java.util.regex.Pattern;
 
 public class LoginForm {
     private JPanel panel1;
@@ -12,12 +14,96 @@ public class LoginForm {
     private JPasswordField txtPassword;
     private JButton btnLogin;
     private JFrame frame;
+    private User user = new User();
 
 
     public LoginForm(){
         frame = new JFrame("GUIForm1");
 
     }
+
+
+    public Boolean verifyInput(){
+
+        System.out.println("Test");
+        //Jake has added a comment and he should be working in a branch.
+
+
+        //This is added to the master
+
+        boolean input_errors = false;
+        //this is a test
+        if(Pattern.matches("[a-zA-Z0-9]{3,20}", user.getUsername())) {
+            txtUsername.setText("Username:");
+        } else {
+            txtUsername.setText("Username: please enter a username");
+            input_errors = true;
+        }
+
+        if(Pattern.matches("[a-zA-Z0-9]{3,20}", user.getPassword())) {
+            txtUsername.setText("Password:");
+        } else {
+            txtPassword.setText("Password: please enter a password");
+            input_errors = true;
+        }
+        return  input_errors;
+
+    }
+
+    public boolean initCompare(){
+        boolean retCheckVar = false;
+        boolean input_errors = verifyInput();
+
+        //READ CODE
+        com.project.mariadb db_connector = new com.project.mariadb();
+        ResultSet read_query = db_connector.read_query("SELECT user_id,username,salt,hash FROM users WHERE username='" + user.getUsername() + "'");
+
+        int user_id = 0;
+        String hash = "";
+        String salt = "";
+
+
+        try {
+            if(!read_query.next()) {
+                System.out.println("No matching username found");
+                input_errors = true;
+            } else {
+                System.out.println("matching username found: success");
+                String username = read_query.getString("username");
+                hash = read_query.getString("hash");
+                salt = read_query.getString("salt");
+            }
+        }
+        catch (Exception a)
+        {
+            System.err.println("Got an exception!");
+            System.err.println(a.getMessage());
+            //System.exit(1);
+        }//try
+
+
+        if(input_errors != true) {
+            DatabaseHash PBKDF2_class = new DatabaseHash();
+
+            try {
+                boolean matched = PBKDF2_class.validatePassword(user.getPassword(), "1000:" + salt + ":" + hash);
+
+                System.out.println("is the password correct: " + matched);
+                System.out.println("The matched var is "+ matched);
+                if(matched){retCheckVar = true;}
+
+            } catch (Exception NoSuchAlgorithmException) {
+                System.err.println("Got an exception! EXITING ");
+                System.err.println(NoSuchAlgorithmException.getMessage());
+                System.exit(1);
+
+            }
+        }
+        System.out.println("The return var is "+ retCheckVar);
+        return retCheckVar;
+    }
+
+
 
     public void displayLogin(){
         UserMenu userMenu = new UserMenu();
@@ -29,8 +115,24 @@ public class LoginForm {
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                userMenu.displayMenu();
-                frame.dispose();
+
+                user.setUsername(txtUsername.getText());
+                String newVar = new String (txtPassword.getPassword());
+                user.setPassword(newVar);
+                System.out.println(newVar+ " + " +user.getPassword()+ " I am here");
+                boolean credCheck  = initCompare();
+                if (credCheck){
+                    userMenu.displayMenu();
+                    frame.dispose();
+                }
+
+                else{
+                    System.out.println("Not matched - exiting");
+                    JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
+
+                }
+
+
             }
         });
 
@@ -38,6 +140,7 @@ public class LoginForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 createAccount.displayCreate();
+                System.out.println("test");
                 frame.dispose();
             }
         });
