@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b43a44c-3498-454b-ad57-4a686d05f73e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../FriendlyTomsProject/.idea/libraries/mariadb_java_client_2_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../FriendlyTomsProject/src/com/project/DatabaseHash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../FriendlyTomsProject/src/com/project/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../FriendlyTomsProject/src/com/project/mariadb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppSwing/META-INF/AppSwing.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/create_account$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/create_account$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/create_account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/create_account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/credential.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/credential.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/login$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/login$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/login$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/mariadb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AppSwing/com/codebind/mariadb.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FriendlyTomsProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FriendlyTomsProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FriendlyTomsProject/FriendlyTomsProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FriendlyTomsProject/FriendlyTomsProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FriendlyTomsProject/src/com/project/CreateAccount.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../FriendlyTomsProject/src/com/project/CreateAccount.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FriendlyTomsProject/src/com/project/CreateAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../FriendlyTomsProject/src/com/project/CreateAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FriendlyTomsProject/src/com/project/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../FriendlyTomsProject/src/com/project/LoginForm.java" afterDir="false" />
-    </list>
+    <list default="true" id="6b43a44c-3498-454b-ad57-4a686d05f73e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,8 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,6 +201,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -351,6 +331,7 @@
       <workItem from="1550577788318" duration="956000" />
       <workItem from="1552391348779" duration="3643000" />
       <workItem from="1552412927639" duration="10000" />
+      <workItem from="1552690708352" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="Jake has added a comment to the test branch">
       <created>1550578577078</created>
@@ -363,7 +344,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14460000" />
+    <option name="totallyTimeSpent" value="14471000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -378,8 +359,8 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.492635" visible="true" weight="0.28971255" />
-      <window_info id="Structure" order="1" sideWeight="0.507365" side_tool="true" visible="true" weight="0.28971255" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49099836" visible="true" weight="0.29425114" />
+      <window_info id="Structure" order="1" sideWeight="0.5090016" side_tool="true" visible="true" weight="0.29425114" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
       <window_info id="UI Designer" order="4" />

@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6baab886-1a52-4b85-adfa-12ad8c59474d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mariadb_java_client_2_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/DatabaseHash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/mariadb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AppSwing/AppSwing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AppSwing/AppSwing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/META-INF/AppSwing.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/create_account$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/create_account$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/create_account.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/create_account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/credential.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/credential.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/login$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/login$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/login$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/mariadb.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppSwing/AppSwing/out/production/AppSwing/com/codebind/mariadb.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FriendlyTomsProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FriendlyTomsProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/AdminMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/AdminMenu.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/CreateAccount.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/CreateAccount.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/CreateAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/CreateAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/LoginForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/LoginForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/LoginForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/UserMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/UserMenu.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/UserMenu.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,10 +14,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1307">
+            <state relative-caret-position="2210">
               <caret line="130" column="87" selection-start-line="130" selection-start-column="87" selection-end-line="130" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -82,7 +61,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
+            <state relative-caret-position="697">
               <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -93,14 +72,14 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.form">
-          <provider selected="true" editor-type-id="ui-designer" />
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+            <state relative-caret-position="240">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,17 +89,17 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.form">
-          <provider selected="true" editor-type-id="ui-designer" />
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.form">
-          <provider selected="true" editor-type-id="ui-designer" />
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.form">
-          <provider selected="true" editor-type-id="ui-designer" />
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -165,46 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FriendlyToms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FriendlyToms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FriendlyToms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FriendlyToms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FriendlyToms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FriendlyToms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="UserMenu" type="e9f4de52:FormNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -273,6 +213,8 @@
       <workItem from="1552391370783" duration="7127000" />
       <workItem from="1552412942393" duration="739000" />
       <workItem from="1552686337949" duration="2854000" />
+      <workItem from="1552690721483" duration="129000" />
+      <workItem from="1552690862398" duration="192000" />
     </task>
     <task id="LOCAL-00001" summary="Login form created">
       <created>1551183458736</created>
@@ -306,13 +248,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21273000" />
+    <option name="totallyTimeSpent" value="21594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15355521" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1580938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -440,6 +381,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2210">
+          <caret line="130" column="87" selection-start-line="130" selection-start-column="87" selection-end-line="130" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/DatabaseHash.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -459,28 +417,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
+        <state relative-caret-position="697">
           <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -488,20 +427,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.form">
+      <provider editor-type-id="ui-designer" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.form">
+      <provider editor-type-id="ui-designer" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.form">
+      <provider editor-type-id="ui-designer" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.form">
+      <provider editor-type-id="ui-designer" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1307">
-          <caret line="130" column="87" selection-start-line="130" selection-start-column="87" selection-end-line="130" selection-end-column="87" />
+        <state relative-caret-position="240">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
