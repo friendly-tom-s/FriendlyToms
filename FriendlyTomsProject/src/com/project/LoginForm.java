@@ -15,6 +15,7 @@ public class LoginForm {
     private JButton btnLogin;
     private JFrame frame;
     private User user = new User();
+    private int adminPriv= 0 ;
 
 
     public LoginForm(){
@@ -56,11 +57,12 @@ public class LoginForm {
 
         //READ CODE
         com.project.mariadb db_connector = new com.project.mariadb();
-        ResultSet read_query = db_connector.read_query("SELECT user_id,username,salt,hash FROM users WHERE username='" + user.getUsername() + "'");
+        ResultSet read_query = db_connector.read_query("SELECT user_id,username,salt,hash,is_admin FROM users WHERE username='" + user.getUsername() + "'");
 
         int user_id = 0;
         String hash = "";
         String salt = "";
+
 
 
         try {
@@ -72,6 +74,7 @@ public class LoginForm {
                 String username = read_query.getString("username");
                 hash = read_query.getString("hash");
                 salt = read_query.getString("salt");
+                adminPriv = read_query.getInt("is_admin");
             }
         }
         catch (Exception a)
@@ -106,7 +109,7 @@ public class LoginForm {
 
 
     public void displayLogin(){
-        UserMenu userMenu = new UserMenu();
+
         CreateAccount createAccount = new CreateAccount();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);
@@ -121,8 +124,16 @@ public class LoginForm {
                 user.setPassword(newVar);
                 System.out.println(newVar+ " + " +user.getPassword()+ " I am here");
                 boolean credCheck  = initCompare();
+                System.out.println("CHECK THIS VAR" + adminPriv);
                 if (credCheck){
-                    userMenu.displayUserMenu();
+                    if(adminPriv== 1){
+                        AdminMenu adminMenu = new AdminMenu();
+                        adminMenu.displayAdminMenu();
+                    }
+                    else {
+                        UserMenu userMenu = new UserMenu();
+                        userMenu.displayUserMenu();
+                    }
                     frame.dispose();
                 }
 

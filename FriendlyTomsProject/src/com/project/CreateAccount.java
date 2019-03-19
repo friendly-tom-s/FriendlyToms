@@ -111,7 +111,7 @@ public class CreateAccount {
 
                 //WRITE CODE
                 mariadb db_connector = new mariadb();
-                boolean write_query = db_connector.write_query("INSERT INTO users (username,salt,hash) VALUES ('" + user.getUsername() + "','" + salt + "','" + hash + "')");
+                boolean write_query = db_connector.write_query("INSERT INTO users (username,salt,hash,is_admin) VALUES ('" + user.getUsername() + "','" + salt + "','" + hash + "','0')");
                 System.out.println("Was the insert successful: " + write_query);
 
 
