@@ -12,12 +12,14 @@ public class UserMenu {
     private JPanel panel1;
     private JFrame frame;
     private LoginForm LoginForm;
+    private FoodOrder FoodOrder;
+    private TableBooking TableBooking;
 
     public UserMenu(){frame = new JFrame("GUIForm1");
 
     }
 
-    public void displayMenu(){
+    public void displayUserMenu(){
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);
         frame.add(panel1);
@@ -31,6 +33,37 @@ public class UserMenu {
                 frame.dispose();
             }
         });
+
+        btnOrderFood.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoodOrder = new FoodOrder();
+                FoodOrder.displayFoodOrder();
+                frame.dispose();
+            }
+        });
+
+        btnBook.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                TableBooking = new TableBooking();
+                TableBooking.displayTableBooking();
+                frame.dispose();
+            }
+        });
+
+        btnHistory.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+//
+            }
+        });
+
+
+
+
+
 
 
     }

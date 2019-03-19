@@ -122,7 +122,7 @@ public class LoginForm {
                 System.out.println(newVar+ " + " +user.getPassword()+ " I am here");
                 boolean credCheck  = initCompare();
                 if (credCheck){
-                    userMenu.displayMenu();
+                    userMenu.displayUserMenu();
                     frame.dispose();
                 }
 
