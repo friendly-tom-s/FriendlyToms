@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6baab886-1a52-4b85-adfa-12ad8c59474d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/CreateAccount.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/CreateAccount.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/CreateAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/CreateAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/AdminMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/Checkout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/CreateAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/FoodMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/FoodOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/LoginForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/TableBooking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/UserMenu.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +37,13 @@
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
@@ -80,6 +92,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -106,7 +119,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -178,6 +190,7 @@
       <workItem from="1552690862398" duration="192000" />
       <workItem from="1552940062262" duration="879000" />
       <workItem from="1552948642146" duration="1218000" />
+      <workItem from="1552992079019" duration="880000" />
     </task>
     <task id="LOCAL-00001" summary="Login form created">
       <created>1551183458736</created>
@@ -218,12 +231,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24149000" />
+    <option name="totallyTimeSpent" value="25029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24508321" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24886535" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -389,10 +403,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-      <provider editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -401,8 +411,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -429,8 +439,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -442,9 +452,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.form">
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/ManageAccounts.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/ManageAccounts.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.form">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">
