@@ -19,7 +19,7 @@ public class UserMenu {
 
     }
 
-    public void displayMenu(){
+    public void displayUserMenu(){
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);
         frame.add(panel1);
@@ -46,6 +46,7 @@ public class UserMenu {
         btnBook.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 TableBooking = new TableBooking();
                 TableBooking.displayTableBooking();
                 frame.dispose();
@@ -55,7 +56,7 @@ public class UserMenu {
         btnHistory.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+//
             }
         });
 
