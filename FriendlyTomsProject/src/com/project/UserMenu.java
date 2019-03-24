@@ -1,29 +1,30 @@
 package com.project;
 
 import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class UserMenu {
+
+public class UserMenu extends LoginForm{
     private JButton btnOrderFood;
     private JButton btnBack;
     private JButton btnHistory;
     private JButton btnBook;
-    private JPanel panel1;
-    private JFrame frame;
+    private JPanel panel2;
+    //JFrame frame;
     private LoginForm LoginForm;
     private FoodOrder FoodOrder;
     private TableBooking TableBooking;
 
-    public UserMenu(){frame = new JFrame("GUIForm1");
+    public UserMenu(){super();
 
     }
 
     public void displayUserMenu(){
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
-        frame.add(panel1);
-        frame.setVisible(true);
+        frame.add(panel2, BorderLayout.CENTER);
+        DisplayGenericElements();
 
         btnBack.addActionListener(new ActionListener() {
             @Override

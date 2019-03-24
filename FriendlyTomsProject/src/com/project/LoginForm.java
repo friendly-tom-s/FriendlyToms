@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.util.regex.Pattern;
+import javax.swing.border.Border;
 
 public class LoginForm {
     private JPanel panel1;
@@ -13,7 +14,7 @@ public class LoginForm {
     private JTextField txtUsername;
     private JPasswordField txtPassword;
     private JButton btnLogin;
-    private JFrame frame;
+    JFrame frame;
     private User user = new User();
     private int adminPriv= 0 ;
 
@@ -22,7 +23,13 @@ public class LoginForm {
         frame = new JFrame("GUIForm1");
 
     }
+    public void DisplayGenericElements(){
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 400);
+        frame.add(panel1, BorderLayout.PAGE_END);
+        frame.setVisible(true);
 
+    }
 
     public Boolean verifyInput(){
 
