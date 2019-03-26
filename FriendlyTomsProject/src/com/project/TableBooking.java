@@ -1,10 +1,11 @@
 package com.project;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TableBooking{
+public class TableBooking extends TemplateGui{
     private JTextField txtName;
     private JComboBox cboDate;
     private JComboBox cboTime;
@@ -12,29 +13,14 @@ public class TableBooking{
     private JButton btnBook;
     private JButton btnMainMenu;
     private UserMenu UserMenu;
-    private JFrame frame;
-    private JPanel panel1;
+    private JPanel panel2;
 
 
 
-    public TableBooking(){frame = new JFrame("Food Order");
-
-
-    }
+    public TableBooking(){super("Table Booking", "Main Menu", "UserMenu");}
 
     public void displayTableBooking() {
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
-        frame.add(panel1);
-        frame.setVisible(true);
-
-    btnMainMenu.addActionListener(new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            UserMenu = new UserMenu();
-            UserMenu.displayUserMenu();
-            frame.dispose();
-        }
-    });
+        frame.add(panel2, BorderLayout.CENTER);
+        DisplayGenericElements();
     }
 }

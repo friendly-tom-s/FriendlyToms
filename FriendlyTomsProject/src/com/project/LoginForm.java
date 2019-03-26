@@ -7,23 +7,21 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.util.regex.Pattern;
 
-public class LoginForm {
-    private JPanel panel1;
+public class LoginForm extends TemplateGui{
+    private JPanel panel2;
     private JButton btnCreate;
     private JTextField txtUsername;
     private JPasswordField txtPassword;
     private JButton btnLogin;
-    private JFrame frame;
+    //private JFrame frame;
     private User user = new User();
     private int adminPriv= 0 ;
 
 
     public LoginForm(){
-        frame = new JFrame("GUIForm1");
-
+        //frame = new JFrame("GUIForm1");
+        super("Login Form", "Quit", "null");
     }
-
-
     public Boolean verifyInput(){
 
         System.out.println("Test");
@@ -106,15 +104,11 @@ public class LoginForm {
         return retCheckVar;
     }
 
-
-
     public void displayLogin(){
 
         CreateAccount createAccount = new CreateAccount();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
-        frame.add(panel1);
-        frame.setVisible(true);
+        frame.add(panel2, BorderLayout.CENTER);
+        DisplayGenericElements();
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -127,14 +121,15 @@ public class LoginForm {
                 System.out.println("CHECK THIS VAR" + adminPriv);
                 if (credCheck){
                     if(adminPriv== 1){
+                        frame.dispose();
                         AdminMenu adminMenu = new AdminMenu();
                         adminMenu.displayAdminMenu();
                     }
                     else {
+                        frame.dispose();
                         UserMenu userMenu = new UserMenu();
                         userMenu.displayUserMenu();
                     }
-                    frame.dispose();
                 }
 
                 else{
@@ -142,8 +137,6 @@ public class LoginForm {
                     JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
 
                 }
-
-
             }
         });
 
@@ -151,6 +144,7 @@ public class LoginForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 createAccount.displayCreate();
+                //setPreviousWin("AdminMenu");
                 System.out.println("test");
                 frame.dispose();
             }

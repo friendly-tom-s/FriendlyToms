@@ -13,4 +13,5 @@ public class Checkout {
     private JComboBox cboExpiry;
     private JButton btnPay;
     private JButton btnBack;
+    private JPanel panel2;
 }

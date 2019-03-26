@@ -1,38 +1,27 @@
 package com.project;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class UserMenu {
+public class UserMenu extends TemplateGui {
     private JButton btnOrderFood;
-    private JButton btnBack;
     private JButton btnHistory;
     private JButton btnBook;
-    private JPanel panel1;
-    private JFrame frame;
+    private JPanel panel2;
     private LoginForm LoginForm;
     private FoodOrder FoodOrder;
     private TableBooking TableBooking;
+    private OrderHistory orderHistory;
 
-    public UserMenu(){frame = new JFrame("GUIForm1");
-
+    public UserMenu(){
+        super("User Menu", "Logout", "LoginForm");
     }
 
     public void displayUserMenu(){
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
-        frame.add(panel1);
-        frame.setVisible(true);
-
-        btnBack.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                LoginForm = new LoginForm();
-                LoginForm.displayLogin();
-                frame.dispose();
-            }
-        });
+        frame.add(panel2, BorderLayout.CENTER);
+        DisplayGenericElements();
 
         btnOrderFood.addActionListener(new ActionListener() {
             @Override
@@ -46,7 +35,6 @@ public class UserMenu {
         btnBook.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 TableBooking = new TableBooking();
                 TableBooking.displayTableBooking();
                 frame.dispose();
@@ -56,15 +44,9 @@ public class UserMenu {
         btnHistory.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//
+                orderHistory = new OrderHistory();
+                orderHistory.DisplayOrderHistory();
             }
         });
-
-
-
-
-
-
-
     }
 }

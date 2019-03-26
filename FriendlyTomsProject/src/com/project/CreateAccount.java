@@ -1,26 +1,27 @@
 package com.project;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.util.regex.Pattern;
 
-public class CreateAccount {
+public class CreateAccount extends TemplateGui {
     private JButton btnCreate;
     private JButton btnMenu;
     private JTextField txtUserName;
     private JTextField txtEmail;
     private JPasswordField pswPassword;
     private JPasswordField pswConfirm;
-    private JPanel panel1;
-    JFrame frame;
+    private JPanel panel2;
+    //JFrame frame;
     private User user = new User();
     mariadb db_connector = new mariadb();
 
 
     public CreateAccount() {
-        frame = new JFrame("GUIForm1");
+        super("Account Creation", "Back", "LoginForm");
         btnCreate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -114,7 +115,6 @@ public class CreateAccount {
                 boolean write_query = db_connector.write_query("INSERT INTO users (username,salt,hash,is_admin) VALUES ('" + user.getUsername() + "','" + salt + "','" + hash + "','0')");
                 System.out.println("Was the insert successful: " + write_query);
 
-
             } catch (Exception NoSuchAlgorithmException){
                 System.err.println("Got an exception! EXITING ");
                 System.err.println(NoSuchAlgorithmException.getMessage());
@@ -124,24 +124,9 @@ public class CreateAccount {
 
     }
 
-
-
-
     public void displayCreate(){
         LoginForm loginForm = new LoginForm();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
-        frame.add(panel1);
-        frame.setVisible(true);
-
-        btnMenu.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                loginForm.displayLogin();
-                frame.dispose();
-            }
-
-        });
+        DisplayGenericElements();
+        frame.add(panel2, BorderLayout.CENTER);
     }
 }
