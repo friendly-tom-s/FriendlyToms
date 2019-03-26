@@ -108,7 +108,7 @@ public class LoginForm extends TemplateGui{
 
     public void displayLogin(){
 
-        CreateAccount createAccount = new CreateAccount();
+        CreateAccount createAccount = new CreateAccount("Create Account", "Back", "LoginForm");
         frame.add(panel2, BorderLayout.CENTER);
         DisplayGenericElements();
         btnLogin.addActionListener(new ActionListener() {

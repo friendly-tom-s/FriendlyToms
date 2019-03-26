@@ -14,14 +14,16 @@ public class CreateAccount extends TemplateGui {
     private JTextField txtEmail;
     private JPasswordField pswPassword;
     private JPasswordField pswConfirm;
-    private JPanel panel2;
+    protected JPanel panel3;
+    protected JRadioButton rdoAdmin;
     //JFrame frame;
     private User user = new User();
     mariadb db_connector = new mariadb();
 
 
-    public CreateAccount() {
-        super("Account Creation", "Back", "LoginForm");
+    public CreateAccount(String guiName, String buttonVar, String previousWin) {
+
+        super(guiName, buttonVar, previousWin);
         btnCreate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -129,6 +131,7 @@ public class CreateAccount extends TemplateGui {
     public void displayCreate(){
         LoginForm loginForm = new LoginForm();
         DisplayGenericElements();
-        frame.add(panel2, BorderLayout.CENTER);
+        rdoAdmin.setVisible(false);
+        frame.add(panel3, BorderLayout.CENTER);
     }
 }
