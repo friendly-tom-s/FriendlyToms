@@ -75,7 +75,8 @@ public class CreateAccount extends TemplateGui {
         //to check if user being created already exists
         if(input_errors != true) {
             //READ CODE
-            ResultSet read_query = db_connector.read_query("SELECT user_id FROM users WHERE username='" + user.getUsername() + "'");
+            //ResultSet read_query = db_connector.read_query("SELECT user_id FROM users WHERE username='" + user.getUsername() + "'");
+            ResultSet read_query = db_connector.prepared_read_query("SELECT user_id FROM users WHERE username=?", user.getUsername());
 
             int user_id = 0;
 
@@ -112,7 +113,8 @@ public class CreateAccount extends TemplateGui {
 
                 //WRITE CODE
                 mariadb db_connector = new mariadb();
-                boolean write_query = db_connector.write_query("INSERT INTO users (username,salt,hash,is_admin) VALUES ('" + user.getUsername() + "','" + salt + "','" + hash + "','0')");
+                //boolean write_query = db_connector.write_query("INSERT INTO users (username,salt,hash,is_admin) VALUES ('" + user.getUsername() + "','" + salt + "','" + hash + "','0')");
+                boolean write_query = db_connector.prepared_write_query("INSERT INTO users (username,salt,hash,is_admin) VALUES (?, ?, ?, ?)", user.getUsername(), salt, hash, 0);
                 System.out.println("Was the insert successful: " + write_query);
 
             } catch (Exception NoSuchAlgorithmException){

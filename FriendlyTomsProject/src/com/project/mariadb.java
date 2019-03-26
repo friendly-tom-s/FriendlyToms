@@ -44,6 +44,41 @@ public class mariadb {
         return null;
     }//end read_query
 
+    public ResultSet prepared_read_query(String sql, Object... parameters)
+    {
+        try
+        {
+            // create our mysql database connection
+            Class.forName(JDBC_DRIVER);
+            Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            // create the java statement
+            Statement st = conn.createStatement();
+
+            // prepare the query
+            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+            for (int i = 0; i < parameters.length; i++) {
+                preparedStatement.setObject(i + 1, parameters[i]);
+            }
+
+            // execute the query, and get a java resultset
+            ResultSet rs = preparedStatement.executeQuery();
+
+            // close connection
+            st.close();
+
+            // return sql result
+            return rs;
+        }
+        catch (Exception e)
+        {
+            System.err.println("Got an exception! EXITING ");
+            System.err.println(e.getMessage());
+            System.exit(1);
+        }
+
+        return null;
+    }//end prepared_read_query
 
     public boolean write_query(String query) {
         Connection conn = null;
@@ -92,6 +127,62 @@ public class mariadb {
         return true;
     }//end write_query
 
+    public boolean prepared_write_query(String sql, Object... parameters) {
+        Connection conn = null;
+        Statement stmt = null;
+
+        try {
+            //STEP 2: Register JDBC driver
+            Class.forName(JDBC_DRIVER);
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to a selected database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            System.out.println("Connected database successfully...");
+
+            //STEP 4: Execute a query
+            System.out.println("Executing query...");
+            stmt = conn.createStatement();
+
+            //stmt.executeUpdate(query);
+
+            // prepare the query
+            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+            for (int i = 0; i < parameters.length; i++) {
+                preparedStatement.setObject(i + 1, parameters[i]);
+            }
+
+            // execute the query, and get a java resultset
+            preparedStatement.executeQuery();
+
+            System.out.println("Query has been performed");
+        } catch (SQLException se) {
+            //Handle errors for JDBC
+            se.printStackTrace();
+            return false;
+        } catch (Exception e) {
+            //Handle errors for Class.forName
+            e.printStackTrace();
+            return false;
+        } finally {
+            //finally block used to close resources
+            try {
+                if (stmt != null) {
+                    conn.close();
+                }
+            } catch (SQLException se) {
+            }// do nothing
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+
+        return true;
+    }//end write_query
 
     public void viewAllData(){
 
