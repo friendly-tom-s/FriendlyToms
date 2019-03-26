@@ -57,7 +57,9 @@ public class LoginForm {
 
         //READ CODE
         com.project.mariadb db_connector = new com.project.mariadb();
-        ResultSet read_query = db_connector.read_query("SELECT user_id,username,salt,hash,is_admin FROM users WHERE username='" + user.getUsername() + "'");
+        //ResultSet read_query = db_connector.read_query("SELECT user_id,username,salt,hash,is_admin FROM users WHERE username='" + user.getUsername() + "'");
+
+        ResultSet read_query = db_connector.prepared_read_query("SELECT user_id,username,salt,hash,is_admin FROM users WHERE username=?", user.getUsername());
 
         int user_id = 0;
         String hash = "";
