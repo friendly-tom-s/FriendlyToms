@@ -16,9 +16,9 @@ public class ManageAccounts extends TemplateGui {
         btnView.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                /*frame.dispose();
+                frame.dispose();
                 accountManagement accountManagement = new accountManagement();
-                accountManagement.renderPage();*/
+                accountManagement.renderPage();
             }
         });
     }

@@ -24,8 +24,8 @@ import java.sql.ResultSet;
 
 public class accountManagement {
 
-    public static void main(String[] args){
-    //public void renderPage() {
+    //public static void main(String[] args){
+    public void renderPage() {
         // create JFrame and JTable
         JFrame frame = new JFrame();
         JTable table = new JTable();
@@ -136,7 +136,7 @@ public class accountManagement {
                 // add row to the model
                 model.addRow(row);*/
 
-                CreateAccount createAccount = new CreateAccount();
+                CreateAccount createAccount = new CreateAccount("Create Account", "Main Menu", "accountManagement");
                 //setPreviousWin("AdminMenu");
                 createAccount.displayCreate();
 
@@ -215,7 +215,7 @@ public class accountManagement {
                     model.setValueAt(textLname.getText(), i, 2);
                     model.setValueAt(textAge.getText(), i, 3);*/
 
-                    CreateAccount createAccount = new CreateAccount();
+                    CreateAccount createAccount = new CreateAccount("Create Account", "Main Menu", "accountManagement");
                     //setPreviousWin("AdminMenu");
                     createAccount.displayCreate();
                 }
