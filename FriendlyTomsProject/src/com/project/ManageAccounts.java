@@ -2,6 +2,8 @@ package com.project;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ManageAccounts extends TemplateGui {
     private JButton btnView;
@@ -9,7 +11,16 @@ public class ManageAccounts extends TemplateGui {
     private JButton btnCreate;
     private JPanel panel2;
 
-    public ManageAccounts(){super("Manage Accounts", "Main Menu", "AdminMenu");}
+    public ManageAccounts(){super("Manage Accounts", "Main Menu", "AdminMenu");
+        btnView.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                /*frame.dispose();
+                accountManagement accountManagement = new accountManagement();
+                accountManagement.renderPage();*/
+            }
+        });
+    }
 
     public void DisplayManageAccounts(){
         frame.add(panel2, BorderLayout.CENTER);
