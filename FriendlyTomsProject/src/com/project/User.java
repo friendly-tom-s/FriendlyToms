@@ -9,6 +9,7 @@ public class User {
     private String confirm_password;
     private String email;
     private String phone_number;
+    private int adminStatus;
 
     public User(){}
 
@@ -28,12 +29,14 @@ public class User {
 
     public void setPhone_number(String phone_number){this.phone_number = phone_number;}
 
+    public void setAdminStatus(int adminStatus){this.adminStatus = adminStatus;}
+
     public String getUsername(){return username;}
 
     public String getPassword(){return password;}
 
     public String getConfirm_password(){return confirm_password;}
 
-
+    public int getAdminStatus(){return adminStatus;}
 
 }

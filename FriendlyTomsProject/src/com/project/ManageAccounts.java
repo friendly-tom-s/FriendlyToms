@@ -10,6 +10,7 @@ public class ManageAccounts extends TemplateGui {
     private JButton btnDelete;
     private JButton btnCreate;
     private JPanel panel2;
+    private AdminCreation adminCreation;
 
     public ManageAccounts(){super("Manage Accounts", "Main Menu", "AdminMenu");
         btnView.addActionListener(new ActionListener() {
@@ -25,5 +26,14 @@ public class ManageAccounts extends TemplateGui {
     public void DisplayManageAccounts(){
         frame.add(panel2, BorderLayout.CENTER);
         DisplayGenericElements();
+        btnCreate.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                adminCreation = new AdminCreation();
+                adminCreation.DisplayGui();
+                frame.dispose();
+            }
+        });
+
     }
 }
