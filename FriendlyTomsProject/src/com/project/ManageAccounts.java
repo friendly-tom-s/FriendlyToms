@@ -13,7 +13,14 @@ public class ManageAccounts extends TemplateGui {
     private AdminCreation adminCreation;
 
     public ManageAccounts(){super("Manage Accounts", "Main Menu", "AdminMenu");
-
+        btnView.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                /*frame.dispose();
+                accountManagement accountManagement = new accountManagement();
+                accountManagement.renderPage();*/
+            }
+        });
     }
 
     public void DisplayManageAccounts(){
