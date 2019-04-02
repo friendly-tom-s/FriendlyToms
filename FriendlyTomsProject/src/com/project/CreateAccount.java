@@ -47,6 +47,16 @@ public class CreateAccount extends TemplateGui {
         user.setConfirmPassword(new String (pswPassword.getPassword()));
         user.setPassword(new String (pswPassword.getPassword()));
         user.setEmail(txtEmail.getText());
+
+        if (rdoAdmin.isSelected())
+        {
+            user.setAdminStatus(1);
+        }
+        else
+        {
+            user.setAdminStatus(0);
+        }
+
         //user.setPhone_number(phone_number_textfield.getText());
     }
 
@@ -116,7 +126,7 @@ public class CreateAccount extends TemplateGui {
                 //WRITE CODE
                 mariadb db_connector = new mariadb();
                 //boolean write_query = db_connector.write_query("INSERT INTO users (username,salt,hash,is_admin) VALUES ('" + user.getUsername() + "','" + salt + "','" + hash + "','0')");
-                boolean write_query = db_connector.prepared_write_query("INSERT INTO users (username,salt,hash,is_admin) VALUES (?, ?, ?, ?)", user.getUsername(), salt, hash, 0);
+                boolean write_query = db_connector.prepared_write_query("INSERT INTO users (username,salt,hash,is_admin) VALUES (?, ?, ?, ?)", user.getUsername(), salt, hash, user.getAdminStatus());
                 System.out.println("Was the insert successful: " + write_query);
 
             } catch (Exception NoSuchAlgorithmException){

@@ -24,6 +24,7 @@ public class ManageAccounts extends TemplateGui {
             public void actionPerformed(ActionEvent e) {
                 adminCreation = new AdminCreation();
                 adminCreation.DisplayGui();
+                frame.dispose();
             }
         });
 
