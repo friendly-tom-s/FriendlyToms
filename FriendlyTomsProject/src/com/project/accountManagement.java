@@ -24,8 +24,8 @@ import java.sql.ResultSet;
 
 public class accountManagement {
 
-    public static void main(String[] args){
-    //public void renderPage() {
+    //public static void main(String[] args){
+    public void renderPage() {
         // create JFrame and JTable
         JFrame frame = new JFrame();
         JTable table = new JTable();
