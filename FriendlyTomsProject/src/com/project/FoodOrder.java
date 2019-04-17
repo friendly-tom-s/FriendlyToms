@@ -19,21 +19,28 @@ public class FoodOrder extends TemplateGui {
     private String name;
     private String calories;
     private String description;
+    private String category;
     private ArrayList<String> main_items=new ArrayList<String>();
 
     public FoodOrder(){super("Food Order", "Main Menu", "UserMenu");}
 
     public void displayFoodOrder() {
 
-        ResultSet testVar = database.prepared_read_query("SELECT * FROM menu");
+        ResultSet foodQuery = database.prepared_read_query("SELECT * FROM menu");
 
         try {
-            while(testVar.next()) {
-                name = testVar.getString("name");
+            while(foodQuery.next()) {
+                name = foodQuery.getString("name");
                 main_items.add(name);
-                cboMain.addItem(name);
-                description = testVar.getString("description");
-                calories = testVar.getString("calories");
+                //cboMain.addItem(name);
+                description = foodQuery.getString("description");
+                calories = foodQuery.getString("calories");
+                category = foodQuery.getString("category");
+
+                if(category.equals("main")){cboMain.addItem(name);}
+                else if(category.equals("starter")){cboStarter.addItem(name);}
+                
+
             }
         }
         catch (Exception a)
@@ -45,7 +52,7 @@ public class FoodOrder extends TemplateGui {
 
 
         //cboMain.addItem(main_items);
-        System.out.println(testVar);
+        System.out.println(foodQuery);
 
 
 
