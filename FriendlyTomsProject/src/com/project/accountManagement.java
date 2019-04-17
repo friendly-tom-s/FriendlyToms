@@ -24,14 +24,14 @@ import java.sql.ResultSet;
 
 public class accountManagement {
 
-    //public static void main(String[] args){
-    public void renderPage() {
+    public static void main(String[] args){
+    //public void renderPage() {
         // create JFrame and JTable
         JFrame frame = new JFrame();
         JTable table = new JTable();
 
         // create a table model and set a Column Identifiers to this model
-        Object[] columns = {"user_id","username","hash","salt"};
+        Object[] columns = {"UID","username","first name","last name"};
         DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(columns);
 
@@ -49,10 +49,13 @@ public class accountManagement {
                 String hash = read_query.getString("hash");
                 String salt = read_query.getString("salt");
 
-                // print the results
-                System.out.format("%s, %s, %s, %s\n", menu_id, username, hash, salt);
+                String first_name = read_query.getString("first_name");
+                String last_name = read_query.getString("last_name");
 
-                String user_info[] = {String.valueOf(menu_id), username, hash, salt};
+                // print the results
+                System.out.format("%s, %s, %s, %s, %s, %s\n", menu_id, username, first_name, last_name, hash, salt);
+
+                String user_info[] = {String.valueOf(menu_id), username, first_name, last_name};
                 model.addRow(user_info);
             }
         }
@@ -77,28 +80,28 @@ public class accountManagement {
 
         // create JTextFields
         JTextField textId = new JTextField();
+        JTextField textUsername = new JTextField();
         JTextField textFname = new JTextField();
         JTextField textLname = new JTextField();
-        JTextField textAge = new JTextField();
 
         // create JButtons
-        JButton btnAdd = new JButton("Add");
-        JButton btnDelete = new JButton("Delete");
-        JButton btnUpdate = new JButton("Update");
+        JButton btnAdd = new JButton("Add User");
+        JButton btnDelete = new JButton("Delete User");
+        JButton btnUpdate = new JButton("Update User");
 
         textId.setBounds(20, 220, 100, 25);
-        textFname.setBounds(20, 250, 100, 25);
-        textLname.setBounds(20, 280, 100, 25);
-        textAge.setBounds(20, 310, 100, 25);
+        textUsername.setBounds(20, 250, 100, 25);
+        textFname.setBounds(20, 280, 100, 25);
+        textLname.setBounds(20, 310, 100, 25);
         //disable editable fields
         textId.setEditable(false);
+        textUsername.setEditable(false);
         textFname.setEditable(false);
         textLname.setEditable(false);
-        textAge.setEditable(false);
 
-        btnAdd.setBounds(150, 220, 100, 25);
-        btnUpdate.setBounds(150, 265, 100, 25);
-        btnDelete.setBounds(150, 310, 100, 25);
+        btnAdd.setBounds(150, 220, 150, 25);
+        btnUpdate.setBounds(150, 265, 150, 25);
+        btnDelete.setBounds(150, 310, 150, 25);
 
         // create JScrollPane
         JScrollPane pane = new JScrollPane(table);
@@ -110,9 +113,9 @@ public class accountManagement {
 
         // add JTextFields to the jframe
         frame.add(textId);
+        frame.add(textUsername);
         frame.add(textFname);
         frame.add(textLname);
-        frame.add(textAge);
 
         // add JButtons to the jframe
         frame.add(btnAdd);
@@ -166,9 +169,9 @@ public class accountManagement {
 
                         //clear text fields
                         textId.setText(null);
+                        textUsername.setText(null);
                         textFname.setText(null);
                         textLname.setText(null);
-                        textAge.setText(null);
                     }
 
                 }
@@ -188,9 +191,9 @@ public class accountManagement {
                 int i = table.getSelectedRow();
 
                 textId.setText(model.getValueAt(i, 0).toString());
-                textFname.setText(model.getValueAt(i, 1).toString());
-                textLname.setText(model.getValueAt(i, 2).toString());
-                textAge.setText(model.getValueAt(i, 3).toString());
+                textUsername.setText(model.getValueAt(i, 1).toString());
+                textFname.setText(model.getValueAt(i, 2).toString());
+                textLname.setText(model.getValueAt(i, 3).toString());
             }
         });
 
