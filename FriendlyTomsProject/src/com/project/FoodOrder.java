@@ -32,15 +32,30 @@ public class FoodOrder extends TemplateGui {
             while(foodQuery.next()) {
                 name = foodQuery.getString("name");
                 main_items.add(name);
+                System.out.println(name);
                 //cboMain.addItem(name);
                 description = foodQuery.getString("description");
                 calories = foodQuery.getString("calories");
                 category = foodQuery.getString("category");
+//                System.out.println(category);
+//                if(category.equals("main")){cboMain.addItem(name);}
+//                else if(category.equals("starter")){cboStarter.addItem(name);}
+//                else if(category.equals("dessert")){cboDessert.addItem(name);
 
-                if(category.equals("main")){cboMain.addItem(name);}
-                else if(category.equals("starter")){cboStarter.addItem(name);}
-                
-
+                switch (category){
+                    case "main":
+                        cboMain.addItem(name);
+                        break;
+                    case "starter":
+                        cboStarter.addItem(name);
+                        break;
+                    case "dessert":
+                        cboDessert.addItem(name);
+                        break;
+                    case "drink":
+                        cboDrink.addItem(name);
+                        break;
+                }
             }
         }
         catch (Exception a)
