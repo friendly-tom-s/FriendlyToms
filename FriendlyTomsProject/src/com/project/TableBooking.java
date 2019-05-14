@@ -14,13 +14,22 @@ public class TableBooking extends TemplateGui{
     private JButton btnMainMenu;
     private UserMenu UserMenu;
     private JPanel panel2;
+    private User loggedUser;
 
 
 
-    public TableBooking(){super("Table Booking", "Main Menu", "UserMenu");}
+    public TableBooking(User loggedUser){
+        super("Table Booking", "Main Menu", "UserMenu");
+        this.loggedUser = loggedUser;
+    }
 
     public void displayTableBooking() {
         frame.add(panel2, BorderLayout.CENTER);
+        txtName.setText(loggedUser.getUsername());
         DisplayGenericElements();
     }
+
+    public String getNameInput(){return txtName.getText();}
+
+
 }

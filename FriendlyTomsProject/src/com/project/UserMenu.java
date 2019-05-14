@@ -14,9 +14,15 @@ public class UserMenu extends TemplateGui {
     private FoodOrder FoodOrder;
     private TableBooking TableBooking;
     private OrderHistory orderHistory;
+    private User loggedUser;
 
     public UserMenu(){
+
         super("User Menu", "Logout", "LoginForm");
+    }
+
+    public void setLoggedInUser(User loggedUser){
+        this.loggedUser = loggedUser;
     }
 
     public void displayUserMenu(){
@@ -35,7 +41,7 @@ public class UserMenu extends TemplateGui {
         btnBook.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                TableBooking = new TableBooking();
+                TableBooking = new TableBooking(loggedUser);
                 TableBooking.displayTableBooking();
                 frame.dispose();
             }

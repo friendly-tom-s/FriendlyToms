@@ -130,6 +130,7 @@ public class LoginForm extends TemplateGui{
                     else {
                         frame.dispose();
                         UserMenu userMenu = new UserMenu();
+                        userMenu.setLoggedInUser(user);
                         userMenu.displayUserMenu();
                     }
                 }
