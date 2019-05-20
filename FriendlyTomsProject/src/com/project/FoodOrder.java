@@ -33,14 +33,10 @@ public class FoodOrder extends TemplateGui {
                 name = foodQuery.getString("name");
                 main_items.add(name);
                 System.out.println(name);
-                //cboMain.addItem(name);
                 description = foodQuery.getString("description");
                 calories = foodQuery.getString("calories");
                 category = foodQuery.getString("category");
-//                System.out.println(category);
-//                if(category.equals("main")){cboMain.addItem(name);}
-//                else if(category.equals("starter")){cboStarter.addItem(name);}
-//                else if(category.equals("dessert")){cboDessert.addItem(name);
+
 
                 switch (category){
                     case "main":
@@ -64,19 +60,9 @@ public class FoodOrder extends TemplateGui {
             System.err.println(a.getMessage());
             //System.exit(1);
         }//try
-
-
-        //cboMain.addItem(main_items);
-        System.out.println(foodQuery);
-
-
-
-
+       System.out.println(foodQuery);
         //cboStarter.addItem(testVar);
         frame.add(panel2, BorderLayout.CENTER);
         DisplayGenericElements();
-
-
-
     }
 }

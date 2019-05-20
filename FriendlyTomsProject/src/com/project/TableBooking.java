@@ -61,7 +61,6 @@ public class TableBooking extends TemplateGui{
 
     public void saveToDatabase(){
         mariadb db_connector = new mariadb();
-        //boolean write_query = db_connector.write_query("INSERT INTO users (username,salt,hash,is_admin) VALUES ('" + user.getUsername() + "','" + salt + "','" + hash + "','0')");
         boolean write_query = db_connector.prepared_write_query("INSERT INTO bookings (date, time, amount, name) VALUES (?, ?, ?, ?)",
                 booking.getDate(), booking.getTime(), booking.getAmount(), booking.getName());
         System.out.println("Was the insert successful: " + write_query);
