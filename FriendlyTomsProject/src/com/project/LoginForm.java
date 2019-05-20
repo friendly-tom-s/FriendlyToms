@@ -134,7 +134,6 @@ public class LoginForm extends TemplateGui{
                         userMenu.displayUserMenu();
                     }
                 }
-
                 else{
                     System.out.println("Not matched - exiting");
                     JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
