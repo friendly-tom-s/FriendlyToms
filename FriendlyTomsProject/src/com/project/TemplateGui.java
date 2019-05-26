@@ -46,6 +46,10 @@ public class TemplateGui {
             UserMenu userMenu = new UserMenu();
             userMenu.displayUserMenu();
         }
+        if (previousWin.equals("FoodOrder")){
+            FoodOrder foodOrder = new FoodOrder();
+            foodOrder.displayFoodOrder();
+        }
     }
 
 
