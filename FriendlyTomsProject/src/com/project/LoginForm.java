@@ -16,6 +16,7 @@ public class LoginForm extends TemplateGui{
     //private JFrame frame;
     private User user = new User();
     private int adminPriv= 0 ;
+    private mariadb database = new mariadb();
 
 
     public LoginForm(){
@@ -111,6 +112,7 @@ public class LoginForm extends TemplateGui{
         CreateAccount createAccount = new CreateAccount("Create Account", "Back", "LoginForm");
         frame.add(panel2, BorderLayout.CENTER);
         DisplayGenericElements();
+        database.prepared_write_query("DELETE FROM basket");
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
