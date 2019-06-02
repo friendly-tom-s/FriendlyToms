@@ -17,6 +17,7 @@ public class LoginForm extends TemplateGui{
     private User user = new User();
     private int adminPriv= 0 ;
     private mariadb database = new mariadb();
+    private String userID;
 
 
     public LoginForm(){
@@ -75,6 +76,7 @@ public class LoginForm extends TemplateGui{
                 String username = read_query.getString("username");
                 hash = read_query.getString("hash");
                 salt = read_query.getString("salt");
+                userID = read_query.getString("user_id");
                 adminPriv = read_query.getInt("is_admin");
             }
         }
@@ -124,6 +126,7 @@ public class LoginForm extends TemplateGui{
                 boolean credCheck  = initCompare();
                 System.out.println("CHECK THIS VAR" + adminPriv);
                 if (credCheck){
+                    saveSessionUser(user.getUsername(), userID);
                     if(adminPriv== 1){
                         frame.dispose();
                         AdminMenu adminMenu = new AdminMenu();
@@ -154,5 +157,10 @@ public class LoginForm extends TemplateGui{
             }
         });
 
+    }
+
+    public void saveSessionUser(String name, String userID){
+        database.prepared_write_query("DELETE FROM loggedSession");
+        database.prepared_write_query("INSERT INTO loggedSession (name, userID) VALUES (?,?)", name, userID);
     }
 }

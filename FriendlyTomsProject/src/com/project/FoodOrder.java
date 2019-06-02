@@ -24,7 +24,9 @@ public class FoodOrder extends TemplateGui {
     private String category;
     private ArrayList<String> main_items=new ArrayList<String>();
 
-    public FoodOrder(){super("Food Order", "Main Menu", "UserMenu");
+    public FoodOrder(){
+        super("Food Order", "Main Menu", "UserMenu");
+
 
             }
 

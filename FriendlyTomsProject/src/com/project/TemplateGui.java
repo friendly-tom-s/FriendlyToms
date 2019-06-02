@@ -5,12 +5,15 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 
 public class TemplateGui {
     private JPanel panel1;
     private JButton backButtonButton;
     JFrame frame;
     private String previousWin;
+    private mariadb database = new mariadb();
+    private String userid;
 
     public TemplateGui(String guiName, String buttonVar, String previousWin){
         frame = new JFrame(guiName);
@@ -51,7 +54,18 @@ public class TemplateGui {
             foodOrder.displayFoodOrder();
         }
     }
+    public String getUser(){
+        ResultSet session = database.prepared_read_query("Select * from loggedsession");
+        try {
+            while(session.next()) {
+                userid = session.getString("userid");
+            }
+        }
+        catch (Exception a){System.out.println("Something failed at 1");}//try
 
+        return userid;
+
+    }
 
 
 }

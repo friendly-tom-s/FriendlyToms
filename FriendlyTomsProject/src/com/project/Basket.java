@@ -17,6 +17,7 @@ public class Basket extends TemplateGui {
     private JButton btnOrder;
     private mariadb database = new mariadb();
     ResultSet nameOfItems;
+    private String userid;
 
 
     public Basket(){super("Basket", "Back", "FoodOrder");
@@ -30,23 +31,7 @@ public class Basket extends TemplateGui {
         DisplayGenericElements();
         btnOrder.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-
-                ResultSet listItems = database.prepared_read_query("SELECT * FROM basket");
-                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-                Date date = new Date();
-
-                try {
-                    while(listItems.next()) {
-                        String foodItem = listItems.getString("itemID");
-                        database.prepared_write_query("INSERT INTO orders (order_date, userID, foodItem) VALUES (?,?,?)", date, "1", foodItem);
-                    }
-                }
-                catch (Exception a){System.out.println("Something failed at 1");}//try
-
-
-
-            }
+            public void actionPerformed(ActionEvent e) { makeOrder();}
         });
     }
 
@@ -75,4 +60,20 @@ public class Basket extends TemplateGui {
         return JListItems;
 
     }
+
+    private void makeOrder(){
+        ResultSet listItems = database.prepared_read_query("SELECT * FROM basket");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date date = new Date();
+
+        try {
+            while(listItems.next()) {
+                String foodItem = listItems.getString("itemID");
+                database.prepared_write_query("INSERT INTO orders (order_date, userID, foodItem) VALUES (?,?,?)", date, getUser(), foodItem);
+            }
+        }
+        catch (Exception a){System.out.println("Something failed at 1");}//try
+
+    }
+
 }
