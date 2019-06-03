@@ -70,6 +70,7 @@ public class Basket extends TemplateGui {
             while(listItems.next()) {
                 String foodItem = listItems.getString("itemID");
                 database.prepared_write_query("INSERT INTO orders (order_date, userID, foodItem) VALUES (?,?,?)", date, getUser(), foodItem);
+                database.prepared_write_query("UPDATE menu SET stock = stock - 1 WHERE menu_id = ?", foodItem);
             }
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try

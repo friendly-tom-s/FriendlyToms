@@ -45,7 +45,7 @@ public class ManageStock extends TemplateGui {
                 ResultSet matchingItem = database.prepared_read_query("SELECT stock FROM menu WHERE name =?", dbItem);
                 try {
                     while (matchingItem.next()) {
-                        labAmount.setText(matchingItem.getString("stock"));
+                        labAmount.setText(String.valueOf(matchingItem.getInt("stock")));
                     }
                 } catch (SQLException e1) {
                     e1.printStackTrace();
