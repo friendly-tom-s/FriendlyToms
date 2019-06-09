@@ -25,41 +25,47 @@ public class TableBooking extends TemplateGui{
     private String loggedUser;
     private Booking booking = new Booking();
     private mariadb db_connector = new mariadb();
+    private int sittingOne = 0;
+    private int sittingTwo = 0;
+    private int sittingThree= 0;
 
-    public TableBooking(User loggedUser){
+    public TableBooking(){
         super("Table Booking", "Main Menu", "UserMenu");
-        this.loggedUser = getUser();
         }
 
     public void displayTableBooking() {
         frame.add(panel2, BorderLayout.CENTER);
-        txtName.setText(loggedUser);
+        txtName.setText(getUserName());
         DisplayGenericElements();
+        comboBox1.addItem("Sitting 1. 12:00 - 14:00");
+        comboBox1.addItem("Sitting 2. 18:00 - 20:00");
+        comboBox1.addItem("Sitting 3. 20:05 - 22:00");
 
         checkAvailabilityButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String date = textDate.getText();
                 checkDate(date);
+                showAvailableSeats();
             }
         });
         btnBook.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(validateDate(textDate.getText(), "dd/MM/yy").equals(true) &&
-                        validateDate(textTime.getText(), "hh:mm").equals(true)){
+                if(validateBooking(textDate.getText(), "dd/MM/yy").equals(true) &&
+                        checkSittingAvailability(getCboStringValue()).equals(true));
+                {
                     booking.setDate(textDate.getText());
-                    booking.setTime(textTime.getText());
+                    //time/sitting is set in getCboStringValue
                     booking.setName(txtName.getText());
                     booking.setAmount(txtAmount.getText());
                     saveToDatabase();
                 }
             }
-
         });
     }
 
-    public Boolean validateDate(String dateTime, String dateFormat){
+    public Boolean validateBooking(String dateTime, String dateFormat){
         DateFormat format = new SimpleDateFormat(dateFormat);
         format.setLenient(false);
         String date = dateTime;
@@ -73,7 +79,7 @@ public class TableBooking extends TemplateGui{
     }
 
     public void saveToDatabase(){
-        boolean write_query = db_connector.prepared_write_query("INSERT INTO bookings (date, time, amount, name) VALUES (?, ?, ?, ?)",
+        boolean write_query = db_connector.prepared_write_query("INSERT INTO bookings (date, sitting, amount, name) VALUES (?, ?, ?, ?)",
                 booking.getDate(), booking.getTime(), booking.getAmount(), booking.getName());
         System.out.println("Was the insert successful: " + write_query);
     }
@@ -83,21 +89,13 @@ public class TableBooking extends TemplateGui{
         ResultSet sumSittingOne = getSitting(1, date);
         ResultSet sumSittingTwo = getSitting(2, date);
         ResultSet sumSittingThree = getSitting(3, date);
-        int sittingOne = 0;
-        int sittingTwo = 0;
-        int sittingThree= 0   ;
+
         try {
             while(sumSittingOne.next()) {sittingOne = sumSittingOne.getInt("amount");}
             while(sumSittingTwo.next()) {sittingTwo = sumSittingTwo.getInt("amount");}
             while(sumSittingThree.next()) {sittingThree = sumSittingThree.getInt("amount");}
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
-        String infoMessage = "The amount of tables booked: \n Sitting 1: "+ sittingOne + "/50\n Sitting 2: " + sittingTwo +
-                "/50\n Sitting 3: "+ sittingThree +"/50";
-
-        JOptionPane.showMessageDialog(null, infoMessage, "InfoBox: " + "Bookings", JOptionPane.INFORMATION_MESSAGE);
-
-
 
     }
 
@@ -105,5 +103,37 @@ public class TableBooking extends TemplateGui{
         ResultSet sittingReturn = db_connector.prepared_read_query("SELECT SUM(amount) AS amount FROM bookings WHERE date" +
                 " = ? AND sitting = ?", date, sitting);
         return sittingReturn;
+    }
+
+    public void showAvailableSeats(){
+        String infoMessage = "The amount of tables booked: \n Sitting 1: "+ sittingOne + "/50\n Sitting 2: " + sittingTwo +
+                "/50\n Sitting 3: "+ sittingThree +"/50";
+
+        JOptionPane.showMessageDialog(null, infoMessage, "InfoBox: " + "Bookings",
+                JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public Boolean checkSittingAvailability(int chosenSitting){
+        if(chosenSitting >= 50){return true;}
+        else{return false;}
+    }
+
+    public int getCboStringValue(){
+        int cboSelected = 0;
+
+        int cboIndex = comboBox1.getSelectedIndex();
+        switch(cboIndex){
+            case 0:
+                cboSelected = sittingOne;
+                booking.setTime("1");
+            case  1:
+                cboSelected = sittingTwo;
+                booking.setTime("2");
+            case 2:
+                cboSelected = sittingThree;
+                booking.setTime("3");
+        }
+        return cboSelected;
+
     }
 }

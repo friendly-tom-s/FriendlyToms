@@ -14,6 +14,7 @@ public class TemplateGui {
     private String previousWin;
     private mariadb database = new mariadb();
     private String userid;
+    private String userName;
 
     public TemplateGui(String guiName, String buttonVar, String previousWin){
         frame = new JFrame(guiName);
@@ -65,6 +66,18 @@ public class TemplateGui {
 
         return userid;
 
+    }
+
+    public String getUserName(){
+        ResultSet session = database.prepared_read_query("Select * from users where user_id = ?", getUser());
+        try {
+            while(session.next()) {
+                userName = session.getString("username");
+            }
+        }
+        catch (Exception a){System.out.println("Something failed at 1");}//try
+
+        return userName;
     }
 
 

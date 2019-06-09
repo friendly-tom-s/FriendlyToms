@@ -41,7 +41,7 @@ public class UserMenu extends TemplateGui {
         btnBook.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                TableBooking = new TableBooking(loggedUser);
+                TableBooking = new TableBooking();
                 TableBooking.displayTableBooking();
                 frame.dispose();
             }
@@ -50,8 +50,9 @@ public class UserMenu extends TemplateGui {
         btnHistory.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                orderHistory = new OrderHistory();
+                orderHistory = new OrderHistory("Order History", "Back", "UserMenu");
                 orderHistory.DisplayOrderHistory();
+                frame.dispose();
             }
         });
     }

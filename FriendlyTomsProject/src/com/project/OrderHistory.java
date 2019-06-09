@@ -10,17 +10,32 @@ public class OrderHistory extends TemplateGui {
     private mariadb database = new mariadb();
     private ResultSet previousOrders;
     private ResultSet foodNames;
+    private String previousWIn;
 
-    public OrderHistory(){super("Order History", "Main Menu", "UserMenu");}
+
+    public OrderHistory(String guiName, String buttonVar, String previousWIn ){
+        super(guiName, buttonVar, previousWIn);
+        this.previousWIn= previousWIn;
+    }
 
     public void DisplayOrderHistory(){
         frame.add(panel2, BorderLayout.CENTER);
-        lstOrderDetails.setModel(getOrder());
+        ResultSet userType = getUserType();
+        lstOrderDetails.setModel(getOrder(userType));
         DisplayGenericElements();
     }
 
-    public DefaultListModel getOrder(){
-        previousOrders = database.prepared_read_query("SELECT * FROM orders WHERE userid = ?", getUser());
+    public ResultSet getUserType(){
+        if(previousWIn.equals("AdminMenu")){
+            previousOrders = database.prepared_read_query("SELECT * FROM orders");
+        }
+        if (previousWIn.equals("UserMenu")){
+            previousOrders = database.prepared_read_query("SELECT * FROM orders WHERE userid = ?", getUser());
+        }
+        return previousOrders;
+    }
+
+    public DefaultListModel getOrder(ResultSet previousOrders){
         DefaultListModel JListItems = new DefaultListModel();
         try {
             while(previousOrders.next()) {
@@ -40,6 +55,7 @@ public class OrderHistory extends TemplateGui {
         catch (Exception a){System.out.println("Something failed at 1");}//try
         return JListItems;
     }
+
 
 
 }

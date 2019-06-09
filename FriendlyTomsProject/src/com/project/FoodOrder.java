@@ -31,15 +31,6 @@ public class FoodOrder extends TemplateGui {
             }
 
     public void displayFoodOrder() {
-        //To implement the food ordering I suggest:
-        //Create a food order class, with the getters and setters.
-        //Add the object to the database under a table called basketOrder
-        //Allow the users to add as many items as they like.
-        //When the basket is conformed/Ordered the database items will be copied/moved to the full orders table
-        //The basket orders will be deleted.
-
-        //There will be three tables; orders, orderdetails and temporder/basket.
-        //Ordersdetails will include the date and customer ID
 
         ResultSet foodQuery = database.prepared_read_query("SELECT * FROM menu");
 
