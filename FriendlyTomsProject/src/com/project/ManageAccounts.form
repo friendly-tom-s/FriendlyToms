@@ -18,28 +18,28 @@
           <text value="Manage Accounts"/>
         </properties>
       </component>
-      <component id="8ea6d" class="javax.swing.JButton" binding="btnView">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="View Acconts"/>
-        </properties>
-      </component>
       <component id="4b711" class="javax.swing.JButton" binding="btnDelete">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Delete Accounts"/>
-        </properties>
-      </component>
-      <component id="59bdc" class="javax.swing.JButton" binding="btnCreate">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Create Accounts"/>
+          <text value="Delete Account"/>
+        </properties>
+      </component>
+      <component id="5ad5c" class="javax.swing.JTable" binding="table">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="9d93c" class="javax.swing.JButton" binding="btnCreate">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Create Account"/>
         </properties>
       </component>
     </children>
