@@ -51,6 +51,7 @@ public class ManageAccounts extends TemplateGui {
     }
 
     public void setJtable(){
+
         Object[] columns = {"UID","username", "First Name", "Last Name"};
         model.setColumnIdentifiers(columns);
         ResultSet read_query = db_connector.prepared_read_query("SELECT * FROM users");

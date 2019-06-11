@@ -68,8 +68,8 @@ public class TemplateGui {
 
     }
 
-    public String getUserName(){
-        ResultSet session = database.prepared_read_query("Select * from users where user_id = ?", getUser());
+    public String getUserName(String queryUserId){
+        ResultSet session = database.prepared_read_query("Select * from users where user_id = ?", queryUserId);
         try {
             while(session.next()) {
                 userName = session.getString("username");
