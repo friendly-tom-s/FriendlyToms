@@ -16,6 +16,7 @@ public class FoodOrder extends TemplateGui {
     private JComboBox cboDrink;
     private JButton btnOrder;
     private JButton btnBasket;
+    private JButton btnMenu;
     private UserMenu UserMenu;
     private String name;
     private String calories;
@@ -24,7 +25,9 @@ public class FoodOrder extends TemplateGui {
     private ArrayList<String> main_items=new ArrayList<String>();
 
     public FoodOrder(){
-        super("Food Order", "Main Menu", "UserMenu");}
+        super("Food Order", "Main Menu", "UserMenu");
+
+    }
 
     public void displayFoodOrder() {
 
@@ -47,6 +50,15 @@ public class FoodOrder extends TemplateGui {
                 frame.dispose();
             }
         });
+        btnMenu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoodMenu foodMenu = new FoodMenu();
+                foodMenu.displayMenu();
+                frame.dispose();
+            }
+        });
+
         DisplayGenericElements();
     }
 
