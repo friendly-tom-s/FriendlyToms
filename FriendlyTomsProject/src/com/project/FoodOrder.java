@@ -17,7 +17,6 @@ public class FoodOrder extends TemplateGui {
     private JButton btnOrder;
     private JButton btnBasket;
     private UserMenu UserMenu;
-    private mariadb database = new mariadb();
     private String name;
     private String calories;
     private String description;
@@ -25,49 +24,13 @@ public class FoodOrder extends TemplateGui {
     private ArrayList<String> main_items=new ArrayList<String>();
 
     public FoodOrder(){
-        super("Food Order", "Main Menu", "UserMenu");
-
-
-            }
+        super("Food Order", "Main Menu", "UserMenu");}
 
     public void displayFoodOrder() {
 
-        ResultSet foodQuery = database.prepared_read_query("SELECT * FROM menu");
-
-        try {
-            while(foodQuery.next()) {
-                name = foodQuery.getString("name");
-                main_items.add(name);
-                System.out.println(name);
-                description = foodQuery.getString("description");
-                calories = foodQuery.getString("calories");
-                category = foodQuery.getString("category");
-
-                switch (category){
-                    case "main":
-                        cboMain.addItem(name);
-                        break;
-                    case "starter":
-                        cboStarter.addItem(name);
-                        break;
-                    case "dessert":
-                        cboDessert.addItem(name);
-                        break;
-                    case "drink":
-                        cboDrink.addItem(name);
-                        break;
-                }
-            }
-        }
-        catch (Exception a)
-        {
-            System.err.println("Got an exception!");
-            System.err.println(a.getMessage());
-            //System.exit(1);
-        }//try
-       System.out.println(foodQuery);
-        //cboStarter.addItem(testVar);
+        setFoodTypes();
         frame.add(panel2, BorderLayout.CENTER);
+
         btnOrder.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -101,5 +64,40 @@ public class FoodOrder extends TemplateGui {
             {break;}//try
 
         }
+    }
+
+    public void setFoodTypes(){
+        ResultSet foodQuery = database.prepared_read_query("SELECT * FROM menu");
+
+        try {
+            while(foodQuery.next()) {
+                name = foodQuery.getString("name");
+                main_items.add(name);
+                System.out.println(name);
+                description = foodQuery.getString("description");
+                calories = foodQuery.getString("calories");
+                category = foodQuery.getString("category");
+
+                switch (category){
+                    case "main":
+                        cboMain.addItem(name);
+                        break;
+                    case "starter":
+                        cboStarter.addItem(name);
+                        break;
+                    case "dessert":
+                        cboDessert.addItem(name);
+                        break;
+                    case "drink":
+                        cboDrink.addItem(name);
+                        break;
+                }
+            }
+        }
+        catch (Exception a)
+        {
+            System.err.println("Got an exception!");
+            System.err.println(a.getMessage());
+        }//try
     }
 }

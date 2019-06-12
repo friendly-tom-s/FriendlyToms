@@ -1,13 +1,5 @@
 package com.project;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-
 public class Booking {
 
     private String date;
@@ -15,8 +7,7 @@ public class Booking {
     private String amount;
     private String name;
 
-    public Booking(){
-    }
+    public Booking(){    }
 
     public void setDate(String date){this.date = date; }
 

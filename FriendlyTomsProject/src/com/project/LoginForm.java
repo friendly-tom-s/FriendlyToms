@@ -13,27 +13,20 @@ public class LoginForm extends TemplateGui{
     private JTextField txtUsername;
     private JPasswordField txtPassword;
     private JButton btnLogin;
-    //private JFrame frame;
     private User user = new User();
     private int adminPriv= 0 ;
-    private mariadb database = new mariadb();
     private String userID;
 
 
     public LoginForm(){
-        //frame = new JFrame("GUIForm1");
-        super("Login Form", "Quit", "null");
-    }
+        super("Login Form", "Quit", "null");}
+
     public Boolean verifyInput(){
 
         System.out.println("Test");
-        //Jake has added a comment and he should be working in a branch.
-
-
-        //This is added to the master
 
         boolean input_errors = false;
-        //this is a test
+
         if(Pattern.matches("[a-zA-Z0-9]{3,20}", user.getUsername())) {
             txtUsername.setText("Username:");
         } else {
@@ -65,8 +58,6 @@ public class LoginForm extends TemplateGui{
         String hash = "";
         String salt = "";
 
-
-
         try {
             if(!read_query.next()) {
                 System.out.println("No matching username found");
@@ -84,7 +75,6 @@ public class LoginForm extends TemplateGui{
         {
             System.err.println("Got an exception!");
             System.err.println(a.getMessage());
-            //System.exit(1);
         }//try
 
 
@@ -115,43 +105,16 @@ public class LoginForm extends TemplateGui{
         frame.add(panel2, BorderLayout.CENTER);
         DisplayGenericElements();
         database.prepared_write_query("DELETE FROM basket");
+
         btnLogin.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-
-                user.setUsername(txtUsername.getText());
-                String newVar = new String (txtPassword.getPassword());
-                user.setPassword(newVar);
-                System.out.println(newVar+ " + " +user.getPassword()+ " I am here");
-                boolean credCheck  = initCompare();
-                System.out.println("CHECK THIS VAR" + adminPriv);
-                if (credCheck){
-                    saveSessionUser(user.getUsername(), userID);
-                    if(adminPriv== 1){
-                        frame.dispose();
-                        AdminMenu adminMenu = new AdminMenu();
-                        adminMenu.displayAdminMenu();
-                    }
-                    else {
-                        frame.dispose();
-                        UserMenu userMenu = new UserMenu();
-                        userMenu.setLoggedInUser(user);
-                        userMenu.displayUserMenu();
-                    }
-                }
-                else{
-                    System.out.println("Not matched - exiting");
-                    JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
-
-                }
-            }
+            public void actionPerformed(ActionEvent e) {setUserAttributes();}
         });
 
         btnCreate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 createAccount.displayCreate();
-                //setPreviousWin("AdminMenu");
                 System.out.println("test");
                 frame.dispose();
             }
@@ -162,5 +125,33 @@ public class LoginForm extends TemplateGui{
     public void saveSessionUser(String name, String userID){
         database.prepared_write_query("DELETE FROM loggedSession");
         database.prepared_write_query("INSERT INTO loggedSession (name, userID) VALUES (?,?)", name, userID);
+    }
+
+    public void setUserAttributes(){
+        user.setUsername(txtUsername.getText());
+        String newVar = new String (txtPassword.getPassword());
+        user.setPassword(newVar);
+        System.out.println(newVar+ " + " +user.getPassword()+ " I am here");
+        boolean credCheck  = initCompare();
+        System.out.println("CHECK THIS VAR" + adminPriv);
+        if (credCheck){
+            saveSessionUser(user.getUsername(), userID);
+            if(adminPriv== 1){
+                frame.dispose();
+                AdminMenu adminMenu = new AdminMenu();
+                adminMenu.displayAdminMenu();
+            }
+            else {
+                frame.dispose();
+                UserMenu userMenu = new UserMenu();
+                userMenu.setLoggedInUser(user);
+                userMenu.displayUserMenu();
+            }
+        }
+        else{
+            System.out.println("Not matched - exiting");
+            JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
+
+        }
     }
 }

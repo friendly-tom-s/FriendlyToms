@@ -12,14 +12,11 @@ public class ManageStock extends TemplateGui {
     private JComboBox cboItem;
     private JTextField txtAddStock;
     private JButton btnAddStock;
-    private JButton btnMenu;
     private JLabel labAmount;
-    private mariadb database = new mariadb();
     private ArrayList<String> main_items = new ArrayList<String>();
 
     public ManageStock() {
         super("Manage Stock", "Main Menu", "AdminMenu");
-
 
     }
 

@@ -1,7 +1,6 @@
 package com.project;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,9 +9,9 @@ import java.sql.ResultSet;
 public class TemplateGui {
     private JPanel panel1;
     private JButton backButtonButton;
-    JFrame frame;
+    protected JFrame frame;
     private String previousWin;
-    private mariadb database = new mariadb();
+    protected mariadb database = new mariadb();
     private String userid;
     private String userName;
 

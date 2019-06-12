@@ -7,7 +7,6 @@ import java.sql.Array;
 import java.sql.ResultSet;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -15,14 +14,9 @@ public class Basket extends TemplateGui {
     private JList list1;
     private JPanel panel2;
     private JButton btnOrder;
-    private mariadb database = new mariadb();
-    ResultSet nameOfItems;
-    private String userid;
+    private ResultSet nameOfItems;
 
-
-    public Basket(){super("Basket", "Back", "FoodOrder");
-
-    }
+    public Basket(){super("Basket", "Back", "FoodOrder");}
 
     public void displayElements(){
         frame.add(panel2, BorderLayout.CENTER);
@@ -55,8 +49,6 @@ public class Basket extends TemplateGui {
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
 
-
-
         return JListItems;
 
     }
@@ -74,7 +66,5 @@ public class Basket extends TemplateGui {
             }
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
-
     }
-
 }

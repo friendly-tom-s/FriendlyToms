@@ -9,7 +9,6 @@ public class OrderHistory extends TemplateGui {
     private JList lstOrderDetails;
     private JPanel panel2;
     private JTable table;
-    private mariadb database = new mariadb();
     private ResultSet previousOrders;
     private ResultSet foodNames;
     private String previousWIn;
@@ -53,7 +52,6 @@ public class OrderHistory extends TemplateGui {
     }
 
     public DefaultTableModel getOrder(ResultSet previousOrders){
-        //DefaultListModel JListItems = new DefaultListModel();
         DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(getObject());
         ResultSet read_query = database.prepared_read_query("SELECT * FROM users");

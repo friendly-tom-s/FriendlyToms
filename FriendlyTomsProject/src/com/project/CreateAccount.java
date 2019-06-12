@@ -9,14 +9,12 @@ import java.util.regex.Pattern;
 
 public class CreateAccount extends TemplateGui {
     private JButton btnCreate;
-    private JButton btnMenu;
     private JTextField txtUserName;
     private JTextField txtEmail;
     private JPasswordField pswPassword;
     private JPasswordField pswConfirm;
     protected JPanel panel3;
     protected JRadioButton rdoAdmin;
-    //JFrame frame;
     private User user = new User();
     mariadb db_connector = new mariadb();
 

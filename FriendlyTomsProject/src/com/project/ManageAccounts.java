@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 public class ManageAccounts extends TemplateGui {
-    private JButton btnView;
     private JButton btnDelete;
     private JButton btnCreate;
     private JPanel panel2;
@@ -16,7 +15,6 @@ public class ManageAccounts extends TemplateGui {
     private AdminCreation adminCreation;
     private JScrollPane pane;
     private JPanel frame2 = new JPanel();
-    private mariadb db_connector = new mariadb();
     DefaultTableModel model = new DefaultTableModel();
 
     public ManageAccounts(){super("Manage Accounts", "Main Menu", "AdminMenu");}
@@ -54,7 +52,7 @@ public class ManageAccounts extends TemplateGui {
 
         Object[] columns = {"UID","username", "First Name", "Last Name"};
         model.setColumnIdentifiers(columns);
-        ResultSet read_query = db_connector.prepared_read_query("SELECT * FROM users");
+        ResultSet read_query = database.prepared_read_query("SELECT * FROM users");
 
         try
         {
@@ -89,7 +87,7 @@ public class ManageAccounts extends TemplateGui {
                     "Are you sure you wish to delete the selected user?", "Delete user conformation", dialogButton);
             if(dialogResult == 0) {
                 //remove from database
-                ResultSet read_query = db_connector.prepared_read_query("DELETE FROM users WHERE user_id=?", model.getValueAt(i, 0).toString());
+                ResultSet read_query = database.prepared_read_query("DELETE FROM users WHERE user_id=?", model.getValueAt(i, 0).toString());
                 // remove a row from jtable
                 model.removeRow(i);
                 setJtable();

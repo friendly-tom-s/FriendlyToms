@@ -11,9 +11,7 @@ public class AdminMenu extends TemplateGui {
     private JButton btnAccounts;
     private JPanel panel2;
 
-    public AdminMenu(){super("Admin Menu", "Logout", "LoginForm");
-
-    }
+    public AdminMenu(){super("Admin Menu", "Logout", "LoginForm");}
 
     public void displayAdminMenu() {
         frame.add(panel2, BorderLayout.CENTER);
