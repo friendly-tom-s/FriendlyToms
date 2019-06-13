@@ -8,6 +8,7 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 
 public class DatabaseHash {
+
     public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException
     {
         String  originalPassword = "password";

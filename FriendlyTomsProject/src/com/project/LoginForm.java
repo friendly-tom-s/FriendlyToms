@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.util.regex.Pattern;
 
 public class LoginForm extends TemplateGui{
@@ -57,6 +59,7 @@ public class LoginForm extends TemplateGui{
         int user_id = 0;
         String hash = "";
         String salt = "";
+
 
         try {
             if(!read_query.next()) {
@@ -122,9 +125,9 @@ public class LoginForm extends TemplateGui{
 
     }
 
-    public void saveSessionUser(String name, String userID){
+    public void saveSessionUser(String userID){
         database.prepared_write_query("DELETE FROM loggedSession");
-        database.prepared_write_query("INSERT INTO loggedSession (name, userID) VALUES (?,?)", name, userID);
+        database.prepared_write_query("INSERT INTO loggedSession (userID) VALUES (?)", userID);
     }
 
     public void setUserAttributes(){
@@ -135,7 +138,7 @@ public class LoginForm extends TemplateGui{
         boolean credCheck  = initCompare();
         System.out.println("CHECK THIS VAR" + adminPriv);
         if (credCheck){
-            saveSessionUser(user.getUsername(), userID);
+            saveSessionUser(userID);
             if(adminPriv== 1){
                 frame.dispose();
                 AdminMenu adminMenu = new AdminMenu();

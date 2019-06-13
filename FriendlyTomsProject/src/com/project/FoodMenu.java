@@ -63,5 +63,10 @@ public class FoodMenu extends TemplateGui {
         return model;
     }
 
+    public int addTen(int integerAdd){
+        int newInt = integerAdd + 10;
+        return newInt;
+    }
+
 
 }

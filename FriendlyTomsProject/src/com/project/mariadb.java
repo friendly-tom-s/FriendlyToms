@@ -74,7 +74,7 @@ public class mariadb {
         {
             System.err.println("Got an exception! EXITING ");
             System.err.println(e.getMessage());
-            System.exit(1);
+            //if broken program, I removed a system.exit from here - JB.
         }
 
         return null;
