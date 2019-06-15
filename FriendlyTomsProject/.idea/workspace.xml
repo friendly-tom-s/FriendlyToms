@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97401e9f-1559-4455-8081-76c68f1d89db" name="Default Changelist" comment="Added account management">
-      <change afterPath="$PROJECT_DIR$/src/com/tests/BookingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tests/FoodMenuTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tests/MariaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tests/TableBookingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tests/TemplateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mariadb_java_client_2_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mariadb_java_client_2_3_0.xml" afterDir="false" />
+    <list default="true" id="97401e9f-1559-4455-8081-76c68f1d89db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FriendlyTomsProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FriendlyTomsProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb-java-client-2.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/DatabaseHash.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/DatabaseHash.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/AdminMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/AdminMenu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/AdminMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/AdminMenu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/AdminMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/AdminMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/CreateAccount$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/CreateAccount$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/FoodMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/FoodMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/LoginForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/LoginForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/LoginForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/LoginForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/LoginForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/LoginForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/mariadb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/mariadb.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/DatabaseHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/DatabaseHash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/FoodMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/FoodMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/LoginForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/mariadb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/mariadb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/FoodOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/FoodOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/ManageAccounts$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/ManageAccounts$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/ManageAccounts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/ManageAccounts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/ManageStock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/ManageStock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/OrderHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/OrderHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/TableBooking.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/TableBooking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/UserMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/UserMenu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/UserMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/UserMenu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/UserMenu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/UserMenu$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/UserMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/UserMenu.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,28 +31,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/DatabaseHash.java">
+        <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="85">
+              <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
+              <folding>
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#663#664#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/project/ViewAccounts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/mariadb.java">
+        <entry file="file://$PROJECT_DIR$/src/com/project/OrderHistory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="76" column="72" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="72" />
+            <state relative-caret-position="552">
+              <caret line="100" column="79" selection-start-line="100" selection-start-column="79" selection-end-line="100" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/ManageAccounts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1504">
+              <caret line="95" column="125" selection-start-line="95" selection-start-column="125" selection-end-line="95" selection-end-column="125" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1374#1375#0" expanded="true" />
+                <element signature="e#1426#1427#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tests/BookingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="102" selection-start-line="10" selection-start-column="102" selection-end-line="10" selection-end-column="102" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tests/FoodOrderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="13" column="117" selection-start-line="13" selection-start-column="117" selection-end-line="13" selection-end-column="117" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,10 +105,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tests/TableBookingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="33" />
+            <state relative-caret-position="374">
+              <caret line="37" column="55" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="74" column="91" selection-start-line="74" selection-start-column="91" selection-end-line="74" selection-end-column="91" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#532#533#0" expanded="true" />
+                <element signature="e#595#596#0" expanded="true" />
+                <element signature="e#1033#1034#0" expanded="true" />
+                <element signature="e#1067#1068#0" expanded="true" />
+                <element signature="e#1217#1218#0" expanded="true" />
+                <element signature="e#1262#1263#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/TemplateGui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+            <state relative-caret-position="453">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,52 +145,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.java">
+        <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/tests/TemplateTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+            <state relative-caret-position="73">
+              <caret line="175" column="66" selection-start-line="175" selection-start-column="66" selection-end-line="175" selection-end-column="66" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+                <element signature="e#839#840#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tests/MariaTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="126" column="198" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="198" />
             </state>
           </provider>
         </entry>
@@ -153,6 +177,7 @@
       <find>dialog</find>
       <find>dialogbut</find>
       <find>table</find>
+      <find>sette</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,36 +195,40 @@
         <option value="$PROJECT_DIR$/src/ManageStock.java" />
         <option value="$PROJECT_DIR$/src/com/project/Basket.form" />
         <option value="$PROJECT_DIR$/src/com/project/TableBooking.form" />
-        <option value="$PROJECT_DIR$/src/com/project/UserMenu.java" />
         <option value="$PROJECT_DIR$/src/com/project/ManageAccounts.form" />
         <option value="$PROJECT_DIR$/src/com/project/accountManagement.java" />
         <option value="$PROJECT_DIR$/src/com/project/OrderHistory.form" />
-        <option value="$PROJECT_DIR$/src/com/project/ManageAccounts.java" />
+        <option value="$PROJECT_DIR$/src/com/project/ManageStock.form" />
+        <option value="$PROJECT_DIR$/src/com/project/FoodOrder.form" />
+        <option value="$PROJECT_DIR$/src/com/project/FoodMenu.form" />
+        <option value="$PROJECT_DIR$/src/com/tests/MainTests.java" />
+        <option value="$PROJECT_DIR$/src/com/tests/TableBookingTest.java" />
+        <option value="$PROJECT_DIR$/src/com/tests/LoginFormTest.java" />
+        <option value="$PROJECT_DIR$/src/com/tests/MariaTest.java" />
+        <option value="$PROJECT_DIR$/src/com/tests/TemplateTest.java" />
+        <option value="$PROJECT_DIR$/src/com/tests/OrderHistoryTest.java" />
+        <option value="$PROJECT_DIR$/src/com/tests/FoodMenuTest.java" />
+        <option value="$PROJECT_DIR$/src/com/project/LoginForm.java" />
+        <option value="$PROJECT_DIR$/src/com/project/TemplateGui.java" />
         <option value="$PROJECT_DIR$/src/com/project/AdminCreation.java" />
         <option value="$PROJECT_DIR$/src/com/project/AdminViewOrder.java" />
         <option value="$PROJECT_DIR$/src/com/project/Booking.java" />
+        <option value="$PROJECT_DIR$/src/com/project/DatabaseHash.java" />
+        <option value="$PROJECT_DIR$/src/com/project/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/project/mariadb.java" />
+        <option value="$PROJECT_DIR$/src/com/project/User.java" />
         <option value="$PROJECT_DIR$/src/com/project/AdminMenu.java" />
         <option value="$PROJECT_DIR$/src/com/project/Basket.java" />
         <option value="$PROJECT_DIR$/src/com/project/CreateAccount.java" />
+        <option value="$PROJECT_DIR$/src/com/project/FoodMenu.java" />
+        <option value="$PROJECT_DIR$/src/com/project/FoodOrder.java" />
+        <option value="$PROJECT_DIR$/src/com/project/ManageAccounts.java" />
         <option value="$PROJECT_DIR$/src/com/project/ManageStock.java" />
         <option value="$PROJECT_DIR$/src/com/project/OrderHistory.java" />
         <option value="$PROJECT_DIR$/src/com/project/TableBooking.java" />
-        <option value="$PROJECT_DIR$/src/com/project/TemplateGui.java" />
-        <option value="$PROJECT_DIR$/src/com/project/ManageStock.form" />
-        <option value="$PROJECT_DIR$/src/com/project/FoodOrder.form" />
-        <option value="$PROJECT_DIR$/src/com/project/FoodOrder.java" />
-        <option value="$PROJECT_DIR$/src/com/project/FoodMenu.form" />
-        <option value="$PROJECT_DIR$/src/com/tests/MainTests.java" />
-        <option value="$PROJECT_DIR$/src/com/project/FoodMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/FoodMenuTest.java" />
+        <option value="$PROJECT_DIR$/src/com/project/UserMenu.java" />
         <option value="$PROJECT_DIR$/src/com/tests/BookingTest.java" />
-        <option value="$PROJECT_DIR$/src/com/project/DatabaseHash.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/TableBookingTest.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/LoginFormTest.java" />
-        <option value="$PROJECT_DIR$/src/com/project/mariadb.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/MariaTest.java" />
-        <option value="$PROJECT_DIR$/src/com/project/LoginForm.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/TemplateTest.java" />
+        <option value="$PROJECT_DIR$/src/com/tests/FoodOrderTest.java" />
       </list>
     </option>
   </component>
@@ -221,7 +250,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,14 +275,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminMenu" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
@@ -293,47 +314,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="FoodMenu" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="FoodOrder" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="LoginForm" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="ManageAccounts" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="ManageStock" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="OrderHistory" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
@@ -364,6 +345,14 @@
               <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewAccounts" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -374,7 +363,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -389,11 +378,11 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560451984876" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560614006766" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/hamcrest-2.1.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/junit-4.13-beta-3.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -424,7 +413,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TemplateTest.test_that_the_correct_user_is_stored_and_retrieved">
+  <component name="RunManager" selected="JUnit.FoodOrderTest.test_that_all_drink_dropdown_has_right_amount">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.project.Main" />
       <module name="FriendlyTomsProject" />
@@ -438,7 +427,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MariaTest.test_that_DB_returns_correct_first_col_with_select_statement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FriendlyTomsProject" />
       <extension name="coverage">
         <pattern>
@@ -447,14 +436,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.tests.MariaTest" />
-      <option name="METHOD_NAME" value="test_that_DB_returns_correct_first_col_with_select_statement" />
+      <option name="MAIN_CLASS_NAME" value="com.tests.FoodOrderTest" />
+      <option name="METHOD_NAME" value="test_that_all_drink_dropdown_has_right_amount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MariaTest.test_that_incorrect_SQL_statement_throws_error" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_object_type" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FriendlyTomsProject" />
       <extension name="coverage">
         <pattern>
@@ -463,14 +452,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.tests.MariaTest" />
-      <option name="METHOD_NAME" value="test_that_incorrect_SQL_statement_throws_error" />
+      <option name="MAIN_CLASS_NAME" value="com.tests.OrderHistoryTest" />
+      <option name="METHOD_NAME" value="test_that_admin_users_can_see_admin_columns_with_object_type" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TableBookingTest.test_that_an_invalid_date_returns_false" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_resultset_type" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FriendlyTomsProject" />
       <extension name="coverage">
         <pattern>
@@ -479,14 +468,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.tests.TableBookingTest" />
-      <option name="METHOD_NAME" value="test_that_an_invalid_date_returns_false" />
+      <option name="MAIN_CLASS_NAME" value="com.tests.OrderHistoryTest" />
+      <option name="METHOD_NAME" value="test_that_admin_users_can_see_admin_columns_with_resultset_type" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TemplateTest.test_that_the_correct_user_is_stored_and_retrieved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.tests in FriendlyTomsProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FriendlyTomsProject" />
       <extension name="coverage">
         <pattern>
@@ -495,20 +484,18 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.tests.TemplateTest" />
-      <option name="METHOD_NAME" value="test_that_the_correct_user_is_stored_and_retrieved" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TemplateTest.test_that_the_correct_user_is_stored_and_retrieved" />
+        <item itemvalue="JUnit.FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MariaTest.test_that_incorrect_SQL_statement_throws_error" />
-        <item itemvalue="JUnit.MariaTest.test_that_DB_returns_correct_first_col_with_select_statement" />
-        <item itemvalue="JUnit.TableBookingTest.test_that_an_invalid_date_returns_false" />
+        <item itemvalue="JUnit.com.tests in FriendlyTomsProject" />
+        <item itemvalue="JUnit.OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_object_type" />
+        <item itemvalue="JUnit.OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_resultset_type" />
       </list>
     </recent_temporary>
   </component>
@@ -542,7 +529,8 @@
       <workItem from="1560436914793" duration="2459000" />
       <workItem from="1560439436899" duration="234000" />
       <workItem from="1560439725471" duration="401000" />
-      <workItem from="1560445345280" duration="6493000" />
+      <workItem from="1560445345280" duration="14270000" />
+      <workItem from="1560543407034" duration="13442000" />
     </task>
     <task id="LOCAL-00001" summary="Added some basic logic to the booking form">
       <created>1557865896566</created>
@@ -621,43 +609,64 @@
       <option name="project" value="LOCAL" />
       <updated>1560368968843</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Created some unit tests - this adds a load.&#10;&#10;So that I remember - You will need Junit 4 and &quot;Hamcrest&quot;.&#10;&#10;Download files should look like:&#10;- &quot;hamcrest-2.1.jar&quot;&#10;- &quot;junit-4.13-beta-3.jar&quot;&#10;&#10;These need to be added in project structure. Ctrl+Alt+Shift+S and then modules &gt; dependencies. &#10;&#10;Good luck xx">
+      <created>1560452184614</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560452184615</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Started added comments">
+      <created>1560598498284</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1560598498284</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added all comments.">
+      <created>1560613702852</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1560613702852</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TableBookingTest_test_that_a_valid_date_returns_true - 2019.06.13 at 18h 46m 53s.xml">
-      <configuration name="TableBookingTest.test_that_a_valid_date_returns_true" configurationId="JUnit" />
+    <history-entry file="OrderHistoryTest_test_that_admin_users_can_see_admin_columns_with_object_type - 2019.06.14 at 14h 57m 09s.xml">
+      <configuration name="OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_object_type" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TableBookingTest_test_that_an_invalid_date_returns_false - 2019.06.13 at 18h 48m 13s.xml">
-      <configuration name="TableBookingTest.test_that_an_invalid_date_returns_false" configurationId="JUnit" />
+    <history-entry file="OrderHistoryTest_test_that_admin_users_can_see_admin_columns_with_object_type - 2019.06.14 at 14h 58m 16s.xml">
+      <configuration name="OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_object_type" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MariaTest_test_that_DB_returns_correct_first_col_with_select_statement - 2019.06.13 at 19h 08m 23s.xml">
-      <configuration name="MariaTest.test_that_DB_returns_correct_first_col_with_select_statement" configurationId="JUnit" />
+    <history-entry file="com_tests_in_FriendlyTomsProject - 2019.06.14 at 15h 00m 49s.xml">
+      <configuration name="com.tests in FriendlyTomsProject" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MariaTest_test_that_DB_returns_correct_first_col_with_select_statement - 2019.06.13 at 19h 08m 46s.xml">
-      <configuration name="MariaTest.test_that_DB_returns_correct_first_col_with_select_statement" configurationId="JUnit" />
+    <history-entry file="FoodOrderTest_test_that_all_drink_dropdown_has_right_amount - 2019.06.14 at 22h 10m 01s.xml">
+      <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MariaTest_test_that_incorrect_SQL_statement_throws_error - 2019.06.13 at 19h 11m 09s.xml">
-      <configuration name="MariaTest.test_that_incorrect_SQL_statement_throws_error" configurationId="JUnit" />
+    <history-entry file="FoodOrderTest_test_that_all_drink_dropdown_has_right_amount - 2019.06.14 at 22h 12m 26s.xml">
+      <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MariaTest_test_that_incorrect_SQL_statement_throws_error - 2019.06.13 at 19h 12m 21s.xml">
-      <configuration name="MariaTest.test_that_incorrect_SQL_statement_throws_error" configurationId="JUnit" />
+    <history-entry file="FoodOrderTest_test_that_all_drink_dropdown_has_right_amount - 2019.06.14 at 22h 15m 23s.xml">
+      <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MariaTest_test_that_incorrect_SQL_statement_throws_error - 2019.06.13 at 19h 15m 45s.xml">
-      <configuration name="MariaTest.test_that_incorrect_SQL_statement_throws_error" configurationId="JUnit" />
+    <history-entry file="FoodOrderTest_test_that_all_drink_dropdown_has_right_amount - 2019.06.14 at 22h 17m 40s.xml">
+      <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TemplateTest_test_that_the_correct_user_is_stored_and_retrieved - 2019.06.13 at 19h 25m 54s.xml">
-      <configuration name="TemplateTest.test_that_the_correct_user_is_stored_and_retrieved" configurationId="JUnit" />
+    <history-entry file="com_tests_in_FriendlyTomsProject - 2019.06.15 at 11h 30m 39s.xml">
+      <configuration name="com.tests in FriendlyTomsProject" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TemplateTest_test_that_the_correct_user_is_stored_and_retrieved - 2019.06.13 at 19h 43m 24s.xml">
-      <configuration name="TemplateTest.test_that_the_correct_user_is_stored_and_retrieved" configurationId="JUnit" />
+    <history-entry file="com_tests_in_FriendlyTomsProject - 2019.06.15 at 11h 30m 52s.xml">
+      <configuration name="com.tests in FriendlyTomsProject" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TemplateTest_test_that_the_correct_user_is_stored_and_retrieved - 2019.06.13 at 19h 46m 39s.xml">
-      <configuration name="TemplateTest.test_that_the_correct_user_is_stored_and_retrieved" configurationId="JUnit" />
+    <history-entry file="FoodOrderTest_test_that_all_drink_dropdown_has_right_amount - 2019.06.15 at 16h 47m 03s.xml">
+      <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109158000" />
+    <option name="totallyTimeSpent" value="130377000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -670,14 +679,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.18532526" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.18683812" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" weight="0.3289689" />
@@ -685,11 +693,11 @@
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50075644" side_tool="true" weight="0.2536825" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32569557" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49924356" visible="true" weight="0.049099836" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.23567921" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.049099836" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49924356" visible="true" weight="0.15220949" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.10801964" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32569557" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32502708" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Theme Preview" order="0" />
@@ -748,7 +756,10 @@
     <MESSAGE value="Added sitting checks for table booking" />
     <MESSAGE value="Added some sick user order stuff" />
     <MESSAGE value="Added account management" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added account management" />
+    <MESSAGE value="Created some unit tests - this adds a load.&#10;&#10;So that I remember - You will need Junit 4 and &quot;Hamcrest&quot;.&#10;&#10;Download files should look like:&#10;- &quot;hamcrest-2.1.jar&quot;&#10;- &quot;junit-4.13-beta-3.jar&quot;&#10;&#10;These need to be added in project structure. Ctrl+Alt+Shift+S and then modules &gt; dependencies. &#10;&#10;Good luck xx" />
+    <MESSAGE value="Started added comments" />
+    <MESSAGE value="Added all comments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added all comments." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -789,23 +800,6 @@
     <option name="serverIp" value="localhost" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="615" selection-start-line="615" selection-end-line="615" />
-          <folding>
-            <element signature="e#10648#10649#0" expanded="true" />
-            <element signature="e#10678#10679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Basket.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/ViewOrders.java" />
     <entry file="file://$PROJECT_DIR$/src/com/project/ViewOrders.form" />
     <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.form">
@@ -829,13 +823,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/accountManagement.java" />
     <entry file="file://$PROJECT_DIR$/src/com/project/GUITemplate.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/OrderHistory.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
@@ -844,13 +831,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.form">
       <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ViewAccounts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.desktop/javax/swing/JTabbedPane.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -888,37 +868,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminCreation.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tests/LoginFormTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/tests/OrderHistoryTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/tests/MariaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="391">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/User.java">
+    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tests/FoodMenuTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/junit-4.13-beta-3.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="334" selection-start-line="334" selection-end-line="334" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tests/TemplateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="31" column="55" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/mariadb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="96" column="40" selection-start-line="96" selection-end-line="97" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97">
-          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        <state relative-caret-position="340">
+          <caret line="20" column="111" selection-start-line="20" selection-start-column="111" selection-end-line="20" selection-end-column="111" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/DatabaseHash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/Booking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+          <folding>
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/AdminViewOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding>
+            <element signature="e#113#114#0" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/AdminCreation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="97" selection-start-line="4" selection-start-column="97" selection-end-line="4" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/Basket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
-          <caret line="37" column="64" lean-forward="true" selection-start-line="37" selection-end-line="38" />
+        <state relative-caret-position="357">
+          <caret line="21" column="80" selection-start-line="21" selection-start-column="80" selection-end-line="21" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="72" column="11" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -931,8 +1007,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+        <state relative-caret-position="1071">
+          <caret line="63" column="33" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -941,120 +1017,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        <state relative-caret-position="2380">
+          <caret line="140" column="52" selection-start-line="140" selection-start-column="52" selection-end-line="140" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4107#4108#0" expanded="true" />
+            <element signature="e#4153#4154#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/ManageAccounts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="75" column="33" selection-start-line="75" selection-end-line="76" />
+        <state relative-caret-position="1504">
+          <caret line="95" column="125" selection-start-line="95" selection-start-column="125" selection-end-line="95" selection-end-column="125" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/OrderHistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-128">
-          <caret line="28" column="30" selection-start-line="28" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tests/BookingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1374#1375#0" expanded="true" />
+            <element signature="e#1426#1427#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+        <state relative-caret-position="161">
+          <caret line="74" column="91" selection-start-line="74" selection-start-column="91" selection-end-line="74" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1217#1218#0" expanded="true" />
+            <element signature="e#1262#1263#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.java">
+    <entry file="file://$PROJECT_DIR$/src/com/project/OrderHistory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-774">
-          <caret line="63" column="56" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tests/FoodMenuTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminViewOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Booking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/DatabaseHash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tests/LoginFormTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/mariadb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="76" column="72" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tests/MariaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+        <state relative-caret-position="552">
+          <caret line="100" column="79" selection-start-line="100" selection-start-column="79" selection-end-line="100" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1063,8 +1074,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tests/TableBookingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="374">
+          <caret line="37" column="55" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="175" column="66" selection-start-line="175" selection-start-column="66" selection-end-line="175" selection-end-column="66" />
+          <folding>
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/TemplateGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1073,39 +1105,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+        <state relative-caret-position="85">
+          <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
+          <folding>
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.java">
+    <entry file="file://$PROJECT_DIR$/src/com/project/ViewAccounts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="126" column="198" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="198" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/TemplateGui.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tests/BookingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+        <state relative-caret-position="170">
+          <caret line="10" column="102" selection-start-line="10" selection-start-column="102" selection-end-line="10" selection-end-column="102" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tests/FoodOrderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tests/TemplateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+        <state relative-caret-position="215">
+          <caret line="13" column="117" selection-start-line="13" selection-start-column="117" selection-end-line="13" selection-end-column="117" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
