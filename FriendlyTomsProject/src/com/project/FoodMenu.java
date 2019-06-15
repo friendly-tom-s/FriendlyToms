@@ -5,6 +5,12 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.sql.ResultSet;
 
+/**
+ * This class populates the menu with all the food in the database.
+ *
+ * It categorises them according to if they are Starter, Main, Dessert or Drink.
+ */
+
 public class FoodMenu extends TemplateGui {
     private JPanel panel1;
     private JTable tblStarter;
@@ -20,6 +26,13 @@ public class FoodMenu extends TemplateGui {
 
     public FoodMenu(){super("Menu", "Back", "FoodOrder");}
 
+    /**
+     * Creates the GUI and populates four separate JTables with the correct foods.
+     *
+     * These are then all given scroll bars and added to the GUI.
+     *
+     * Each JTable has a separate scroll bar.
+     */
     public void displayMenu(){
         DisplayGenericElements();
         tblStarter.setModel(getMenu("starter"));
@@ -41,6 +54,15 @@ public class FoodMenu extends TemplateGui {
         frame.add(tabbedPane1);
     }
 
+    /**
+     * This is used to get the table model including all the food items with the given food category.
+     *
+     * @param menuOption
+     * This is either Starter, Main, Dessert or Drink. It is a column in the database.
+     *
+     * @return
+     * The TableModel is returned which will include all food items.
+     */
     public DefaultTableModel getMenu(String menuOption){
         DefaultTableModel model = new DefaultTableModel();
         Object[] columns = {"FoodName","Description", "Cals"};

@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * This is simply a Gui that has buttons taking the user to the next Guis.
+ */
 public class UserMenu extends TemplateGui {
     private JButton btnOrderFood;
     private JButton btnHistory;

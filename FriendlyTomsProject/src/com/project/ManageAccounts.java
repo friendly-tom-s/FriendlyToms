@@ -7,6 +7,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
+
+/**
+ * This class is used to mangage all accounts, this is both admin and user accounts. It can only be accessed from the Admin Menu.
+ */
 public class ManageAccounts extends TemplateGui {
     private JButton btnDelete;
     private JButton btnCreate;
@@ -19,11 +23,16 @@ public class ManageAccounts extends TemplateGui {
 
     public ManageAccounts(){super("Manage Accounts", "Main Menu", "AdminMenu");}
 
+    /**
+     * This is a slightly different way of creating the Gui than with other classes due to the use of a JPanel and a JScrollPane.
+     * Because they handle differently they could not easily be added to a pre-existing panel and thus a new one had to be created,
+     * this new pane is then added to the th existing frame from TemplateGui.
+     *
+     * The reason for this extra work as opposed to using a Jlist is because a scrollbar can be implemented well.
+     */
     public void DisplayManageAccounts(){
-
         DisplayGenericElements();
         setJtable();
-        //table.setSize(200, 200);
         pane = new JScrollPane(table);
         frame2.add(pane);
         frame2.add(btnCreate);
@@ -48,6 +57,12 @@ public class ManageAccounts extends TemplateGui {
         });
     }
 
+    /**
+     * This is used to set the columns and add the data to the JTable, the data is taken from the users table in
+     * the database.
+     *
+     * The data is set to the JTable using a model.
+     */
     public void setJtable(){
 
         Object[] columns = {"UID","username", "First Name", "Last Name"};
@@ -72,12 +87,14 @@ public class ManageAccounts extends TemplateGui {
             System.err.println(e.getMessage());
             System.exit(1);
         }
-
         // set the model to the table
         table.setModel(model);
 
     }
 
+    /**
+     * This function will remove the item from the database from the selected index if the button is clicked in the database.
+     */
     public void deleteSelectedItem(){
         table.removeAll();
         int i = table.getSelectedRow();

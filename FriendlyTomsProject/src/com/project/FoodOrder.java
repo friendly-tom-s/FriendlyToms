@@ -8,6 +8,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * This class is used for the food ordering, it moves all selected items to the basket.
+ */
+
 public class FoodOrder extends TemplateGui {
     private JComboBox cboStarter;
     private JPanel panel2;
@@ -29,6 +33,9 @@ public class FoodOrder extends TemplateGui {
 
     }
 
+    /**
+     * Adds the generic Gui elements and adds the action listeners for the buttons.
+     */
     public void displayFoodOrder() {
 
         setFoodTypes();
@@ -36,6 +43,7 @@ public class FoodOrder extends TemplateGui {
 
         btnOrder.addActionListener(new ActionListener() {
             @Override
+            //This gets the selected items from the combo boxes and adds them to an array.
             public void actionPerformed(ActionEvent e) {
                 String[] chosenItems = {(cboStarter.getSelectedItem()).toString(),(cboMain.getSelectedItem()).toString(),
                         (cboDessert.getSelectedItem()).toString(),(cboDrink.getSelectedItem()).toString()};
@@ -62,6 +70,12 @@ public class FoodOrder extends TemplateGui {
         DisplayGenericElements();
     }
 
+    /**
+     * This moves every item in the array into the basket table in the database.
+     *
+     * @param chosenItems
+     * This is the array of chosen items.
+     */
     public void addItemsToDatabase(String[] chosenItems){
         for (String var:chosenItems
              ) {
@@ -78,6 +92,11 @@ public class FoodOrder extends TemplateGui {
         }
     }
 
+    /**
+     * A switch statement is used to sort all foods into the correct combo box depending on their category.
+     *
+     * I.e Starter, Main, Dessert or Drink.
+     */
     public void setFoodTypes(){
         ResultSet foodQuery = database.prepared_read_query("SELECT * FROM menu");
 
@@ -114,6 +133,13 @@ public class FoodOrder extends TemplateGui {
         }//try
     }
 
+    /**
+     * This was created for the test. This is a bad and inefficient way of writing unit tests but the code was not written in the correct
+     * way to start with. This is called using a reflection.
+     *
+     * @return
+     * Returns the amount of items in the combo box.
+     */
     public int returnValuesOfDrinkCBO(){
         return cboDrink.getItemCount();
     }

@@ -18,9 +18,11 @@ public class Basket extends TemplateGui {
 
     public Basket(){super("Basket", "Back", "FoodOrder");}
 
+    /**
+     * A typical class that inherits the generic elements from the template gui.
+     */
     public void displayElements(){
         frame.add(panel2, BorderLayout.CENTER);
-        System.out.println(getListItems());
         list1.setModel(getListItems());
         DisplayGenericElements();
         btnOrder.addActionListener(new ActionListener() {
@@ -29,6 +31,14 @@ public class Basket extends TemplateGui {
         });
     }
 
+    /**
+     * Seeing as the items in the "basket" table in the database only uses the foodID and not the name of the food this method
+     * gets the items and names from the correct places in the database. It then adds this to a list model so that it can be
+     * added to a JList.
+     *
+     * @return
+     * A ListModel is returned with all the food names.
+     */
     public DefaultListModel getListItems(){
         DefaultListModel JListItems = new DefaultListModel();
         ResultSet listItems = database.prepared_read_query("SELECT itemID FROM basket");
@@ -52,6 +62,14 @@ public class Basket extends TemplateGui {
         return JListItems;
     }
 
+    /**
+     * When the user confirms that everything in the basket is what they want to order, the confirm order button gets everything from
+     * the basket table and adds them to the order table.
+     *
+     * The stock level is also reduced by however many items have been ordered.
+     *
+     * The basket is not cleared because this is already done when the user logs in.
+     */
     private void makeOrder(){
         ResultSet listItems = database.prepared_read_query("SELECT * FROM basket");
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");

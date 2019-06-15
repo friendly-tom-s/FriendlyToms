@@ -10,6 +10,9 @@ import static org.junit.Assert.assertEquals;
 
 public class FoodOrderTest {
 
+    /**
+     * This makes sure that the cbos are handling as expected. It checks that there is the expected amount in the DB.
+     */
     @Test
     public void test_that_all_drink_dropdown_has_right_amount(){
         FoodOrder foodOrder = new FoodOrder();
