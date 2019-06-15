@@ -103,6 +103,7 @@ public class FoodOrder extends TemplateGui {
                     case "drink":
                         cboDrink.addItem(name);
                         break;
+
                 }
             }
         }
@@ -111,5 +112,9 @@ public class FoodOrder extends TemplateGui {
             System.err.println("Got an exception!");
             System.err.println(a.getMessage());
         }//try
+    }
+
+    public int returnValuesOfDrinkCBO(){
+        return cboDrink.getItemCount();
     }
 }

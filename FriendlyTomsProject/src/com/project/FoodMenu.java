@@ -39,9 +39,6 @@ public class FoodMenu extends TemplateGui {
         paneDrink = new JScrollPane(tblDrink);
         tabbedPane1.add("Drinks", paneDrink);
         frame.add(tabbedPane1);
-
-
-
     }
 
     public DefaultTableModel getMenu(String menuOption){
@@ -63,10 +60,7 @@ public class FoodMenu extends TemplateGui {
         return model;
     }
 
-    public int addTen(int integerAdd){
-        int newInt = integerAdd + 10;
-        return newInt;
-    }
+
 
 
 }

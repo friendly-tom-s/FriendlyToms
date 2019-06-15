@@ -1,5 +1,9 @@
 package com.project;
 
+/**
+ * This is where all the user data is set.
+ */
+
 public class User {
 
     private String first_name;

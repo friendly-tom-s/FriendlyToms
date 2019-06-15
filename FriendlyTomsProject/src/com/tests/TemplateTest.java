@@ -12,26 +12,35 @@ public class TemplateTest {
 
     private TemplateGui templateGui = new TemplateGui("testClass", "testClass", "testClass");
     private mariadb database = new mariadb();
+    LoginForm loginForm = new LoginForm();
 
     @Test
     public void test_that_the_correct_user_is_stored_and_retrieved(){
 
         String createdTestIndex = setDatabaseForTest();
-
-        LoginForm loginForm = new LoginForm();
         loginForm.saveSessionUser(createdTestIndex);
 
         String sessionUserIndex = templateGui.getUser();
         String sessionUserString = templateGui.getUserName(sessionUserIndex);
 
-        assertEquals("TestUser", sessionUserString);
+        assertEquals("TestUserTester", sessionUserString);
 
         removeTestsFromDB(createdTestIndex);
     }
 
+    @Test
+    public void test_that_the_correct_index_is_returned(){
+        String newTestIndex = setDatabaseForTest();
+        loginForm.saveSessionUser(newTestIndex);
+        String newComparisonIndex = templateGui.getUser();
+
+        assertEquals(newTestIndex,newComparisonIndex);
+        removeTestsFromDB(newTestIndex);
+    }
+
     public String setDatabaseForTest(){
         String testIndex = null;
-        String testUsername = "TestUser";
+        String testUsername = "TestUserTester";
         String testSalt = "TestSalt";
         String testHash = "TestHash";
         String testAdmin = "0";

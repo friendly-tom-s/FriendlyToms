@@ -1,5 +1,8 @@
 package com.project;
 
+/**
+ * This class is simply where the values are set for the booking.
+ */
 public class Booking {
 
     private String date;

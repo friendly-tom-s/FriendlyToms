@@ -9,20 +9,15 @@ import java.security.spec.InvalidKeySpecException;
 
 public class DatabaseHash {
 
-    public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException
-    {
-        String  originalPassword = "password";
-        String generatedSecuredPasswordHash = generateStorngPasswordHash(originalPassword);
-        System.out.println(generatedSecuredPasswordHash);
+//    public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException
+//    {
+//        String  originalPassword = "password";
+//        String generatedSecuredPasswordHash = generateStorngPasswordHash(originalPassword);
+//        boolean matched = validatePassword("password", generatedSecuredPasswordHash);
+//        matched = validatePassword("password1", generatedSecuredPasswordHash);
+//    }
 
-        boolean matched = validatePassword("password", generatedSecuredPasswordHash);
-        System.out.println(matched);
-
-        matched = validatePassword("password1", generatedSecuredPasswordHash);
-        System.out.println(matched);
-    }//main
-
-    public static String generateStorngPasswordHash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException
+    public String generateStorngPasswordHash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException
     {
         int iterations = 1000;
         char[] chars = password.toCharArray();
@@ -32,18 +27,17 @@ public class DatabaseHash {
         SecretKeyFactory skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
         byte[] hash = skf.generateSecret(spec).getEncoded();
         return iterations + ":" + toHex(salt) + ":" + toHex(hash);
-    }//generateStorngPasswordHash
-
-    private static byte[] getSalt() throws NoSuchAlgorithmException
+    }
+    private byte[] getSalt() throws NoSuchAlgorithmException
     {
         SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
         byte[] salt = new byte[16];
         sr.nextBytes(salt);
         return salt;
-    }//getSalt
+    }
 
     //Hex to and from classes
-    private static String toHex(byte[] array) throws NoSuchAlgorithmException
+    private String toHex(byte[] array) throws NoSuchAlgorithmException
     {
         BigInteger bi = new BigInteger(1, array);
         String hex = bi.toString(16);
@@ -55,7 +49,7 @@ public class DatabaseHash {
             return hex;
         }
     }
-    private static byte[] fromHex(String hex) throws NoSuchAlgorithmException
+    private byte[] fromHex(String hex) throws NoSuchAlgorithmException
     {
         byte[] bytes = new byte[hex.length() / 2];
         for(int i = 0; i<bytes.length ;i++)
@@ -66,7 +60,7 @@ public class DatabaseHash {
     }
 
     //authenticate the password
-    public static boolean validatePassword(String originalPassword, String storedPassword) throws NoSuchAlgorithmException, InvalidKeySpecException
+    public boolean validatePassword(String originalPassword, String storedPassword) throws NoSuchAlgorithmException, InvalidKeySpecException
     {
         String[] parts = storedPassword.split(":");
         int iterations = Integer.parseInt(parts[0]);

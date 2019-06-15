@@ -50,7 +50,6 @@ public class Basket extends TemplateGui {
         catch (Exception a){System.out.println("Something failed at 1");}//try
 
         return JListItems;
-
     }
 
     private void makeOrder(){

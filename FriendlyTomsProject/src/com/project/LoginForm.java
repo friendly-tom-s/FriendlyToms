@@ -9,6 +9,10 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.regex.Pattern;
 
+/**
+ * This class is used for users to login and to make sure that the username is saved into the "loggedUsers" database table
+ * so that the program can access the database in the future.
+ */
 public class LoginForm extends TemplateGui{
     private JPanel panel2;
     private JButton btnCreate;
@@ -19,54 +23,54 @@ public class LoginForm extends TemplateGui{
     private int adminPriv= 0 ;
     private String userID;
 
-
     public LoginForm(){
         super("Login Form", "Quit", "null");}
 
+    /**
+     * This functions makes sure that the text has been entered into the text boxes
+     *
+     * @return
+     * A boolean is returned containing either True or False.
+     *
+     */
     public Boolean verifyInput(){
-
-        System.out.println("Test");
 
         boolean input_errors = false;
 
         if(Pattern.matches("[a-zA-Z0-9]{3,20}", user.getUsername())) {
-            txtUsername.setText("Username:");
+
         } else {
-            txtUsername.setText("Username: please enter a username");
             input_errors = true;
         }
 
         if(Pattern.matches("[a-zA-Z0-9]{3,20}", user.getPassword())) {
-            txtUsername.setText("Password:");
+
         } else {
-            txtPassword.setText("Password: please enter a password");
             input_errors = true;
         }
         return  input_errors;
-
     }
 
+    /**
+     * This method checks that the username is in the database by running a SELECT statement in the "user" table in the database.
+     *
+     * If this returns True the password is checked against the program encryption.
+     *
+     * @return
+     * A boolean is return that confirms if the entered data is present in the database or not.
+     */
     public boolean initCompare(){
         boolean retCheckVar = false;
         boolean input_errors = verifyInput();
 
-        //READ CODE
-        com.project.mariadb db_connector = new com.project.mariadb();
-        //ResultSet read_query = db_connector.read_query("SELECT user_id,username,salt,hash,is_admin FROM users WHERE username='" + user.getUsername() + "'");
-
-        ResultSet read_query = db_connector.prepared_read_query("SELECT user_id,username,salt,hash,is_admin FROM users WHERE username=?", user.getUsername());
-
-        int user_id = 0;
+        ResultSet read_query = database.prepared_read_query("SELECT user_id,username,salt,hash,is_admin FROM users WHERE username=?", user.getUsername());
         String hash = "";
         String salt = "";
 
-
         try {
             if(!read_query.next()) {
-                System.out.println("No matching username found");
                 input_errors = true;
             } else {
-                System.out.println("matching username found: success");
                 String username = read_query.getString("username");
                 hash = read_query.getString("hash");
                 salt = read_query.getString("salt");
@@ -76,10 +80,8 @@ public class LoginForm extends TemplateGui{
         }
         catch (Exception a)
         {
-            System.err.println("Got an exception!");
             System.err.println(a.getMessage());
-        }//try
-
+        }
 
         if(input_errors != true) {
             DatabaseHash PBKDF2_class = new DatabaseHash();
@@ -87,21 +89,28 @@ public class LoginForm extends TemplateGui{
             try {
                 boolean matched = PBKDF2_class.validatePassword(user.getPassword(), "1000:" + salt + ":" + hash);
 
-                System.out.println("is the password correct: " + matched);
-                System.out.println("The matched var is "+ matched);
                 if(matched){retCheckVar = true;}
 
             } catch (Exception NoSuchAlgorithmException) {
-                System.err.println("Got an exception! EXITING ");
                 System.err.println(NoSuchAlgorithmException.getMessage());
                 System.exit(1);
-
             }
         }
-        System.out.println("The return var is "+ retCheckVar);
         return retCheckVar;
     }
 
+    /**
+     * This is the method used to setup the GUI and it is what loads the frotnt end, this is called by the previous class,
+     * in this case "Main".
+     *
+     * The DisplayGenericElements is inherited from the templateGui and it is called here, this sets up the frame size.
+     *
+     * Action listeners to the buttons are added here.
+     *
+     * The basket is also cleared with the "DELETE" statement, this is because basket sessions are only valid for when the user
+     * is logged in.
+     *
+     */
     public void displayLogin(){
 
         CreateAccount createAccount = new CreateAccount("Create Account", "Back", "LoginForm");
@@ -118,25 +127,38 @@ public class LoginForm extends TemplateGui{
             @Override
             public void actionPerformed(ActionEvent e) {
                 createAccount.displayCreate();
-                System.out.println("test");
                 frame.dispose();
             }
         });
-
     }
 
+    /**
+     * This method is used to save the current user to the database in the "loggedSession" table. This is
+     * useful throughout the program as it makes sure that variables are not carried to every class.
+     *
+     * @param userID
+     * This is the ID of the user that has just logged in, the database index from the "users" table.
+     */
     public void saveSessionUser(String userID){
         database.prepared_write_query("DELETE FROM loggedSession");
         database.prepared_write_query("INSERT INTO loggedSession (userID) VALUES (?)", userID);
     }
 
+    /**
+     * This is where the session user is called.
+     *
+     * If the credential check returns true then an if statment checks what type of user is requesting to log in.
+     *
+     * If the user is an admin they will be taken to the Admin Menu whereas if the user is a typical
+     * user they will go to the User Menu.
+     *
+     * If the credentials are incorrect a messagebox is shown.
+     */
     public void setUserAttributes(){
         user.setUsername(txtUsername.getText());
         String newVar = new String (txtPassword.getPassword());
         user.setPassword(newVar);
-        System.out.println(newVar+ " + " +user.getPassword()+ " I am here");
         boolean credCheck  = initCompare();
-        System.out.println("CHECK THIS VAR" + adminPriv);
         if (credCheck){
             saveSessionUser(userID);
             if(adminPriv== 1){
@@ -152,9 +174,7 @@ public class LoginForm extends TemplateGui{
             }
         }
         else{
-            System.out.println("Not matched - exiting");
             JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
-
         }
     }
 }
