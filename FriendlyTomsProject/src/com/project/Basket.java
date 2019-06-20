@@ -3,6 +3,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
+import java.io.*;
 import java.sql.Array;
 import java.sql.ResultSet;
 import java.text.DateFormat;
@@ -27,7 +30,22 @@ public class Basket extends TemplateGui {
         DisplayGenericElements();
         btnOrder.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) { makeOrder();}
+            public void actionPerformed(ActionEvent e) {
+                makeOrder();
+                Object[] options = {"Yes, print receipt",
+                        "No, thanks"};
+                int n = JOptionPane.showOptionDialog(frame,
+                        "Order has been made, would you like to print the receipt? ",
+                        "Order Completed",
+                        JOptionPane.YES_NO_CANCEL_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        options,
+                        options[1]);
+                if(n == 0){printUserReceipt();}
+                database.prepared_write_query("DELETE FROM basket");
+
+            }
         });
     }
 
@@ -83,5 +101,58 @@ public class Basket extends TemplateGui {
             }
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
+    }
+
+    private void printUserReceipt(){
+        File file = new File("C:/Users/jake.bowles/desktop/abc.txt");
+
+        // if file doesnt exists, then create it
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        ResultSet listItems = database.prepared_read_query("SELECT itemID FROM basket");
+        String foodItems= "";
+
+        try {
+            while(listItems.next()) {
+                String columnValue = listItems.getString("itemID");
+                nameOfItems = database.prepared_read_query("SELECT name FROM menu where menu_id=?", columnValue);//Take this out the while loop and make it an array
+                try {
+                    while(nameOfItems.next()) {
+                        String columnNameValue = nameOfItems.getString("name");
+                        foodItems = foodItems + System.lineSeparator() + columnNameValue;
+                    }
+                }
+                catch (Exception a){System.out.println("Something failed at 2");}//try
+            }
+        }
+        catch (Exception a){System.out.println("Something failed at 1");}//try
+
+        FileWriter fw = null;
+        try {
+            fw = new FileWriter(file.getAbsoluteFile());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        BufferedWriter bw = new BufferedWriter(fw);
+        try {
+            bw.write(foodItems);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        JOptionPane.showMessageDialog(null,"Receipt Saved!");
+
+
     }
 }
