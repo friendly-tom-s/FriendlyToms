@@ -12,8 +12,10 @@ import java.sql.ResultSet;
  * Every class will inherit from this class to use common variables such as "frame", "database" and "userName".
  */
 public class TemplateGui {
-    private JPanel panel1;
+    protected JPanel panel1;
     private JButton backButtonButton;
+    protected JPanel panel3;
+    protected JLabel labelHidden;
     protected JFrame frame;
     private String previousWin;
     protected mariadb database = new mariadb();
@@ -48,7 +50,7 @@ public class TemplateGui {
     public void DisplayGenericElements(){
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 400);
-        frame.add(panel1,BorderLayout.PAGE_END);
+        frame.add(panel1,BorderLayout.SOUTH);
         frame.setVisible(true);
         backButtonButton.addActionListener(new ActionListener() {
             @Override

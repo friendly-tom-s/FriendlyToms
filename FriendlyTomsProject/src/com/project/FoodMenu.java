@@ -65,7 +65,7 @@ public class FoodMenu extends TemplateGui {
      */
     public DefaultTableModel getMenu(String menuOption){
         DefaultTableModel model = new DefaultTableModel();
-        Object[] columns = {"FoodName","Description", "Cals"};
+        Object[] columns = {"FoodName","Description", "Cals", "Price"};
 
         model.setColumnIdentifiers(columns);
         ResultSet read_query = database.prepared_read_query("SELECT * FROM menu WHERE category = ?", menuOption);
@@ -74,7 +74,8 @@ public class FoodMenu extends TemplateGui {
                 String foodName = read_query.getString("name");
                 String descriptions = read_query.getString("description");
                 String cals = read_query.getString("calories");
-                String[] foodInfo = {foodName, descriptions, cals};
+                String prices = read_query.getString("price");
+                String[] foodInfo = {foodName, descriptions, cals, "£"+prices};
                 model.addRow(foodInfo);
                             }
         }

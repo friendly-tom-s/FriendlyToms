@@ -1,5 +1,6 @@
 package com.project;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,12 +13,15 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
 public class Basket extends TemplateGui {
-    private JList list1;
     private JPanel panel2;
+    private JPanel penlTest = new JPanel(new BorderLayout());
     private JButton btnOrder;
+    private JTable table;
+    private JLabel costLabel;
     private ResultSet nameOfItems;
+    private JScrollPane pane;
+    private int totalCost;
 
     public Basket(){super("Basket", "Back", "FoodOrder");}
 
@@ -25,8 +29,20 @@ public class Basket extends TemplateGui {
      * A typical class that inherits the generic elements from the template gui.
      */
     public void displayElements(){
-        frame.add(panel2, BorderLayout.CENTER);
-        list1.setModel(getListItems());
+        //frame.add(panel2, BorderLayout.CENTER);
+        //list1.setModel(getListItems());
+
+        table.setModel(getListItems());
+        Dimension dimension = new Dimension();
+        dimension.setSize(500, 250);
+        table.setPreferredScrollableViewportSize(dimension);
+        pane = new JScrollPane(table);
+        costLabel.setText("The cost of this basket is: £"+totalCost);
+        penlTest.add(pane, BorderLayout.NORTH);
+        penlTest.add(costLabel, BorderLayout.CENTER);
+        penlTest.add(btnOrder, BorderLayout.SOUTH);
+        frame.add(penlTest, BorderLayout.CENTER);
+
         DisplayGenericElements();
         btnOrder.addActionListener(new ActionListener() {
             @Override
@@ -60,19 +76,24 @@ public class Basket extends TemplateGui {
      * @return
      * A ListModel is returned with all the food names.
      */
-    public DefaultListModel getListItems(){
+    public DefaultTableModel getListItems(){
+        DefaultTableModel model = new DefaultTableModel();
+        Object[] columns = {"FoodName","Price"};
+        model.setColumnIdentifiers(columns);
         DefaultListModel JListItems = new DefaultListModel();
         ResultSet listItems = database.prepared_read_query("SELECT itemID FROM basket");
 
         try {
             while(listItems.next()) {
                 String columnValue = listItems.getString("itemID");
-                nameOfItems = database.prepared_read_query("SELECT name FROM menu where menu_id=?", columnValue);//Take this out the while loop and make it an array
+                nameOfItems = database.prepared_read_query("SELECT name, price FROM menu where menu_id=?", columnValue);//Take this out the while loop and make it an array
                 try {
                     while(nameOfItems.next()) {
                         String columnNameValue = nameOfItems.getString("name");
-                        System.out.println(columnNameValue);
-                        JListItems.addElement(columnNameValue);
+                        String prices = nameOfItems.getString("price");
+                        totalCost= totalCost + Integer.parseInt(prices);
+                        String user_info[] = {columnNameValue, prices};
+                        model.addRow(user_info);
                     }
                 }
                 catch (Exception a){System.out.println("Something failed at 2");}//try
@@ -80,7 +101,7 @@ public class Basket extends TemplateGui {
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
 
-        return JListItems;
+        return model;
     }
 
     /**

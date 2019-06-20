@@ -21,12 +21,14 @@ public class FoodOrder extends TemplateGui {
     private JButton btnOrder;
     private JButton btnBasket;
     private JButton btnMenu;
+    private JLabel basketAmount;
     private UserMenu UserMenu;
     private String name;
     private String calories;
     private String description;
     private String category;
     private ArrayList<String> main_items=new ArrayList<String>();
+    private int basketValue;
 
     public FoodOrder(){
         super("Food Order", "Main Menu", "UserMenu");
@@ -48,6 +50,8 @@ public class FoodOrder extends TemplateGui {
                 String[] chosenItems = {(cboStarter.getSelectedItem()).toString(),(cboMain.getSelectedItem()).toString(),
                         (cboDessert.getSelectedItem()).toString(),(cboDrink.getSelectedItem()).toString()};
                 addItemsToDatabase(chosenItems);
+                JOptionPane.showMessageDialog(null,"Added to your basket!");
+
             }
         });
         btnBasket.addActionListener(new ActionListener() {
