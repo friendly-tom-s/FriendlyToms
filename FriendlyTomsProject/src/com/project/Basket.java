@@ -44,6 +44,9 @@ public class Basket extends TemplateGui {
                         options[1]);
                 if(n == 0){printUserReceipt();}
                 database.prepared_write_query("DELETE FROM basket");
+                UserMenu userMenu = new UserMenu();
+                userMenu.displayUserMenu();
+                frame.dispose();
 
             }
         });
@@ -104,7 +107,7 @@ public class Basket extends TemplateGui {
     }
 
     private void printUserReceipt(){
-        File file = new File("C:/Users/jake.bowles/desktop/abc.txt");
+        File file = new File(System.getProperty("user.home") + "/Desktop/FT_Receipt.txt");
 
         // if file doesnt exists, then create it
         if (!file.exists()) {
