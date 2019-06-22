@@ -3,6 +3,8 @@ package com.project;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 /**
@@ -13,12 +15,18 @@ import java.sql.ResultSet;
 public class OrderHistory extends TemplateGui {
     private JList lstOrderDetails;
     private JPanel panel2;
+    private JPanel panelMain = new JPanel(new BorderLayout());
     private JTable table;
+    private JComboBox cboMonth;
+    private JComboBox cboYear;
+    private JButton btnUpdate;
     private ResultSet previousOrders;
     private ResultSet foodNames;
     private String previousWIn;
     private JPanel frame2 = new JPanel();
     private JScrollPane pane;
+    private String searchItem = "%";
+    private String searchYear = "2019";
 
 
     /**
@@ -37,6 +45,7 @@ public class OrderHistory extends TemplateGui {
     public OrderHistory(String guiName, String buttonVar, String previousWIn ){
         super(guiName, buttonVar, previousWIn);
         this.previousWIn= previousWIn;
+
     }
 
     /**
@@ -44,10 +53,36 @@ public class OrderHistory extends TemplateGui {
      */
     public void DisplayOrderHistory(){
         DisplayGenericElements();
-        ResultSet userType = getUserType();
-        table.setModel(getOrder(userType));
+        //ResultSet userType = getUserType();
+        table.setModel(getOrder(getUserType()));
+        Dimension dimension = new Dimension();
+        dimension.setSize(500, 275);
+        table.setPreferredScrollableViewportSize(dimension);
         pane = new JScrollPane(table);
-        frame.add(pane, BorderLayout.CENTER);
+        String[] itemsMonth = {"January", "February", "March", "April", "May", "June", "July", "August", "September",
+                "October", "November", "December"};
+
+        int yearNum = 2020;
+        for (int i = 0; i < 10; i++) {
+            yearNum = yearNum -1;
+            cboYear.addItem(yearNum);
+        }
+        cboMonth.setModel(new DefaultComboBoxModel(itemsMonth));
+        panelMain.add(pane, BorderLayout.SOUTH);
+        panelMain.add(cboMonth, BorderLayout.WEST);
+        panelMain.add(cboYear, BorderLayout.CENTER);
+        panelMain.add(btnUpdate, BorderLayout.EAST);
+        frame.add(panelMain, BorderLayout.CENTER);
+        btnUpdate.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                monthLogic((cboMonth.getSelectedItem()).toString());
+                searchYear = cboYear.getSelectedItem().toString();
+                table.setModel(getOrder(getUserType()));
+
+            }
+        });
+
     }
 
     /**
@@ -61,11 +96,13 @@ public class OrderHistory extends TemplateGui {
      * TemplateGui and the getUser method.
      */
     public ResultSet getUserType(){
+        String preparedDate = searchYear + "-"+ searchItem + "%";
         if(previousWIn.equals("AdminMenu")){
-            previousOrders = database.prepared_read_query("SELECT * FROM orders");
+            previousOrders = database.prepared_read_query("SELECT * FROM orders WHERE order_date LIKE ?", preparedDate);
         }
         if (previousWIn.equals("UserMenu")){
-            previousOrders = database.prepared_read_query("SELECT * FROM orders WHERE userid = ?", getUser());
+            previousOrders = database.prepared_read_query("SELECT * FROM orders WHERE userid = ? AND order_date LIKE ?"
+                    , getUser(), preparedDate);
         }
         return previousOrders;
     }
@@ -129,5 +166,49 @@ public class OrderHistory extends TemplateGui {
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
         return model;
+    }
+
+    public void monthLogic(String chosenMonth){
+        switch (chosenMonth){
+            case "All":
+                searchItem = "%";
+                break;
+            case "January":
+                searchItem = "01";
+                break;
+            case "February":
+                searchItem = "02";
+                break;
+            case "March":
+                searchItem = "03";
+                break;
+            case "April":
+                searchItem = "04";
+                break;
+            case "May":
+                searchItem = "05";
+                break;
+            case "June":
+                searchItem = "06";
+                break;
+            case "July":
+                searchItem = "07";
+                break;
+            case "August":
+                searchItem = "08";
+                break;
+            case "September":
+                searchItem = "09";
+                break;
+            case "October":
+                searchItem = "10";
+                break;
+            case "November":
+                searchItem = "11";
+                break;
+            case "December":
+                searchItem = "12";
+                break;
+        }
     }
 }

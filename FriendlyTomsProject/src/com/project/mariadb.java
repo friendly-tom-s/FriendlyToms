@@ -66,6 +66,7 @@ public class mariadb {
 
             // close connection
             st.close();
+            conn.close();
 
             // return sql result
             return rs;
