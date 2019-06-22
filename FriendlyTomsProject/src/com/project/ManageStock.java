@@ -17,6 +17,7 @@ public class ManageStock extends TemplateGui {
     private JTextField txtAddStock;
     private JButton btnAddStock;
     private JLabel labAmount;
+    private JButton btnAddMenuItem;
     private ArrayList<String> main_items = new ArrayList<String>();
 
     public ManageStock() {
@@ -30,6 +31,15 @@ public class ManageStock extends TemplateGui {
         frame.add(panel2, BorderLayout.CENTER);
         DisplayGenericElements();
         setInitialStock();
+
+        btnAddMenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddMenuItem addMenuItem = new AddMenuItem();
+                addMenuItem.DisplayAddMenuItem();
+                frame.dispose();
+            }
+        });
 
         cboItem.addActionListener(new ActionListener() {
             @Override
