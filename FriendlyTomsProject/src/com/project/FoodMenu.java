@@ -17,7 +17,9 @@ public class FoodMenu extends TemplateGui {
     private JTable tblMain;
     private JTable tblDessert;
     private JTable tblDrink;
+    private JPanel panelMain = new JPanel(new BorderLayout());
     private JTabbedPane tabbedPane1;
+    private JButton imageButton;
     private JScrollPane paneStarter;
     private JScrollPane paneMain;
     private JScrollPane paneDessert;
@@ -40,6 +42,13 @@ public class FoodMenu extends TemplateGui {
         tblDessert.setModel(getMenu("dessert"));
         tblDrink.setModel(getMenu("drink"));
 
+        Dimension dimension = new Dimension();
+        dimension.setSize(500, 250);
+        tblStarter.setPreferredScrollableViewportSize(dimension);
+        tblDrink.setPreferredScrollableViewportSize(dimension);
+        tblDessert.setPreferredScrollableViewportSize(dimension);
+        tblMain.setPreferredScrollableViewportSize(dimension);
+
         paneStarter = new JScrollPane(tblStarter);
         tabbedPane1.add("Starters", paneStarter);
 
@@ -51,7 +60,11 @@ public class FoodMenu extends TemplateGui {
 
         paneDrink = new JScrollPane(tblDrink);
         tabbedPane1.add("Drinks", paneDrink);
-        frame.add(tabbedPane1);
+
+        panelMain.add(tabbedPane1, BorderLayout.NORTH);
+        panelMain.add(imageButton);
+
+        frame.add(panelMain);
     }
 
     /**
