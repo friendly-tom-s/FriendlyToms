@@ -82,6 +82,9 @@ public class TemplateGui {
             FoodOrder foodOrder = new FoodOrder();
             foodOrder.displayFoodOrder();
         }
+        if(previousWin.equals("FoodMenu")){
+            frame.dispose();
+        }
     }
 
     /**

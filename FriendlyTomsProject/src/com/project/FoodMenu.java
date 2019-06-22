@@ -3,6 +3,8 @@ package com.project;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 /**
@@ -24,9 +26,14 @@ public class FoodMenu extends TemplateGui {
     private JScrollPane paneMain;
     private JScrollPane paneDessert;
     private JScrollPane paneDrink;
+    private String imageWebAddress;
+    private String selectedItem;
+    private String selectedCategory;
 
 
-    public FoodMenu(){super("Menu", "Back", "FoodOrder");}
+    public FoodMenu(){super("Menu", "Back", "FoodOrder");
+
+    }
 
     /**
      * Creates the GUI and populates four separate JTables with the correct foods.
@@ -64,6 +71,15 @@ public class FoodMenu extends TemplateGui {
         panelMain.add(tabbedPane1, BorderLayout.NORTH);
         panelMain.add(imageButton);
 
+        imageButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setSelectedIndex();
+                ImageView imageView = new ImageView(getItemWebaddress(selectedItem));
+                imageView.displayImageView();
+            }
+        });
+
         frame.add(panelMain);
     }
 
@@ -96,7 +112,41 @@ public class FoodMenu extends TemplateGui {
         return model;
     }
 
+    public void setSelectedIndex(){
+        int column = 0;
+        int row = 0;
 
+        switch (tabbedPane1.getSelectedIndex()){
+            case 0:
+                row = tblStarter.getSelectedRow();
+                selectedItem= tblStarter.getValueAt(row, column).toString();
+                break;
+            case 1:
+                row = tblMain.getSelectedRow();
+                selectedItem= tblMain.getValueAt(row, column).toString();
+                break;
+            case 2:
+                row = tblDessert.getSelectedRow();
+                selectedItem= tblDessert.getValueAt(row, column).toString();
+                break;
+            case 3:
+                row = tblDrink.getSelectedRow();
+                selectedItem= tblDrink.getValueAt(row, column).toString();
+                break;
 
+        }
+    }
+
+    public String getItemWebaddress(String foodName){
+        String address = null;
+        ResultSet read_query = database.prepared_read_query("SELECT * FROM menu WHERE name = ?", foodName );
+        try {
+            while(read_query.next()) {
+                address = read_query.getString("webaddress");
+            }
+        }
+        catch (Exception a){System.out.println("Something failed at 1");}//try
+        return address;
+    }
 
 }
