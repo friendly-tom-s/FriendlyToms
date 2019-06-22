@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97401e9f-1559-4455-8081-76c68f1d89db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/project/AddMenuItem.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/AddMenuItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/OrderHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/OrderHistory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/mariadb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/mariadb.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/ManageStock.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/ManageStock.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/ManageStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/ManageStock.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +20,11 @@
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+            <state relative-caret-position="527">
+              <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#311#312#0" expanded="true" />
@@ -38,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
@@ -164,10 +160,10 @@
         <option value="$PROJECT_DIR$/src/com/project/UserMenu.java" />
         <option value="$PROJECT_DIR$/src/com/tests/BookingTest.java" />
         <option value="$PROJECT_DIR$/src/com/tests/FoodOrderTest.java" />
-        <option value="$PROJECT_DIR$/src/com/project/AddMenuItem.form" />
         <option value="$PROJECT_DIR$/src/com/project/ManageStock.form" />
         <option value="$PROJECT_DIR$/src/com/project/ManageStock.java" />
         <option value="$PROJECT_DIR$/src/com/project/AddMenuItem.java" />
+        <option value="$PROJECT_DIR$/src/com/project/AddMenuItem.form" />
       </list>
     </option>
   </component>
@@ -364,7 +360,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561242748328" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561242868604" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -517,7 +513,7 @@
       <workItem from="1560439725471" duration="401000" />
       <workItem from="1560445345280" duration="14270000" />
       <workItem from="1560543407034" duration="13442000" />
-      <workItem from="1561229253886" duration="7509000" />
+      <workItem from="1561229253886" duration="7771000" />
     </task>
     <task id="LOCAL-00001" summary="Added some basic logic to the booking form">
       <created>1557865896566</created>
@@ -617,7 +613,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560613702852</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Adding in the form for Adding menu items">
+      <created>1561242898532</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1561242898532</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -653,7 +656,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137886000" />
+    <option name="totallyTimeSpent" value="138148000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -747,7 +750,8 @@
     <MESSAGE value="Created some unit tests - this adds a load.&#10;&#10;So that I remember - You will need Junit 4 and &quot;Hamcrest&quot;.&#10;&#10;Download files should look like:&#10;- &quot;hamcrest-2.1.jar&quot;&#10;- &quot;junit-4.13-beta-3.jar&quot;&#10;&#10;These need to be added in project structure. Ctrl+Alt+Shift+S and then modules &gt; dependencies. &#10;&#10;Good luck xx" />
     <MESSAGE value="Started added comments" />
     <MESSAGE value="Added all comments." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added all comments." />
+    <MESSAGE value="Adding in the form for Adding menu items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding in the form for Adding menu items" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1044,9 +1048,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
@@ -1077,8 +1078,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        <state relative-caret-position="527">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#311#312#0" expanded="true" />
@@ -1086,6 +1087,9 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">
