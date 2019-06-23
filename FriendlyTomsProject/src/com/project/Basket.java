@@ -104,6 +104,14 @@ public class Basket extends TemplateGui {
         return model;
     }
 
+    public void setTotalCost(int totalCostIncrement){
+        totalCost= totalCost+totalCostIncrement;
+    }
+
+    public int getTotalCost(){
+        return totalCost;
+    }
+
     /**
      * When the user confirms that everything in the basket is what they want to order, the confirm order button gets everything from
      * the basket table and adds them to the order table.

@@ -1,9 +1,13 @@
 package com.project;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -22,6 +26,7 @@ public class FoodOrder extends TemplateGui {
     private JButton btnBasket;
     private JButton btnMenu;
     private JLabel basketAmount;
+    private JLabel basketIcon;
     private UserMenu UserMenu;
     private String name;
     private String calories;
@@ -29,6 +34,8 @@ public class FoodOrder extends TemplateGui {
     private String category;
     private ArrayList<String> main_items=new ArrayList<String>();
     private int basketValue;
+    private Basket basket = new Basket();
+    private String totalcost;
 
     public FoodOrder(){
         super("Food Order", "Main Menu", "UserMenu");
@@ -40,6 +47,8 @@ public class FoodOrder extends TemplateGui {
      */
     public void displayFoodOrder() {
 
+        setIconImage();
+        setTotalcost();
         setFoodTypes();
         frame.add(panel2, BorderLayout.CENTER);
 
@@ -51,13 +60,13 @@ public class FoodOrder extends TemplateGui {
                         (cboDessert.getSelectedItem()).toString(),(cboDrink.getSelectedItem()).toString()};
                 addItemsToDatabase(chosenItems);
                 JOptionPane.showMessageDialog(null,"Added to your basket!");
+                setTotalcost();
 
             }
         });
         btnBasket.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Basket basket = new Basket();
                 basket.displayElements();
                 frame.dispose();
             }
@@ -94,6 +103,23 @@ public class FoodOrder extends TemplateGui {
             {break;}//try
 
         }
+    }
+
+    public void setTotalcost(){
+        DefaultTableModel throwawayRS = basket.getListItems();
+        totalcost = String.valueOf(basket.getTotalCost());
+        basketAmount.setText("£"+totalcost);
+    }
+
+    public void setIconImage(){
+        Image image = null;
+        try {
+            URL url = new URL("http://chittagongit.com/download/107277");
+            image = ImageIO.read(url.openStream());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        basketIcon.setIcon(new ImageIcon(image.getScaledInstance(25,25,Image.SCALE_DEFAULT)));
     }
 
     /**
