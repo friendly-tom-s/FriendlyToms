@@ -4,12 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import java.sql.ResultSet;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+
 
 /**
  * This class is used to book tables. It can only be accessed by the users.
@@ -22,13 +25,19 @@ public class TableBooking extends TemplateGui{
     private JTextField txtAmount;
     private JComboBox comboBox1;
     private JButton checkAvailabilityButton;
+    private JComboBox cboDay;
+    private JComboBox cboMonth;
+    private JComboBox cboYear;
+    private JComboBox cboAmount;
     private Booking booking = new Booking();
     private int sittingOne = 0;
     private int sittingTwo = 0;
     private int sittingThree= 0;
 
+
     public TableBooking(){
         super("Table Booking", "Main Menu", "UserMenu");
+
     }
 
     /**
@@ -39,8 +48,11 @@ public class TableBooking extends TemplateGui{
     public void displayTableBooking() {
         frame.add(panel2, BorderLayout.CENTER);
         txtName.setText(getUserName(getUser()));
+        setCbos();
         DisplayGenericElements();
         frame.setSize(350, 450);
+
+
         comboBox1.addItem("Sitting 1. 12:00 - 14:00");
         comboBox1.addItem("Sitting 2. 18:00 - 20:00");
         comboBox1.addItem("Sitting 3. 20:05 - 22:00");
@@ -48,7 +60,7 @@ public class TableBooking extends TemplateGui{
         checkAvailabilityButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String date = textDate.getText();
+                String date = cboDay.getSelectedItem() + "/"+(cboMonth.getSelectedIndex()+1)+"/"+cboYear.getSelectedItem();
                 checkDate(date);
                 showAvailableSeats();
             }
@@ -56,16 +68,22 @@ public class TableBooking extends TemplateGui{
         btnBook.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(validateBooking(textDate.getText(), "dd/MM/yy").equals(true) &&
+                String date = cboDay.getSelectedItem() + "/"+(cboMonth.getSelectedIndex()+1)+"/"+cboYear.getSelectedItem();
+                if(validateBooking(date, "dd/MM/yy").equals(true) &&
                         checkSittingAvailability(getCboStringValue()).equals(true));
                 {
-                    booking.setDate(textDate.getText());
+                    booking.setDate(date);
                     booking.setName(txtName.getText());
-                    booking.setAmount(txtAmount.getText());
-                    saveToDatabase();
+                    booking.setAmount(cboAmount.getSelectedItem().toString());
+                    int dialogButton = JOptionPane.YES_NO_OPTION;
+                    int dialogResult = JOptionPane.showConfirmDialog(null,
+                            "Are you sure you wish to make the booking", "Make Booking", dialogButton);
+                    if(dialogResult == 0) {saveToDatabase();}
+
                 }
             }
         });
+
     }
 
     /**
@@ -192,6 +210,19 @@ public class TableBooking extends TemplateGui{
                 booking.setTime("3");
         }
         return cboSelected;
+
+    }
+
+    public void setCbos(){
+        String[] days = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "24", "25", "26", "27", "28", "29", "30", "31"};
+        String[] month = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        String[] year = {"19", "20", "21", "22", "22", "23", "24"};
+        String[] tableNums = {"1","2","3","4","5","6","7","8","9", "10"};
+
+        cboDay.setModel(new DefaultComboBoxModel(days));
+        cboMonth.setModel(new DefaultComboBoxModel(month));
+        cboYear.setModel(new DefaultComboBoxModel(year));
+        cboAmount.setModel(new DefaultComboBoxModel(tableNums));
 
     }
 }
