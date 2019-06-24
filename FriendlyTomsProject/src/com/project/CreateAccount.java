@@ -21,6 +21,8 @@ public class CreateAccount extends TemplateGui {
     private JPasswordField pswConfirm;
     protected JPanel panel3;
     protected JRadioButton rdoAdmin;
+    private JTextField txtFirstName;
+    private JTextField txtSurname;
     private User user = new User();
     mariadb db_connector = new mariadb();
 
@@ -56,6 +58,8 @@ public class CreateAccount extends TemplateGui {
         user.setConfirmPassword(new String (pswPassword.getPassword()));
         user.setPassword(new String (pswPassword.getPassword()));
         user.setEmail(txtEmail.getText());
+        user.setFirst_name(txtFirstName.getText());
+        user.setLast_name(txtSurname.getText());
 
         if (rdoAdmin.isSelected())
         {
@@ -77,26 +81,25 @@ public class CreateAccount extends TemplateGui {
      * If the user does not exist it adds the new user to the database.
      */
     public void confirmUserData(){
+        Boolean checkUser = false;
+        Boolean checkPw = false;
 
         boolean input_errors = false;
         if(Pattern.matches("[a-zA-Z0-9]{3,20}", user.getPassword())) {
-            txtUserName.setText("Username:");
+
         } else {
-            txtUserName.setText("Username: must contain 3-20 lowercase characters");
+
             input_errors = true;
         }
         //validate password
         if(Pattern.matches("[a-zA-Z0-9]{3,20}", user.getPassword())) {
-            pswPassword.setText("Password:");
+
         } else {
-            pswPassword.setText("Password: must contain 3-20 characters made up of alpha-numeric characters and include at least one special character");
             input_errors = true;
         }
         //validate passwords match
         if(Pattern.matches(user.getPassword(), user.getConfirm_password())) {
-            pswConfirm.setText("Confirm Password:");
         } else {
-            pswConfirm.setText("Confirm Password: Passwords must match");
             input_errors = true;
         }
 
@@ -121,7 +124,12 @@ public class CreateAccount extends TemplateGui {
         }
 
         if(input_errors != true) {
+
             DatabaseHash PBKDF2_class = new DatabaseHash();
+            JOptionPane.showMessageDialog(null, "Account Created.");
+            LoginForm loginForm = new LoginForm();
+            loginForm.displayLogin();
+            frame.dispose();
 
             try {
                 String generatedSecuredPasswordHash = PBKDF2_class.generateStorngPasswordHash(user.getPassword());
@@ -131,13 +139,13 @@ public class CreateAccount extends TemplateGui {
                 String hash = parts[2];
                 //WRITE CODE
                 mariadb db_connector = new mariadb();
-                boolean write_query = db_connector.prepared_write_query("INSERT INTO users (username,salt,hash,is_admin) VALUES (?, ?, ?, ?)", user.getUsername(), salt, hash, user.getAdminStatus());
+                boolean write_query = db_connector.prepared_write_query("INSERT INTO users (username,salt,hash,is_admin, first_name, last_name) VALUES" +
+                        " (?, ?, ?, ?, ?, ?)", user.getUsername(), salt, hash, user.getAdminStatus(), user.getFirst_name(), user.getLast_name());
 
             } catch (Exception NoSuchAlgorithmException){
                 System.exit(1);
             }//try
         }//input_errors
-
     }
 
     /**
@@ -152,9 +160,23 @@ public class CreateAccount extends TemplateGui {
         btnCreate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setUserData();
-                confirmUserData();
+                if(checkEntriesArePresent()){
+                    setUserData();
+                    confirmUserData();
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Please fill out all data fields");
+                }
             }
         });
+    }
+
+    public boolean checkEntriesArePresent(){
+        Boolean check = true;
+        if(txtUserName.getText().equals("")){check= false;}
+        if(txtEmail.getText().equals("")){check= false;}
+        if(txtFirstName.getText().equals("")){check= false;}
+        if(txtSurname.getText().equals("")){check= false;}
+        return check;
     }
 }

@@ -43,4 +43,8 @@ public class User {
 
     public int getAdminStatus(){return adminStatus;}
 
+    public String getFirst_name(){return first_name;}
+
+    public String getLast_name(){return last_name;}
+
 }
