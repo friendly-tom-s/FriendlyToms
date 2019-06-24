@@ -81,6 +81,8 @@ public class FoodOrder extends TemplateGui {
         });
 
         DisplayGenericElements();
+        frame.setSize(300, 500);
+
     }
 
     /**

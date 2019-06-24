@@ -40,6 +40,7 @@ public class TableBooking extends TemplateGui{
         frame.add(panel2, BorderLayout.CENTER);
         txtName.setText(getUserName(getUser()));
         DisplayGenericElements();
+        frame.setSize(350, 450);
         comboBox1.addItem("Sitting 1. 12:00 - 14:00");
         comboBox1.addItem("Sitting 2. 18:00 - 20:00");
         comboBox1.addItem("Sitting 3. 20:05 - 22:00");
