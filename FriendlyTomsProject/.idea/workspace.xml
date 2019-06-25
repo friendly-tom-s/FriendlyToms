@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97401e9f-1559-4455-8081-76c68f1d89db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/project/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/AddMenuItem.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/AddMenuItem.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/AddMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/AddMenuItem.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="46" column="96" selection-start-line="46" selection-start-column="96" selection-end-line="46" selection-end-column="96" />
+            <state relative-caret-position="357">
+              <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="649">
+            <state relative-caret-position="547">
               <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
@@ -93,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/AdminCreation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="97" selection-start-line="4" selection-start-column="97" selection-end-line="4" selection-end-column="97" />
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -310,7 +307,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561501359491" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561501382202" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -467,7 +464,7 @@
       <workItem from="1561300920820" duration="10190000" />
       <workItem from="1561473345747" duration="12000" />
       <workItem from="1561473392367" duration="19000" />
-      <workItem from="1561478997838" duration="12533000" />
+      <workItem from="1561478997838" duration="12774000" />
     </task>
     <task id="LOCAL-00001" summary="Added some basic logic to the booking form">
       <created>1557865896566</created>
@@ -574,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561242898532</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Admins can now add product (OO version)">
+      <created>1561501409515</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1561501409515</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -610,7 +614,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160902000" />
+    <option name="totallyTimeSpent" value="161143000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -630,7 +634,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.17377399" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17377399" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" weight="0.3289689" />
@@ -639,7 +643,7 @@
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50075644" side_tool="true" weight="0.2536825" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info active="true" anchor="bottom" id="Find" order="6" visible="true" weight="0.04767064" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49924356" visible="true" weight="0.15276273" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49924356" visible="true" weight="0.15276273" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.10801964" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32502708" />
@@ -705,7 +709,8 @@
     <MESSAGE value="Started added comments" />
     <MESSAGE value="Added all comments." />
     <MESSAGE value="Adding in the form for Adding menu items" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding in the form for Adding menu items" />
+    <MESSAGE value="Admins can now add product (OO version)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admins can now add product (OO version)" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -984,13 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminCreation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="97" selection-start-line="4" selection-start-column="97" selection-end-line="4" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1025,17 +1023,24 @@
     <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/AdminCreation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
+        <state relative-caret-position="547">
           <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="46" column="96" selection-start-line="46" selection-start-column="96" selection-end-line="46" selection-end-column="96" />
+        <state relative-caret-position="357">
+          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
