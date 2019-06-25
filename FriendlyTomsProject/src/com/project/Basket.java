@@ -23,21 +23,23 @@ public class Basket extends TemplateGui {
     private JScrollPane pane;
     private int totalCost;
 
-    public Basket(){super("Basket", "Back", "FoodOrder");}
+
+    public Basket(){
+        super("Basket", "Back", "FoodOrder");
+
+    }
 
     /**
      * A typical class that inherits the generic elements from the template gui.
      */
     public void displayElements(){
-        //frame.add(panel2, BorderLayout.CENTER);
-        //list1.setModel(getListItems());
 
         table.setModel(getListItems());
         Dimension dimension = new Dimension();
         dimension.setSize(500, 250);
         table.setPreferredScrollableViewportSize(dimension);
         pane = new JScrollPane(table);
-        costLabel.setText("The cost of this basket is: £"+totalCost);
+        costLabel.setText("The cost of this basket is: £"+getTotalCost());
         penlTest.add(pane, BorderLayout.NORTH);
         penlTest.add(costLabel, BorderLayout.CENTER);
         penlTest.add(btnOrder, BorderLayout.SOUTH);
@@ -77,6 +79,9 @@ public class Basket extends TemplateGui {
      * A ListModel is returned with all the food names.
      */
     public DefaultTableModel getListItems(){
+
+        int overallTotalCost;
+        totalCost = 0;
         DefaultTableModel model = new DefaultTableModel();
         Object[] columns = {"FoodName","Price"};
         model.setColumnIdentifiers(columns);
@@ -91,7 +96,8 @@ public class Basket extends TemplateGui {
                     while(nameOfItems.next()) {
                         String columnNameValue = nameOfItems.getString("name");
                         String prices = nameOfItems.getString("price");
-                        totalCost= totalCost + Integer.parseInt(prices);
+                        overallTotalCost= totalCost + Integer.parseInt(prices);
+                        setTotalCost(overallTotalCost);
                         String user_info[] = {columnNameValue, prices};
                         model.addRow(user_info);
                     }
@@ -104,12 +110,14 @@ public class Basket extends TemplateGui {
         return model;
     }
 
-    public void setTotalCost(int totalCostIncrement){
-        totalCost= totalCost+totalCostIncrement;
+    public void setTotalCost(int cost){
+        totalCost = cost;
     }
 
     public int getTotalCost(){
-        return totalCost;
+        int returnVar;
+        returnVar = totalCost;
+        return returnVar;
     }
 
     /**
