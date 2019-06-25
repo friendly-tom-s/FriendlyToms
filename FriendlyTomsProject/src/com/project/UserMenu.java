@@ -2,6 +2,7 @@ package com.project;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.text.View;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,6 +20,7 @@ public class UserMenu extends TemplateGui {
     private JPanel panel2;
     private JLabel lblText;
     private JLabel lblMenu;
+    private JButton btnBooking;
     private LoginForm LoginForm;
     private FoodOrder FoodOrder;
     private TableBooking TableBooking;
@@ -29,6 +31,7 @@ public class UserMenu extends TemplateGui {
     public UserMenu(){
 
         super("User Menu", "Logout", "LoginForm");
+
     }
 
     public void setLoggedInUser(User loggedUser){
@@ -53,13 +56,15 @@ public class UserMenu extends TemplateGui {
         btnBook.setUI(new StyledButtonUI());
         mainUserPanel.add(btnHistory);
         btnHistory.setUI(new StyledButtonUI());
+        btnBooking.setUI(new StyledButtonUI());
+        mainUserPanel.add(btnBooking);
         mainUserPanel.add(lblText);
         setIconImage();
         mainUserPanel.add(lblMenu);
         lblText.setText("Welcome to Friendly Tom's Pub. Here we are devoted to blah blah blah");
-
         frame.add(mainUserPanel, BorderLayout.CENTER);
         DisplayGenericElements();
+        frame.setSize(520, 400);
 
         btnOrderFood.addActionListener(new ActionListener() {
             @Override
@@ -84,6 +89,14 @@ public class UserMenu extends TemplateGui {
             public void actionPerformed(ActionEvent e) {
                 orderHistory = new OrderHistory("Order History", "Back", "UserMenu");
                 orderHistory.DisplayOrderHistory();
+                frame.dispose();
+            }
+        });
+        btnBooking.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ViewBookings viewBookings = new ViewBookings("UserMenu");
+                viewBookings.DisplayViewBooking();
                 frame.dispose();
             }
         });

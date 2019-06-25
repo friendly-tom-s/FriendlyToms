@@ -14,8 +14,11 @@ public class AdminMenu extends TemplateGui {
     private JButton btnStock;
     private JButton btnAccounts;
     private JPanel panel2;
+    private JButton btnBooking;
 
-    public AdminMenu(){super("Admin Menu", "Logout", "LoginForm");}
+    public AdminMenu(){super("Admin Menu", "Logout", "LoginForm");
+
+    }
 
     /**
      * The GUI is created and the button listeners set, this is where the user gets taken to the correct place.
@@ -47,6 +50,15 @@ public class AdminMenu extends TemplateGui {
             public void actionPerformed(ActionEvent e) {
                 ManageStock manageStock = new ManageStock();
                 manageStock.DisplayStock();
+                frame.dispose();
+            }
+        });
+
+        btnBooking.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ViewBookings viewBookings = new ViewBookings("AdminMenu");
+                viewBookings.DisplayViewBooking();
                 frame.dispose();
             }
         });

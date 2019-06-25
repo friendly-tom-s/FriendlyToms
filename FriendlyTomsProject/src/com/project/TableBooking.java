@@ -202,12 +202,15 @@ public class TableBooking extends TemplateGui{
             case 0:
                 cboSelected = sittingOne;
                 booking.setTime("1");
+                break;
             case  1:
                 cboSelected = sittingTwo;
                 booking.setTime("2");
+                break;
             case 2:
                 cboSelected = sittingThree;
                 booking.setTime("3");
+                break;
         }
         return cboSelected;
 
