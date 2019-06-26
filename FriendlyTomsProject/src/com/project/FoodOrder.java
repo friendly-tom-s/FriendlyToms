@@ -142,16 +142,16 @@ public class FoodOrder extends TemplateGui {
                 category = foodQuery.getString("category");
 
                 switch (category){
-                    case "main":
+                    case "Main":
                         cboMain.addItem(name);
                         break;
-                    case "starter":
+                    case "Starter":
                         cboStarter.addItem(name);
                         break;
-                    case "dessert":
+                    case "Dessert":
                         cboDessert.addItem(name);
                         break;
-                    case "drink":
+                    case "Drink":
                         cboDrink.addItem(name);
                         break;
 
