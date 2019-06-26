@@ -43,10 +43,6 @@ public class AddMenuItem extends TemplateGui {
                         (product.getCalories()),(product.getCategory()),
                         (product.getPrice()),(product.getNoinstock()),(product.getUrl())};
 
-                /*String[] productParts = {(txtName.getText()),(txtDescription.getText()),
-                        (spnCalories.getValue()).toString(),(cboCategory.getSelectedItem()).toString(),
-                        (txtPrice.getText()),(spnStock.getValue().toString()), (txtURL.getText())};*/
-
                 JOptionPane.showMessageDialog(null,"Added new product to database");
 
             writeToDB(productParts);
@@ -63,40 +59,17 @@ public class AddMenuItem extends TemplateGui {
         product.setPrice(txtPrice.getText());
         product.setNoinstock(spnStock.getValue().toString());
         product.setUrl(txtURL.getText());
-
-        //user.setUsername(txtUserName.getText());
-        //user.setConfirmPassword(new String (pswPassword.getPassword()));
-        //user.setPassword(new String (pswPassword.getPassword()));
-        //user.setEmail(txtEmail.getText());
-
-
     }
 
     public void writeToDB(String[] productParts){
-      // for (String var:chosenItems) {
-          // ResultSet read_query = database.prepared_read_query("SELECT menu_id FROM menu WHERE name =?", var);
-           try {
-               //while (read_query.next()) {
-                   //String foodItem = read_query.getString("menu_id");
-                   mariadb db_connector = new mariadb();
+            try {
+               mariadb db_connector = new mariadb();
 
                    db_connector.prepared_write_query("INSERT INTO menu (name, description, calories, category, stock, price, webaddress) VALUES (?,?,?,?,?,?,?)", productParts[0], productParts[1], productParts[2], productParts[3], productParts[4], productParts[5], productParts[6]);
-              // }
+
                }
-            catch(Exception a)
-               {
-
-
-                  // break;
-               }//try
-
-
-
-
+            catch(Exception a){}
     }
-
-
-
 }
 
 

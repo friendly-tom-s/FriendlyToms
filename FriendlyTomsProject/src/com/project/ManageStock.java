@@ -41,7 +41,7 @@ public class ManageStock extends TemplateGui {
         table.setPreferredScrollableViewportSize(dimension);
         pane = new JScrollPane(table);
         panelMain.add(pane, BorderLayout.CENTER);
-        panelMain.add(btnUpdate, BorderLayout.SOUTH);
+        panelMain.add(btnUpdate, BorderLayout.LINE_END);
         panelMain.add(btnAddMenuItem, BorderLayout.PAGE_END);
 
         frame.add(panelMain, BorderLayout.CENTER);
