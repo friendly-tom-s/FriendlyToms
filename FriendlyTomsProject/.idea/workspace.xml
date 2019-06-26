@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97401e9f-1559-4455-8081-76c68f1d89db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/project/ViewBookings.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/ViewBookings.java" afterDir="false" />
+    <list default="true" id="7568b733-e8b3-447b-b100-fe5bccff3566" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/AdminMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/AdminMenu.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/AdminMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/TableBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/TableBooking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/UserMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/UserMenu.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/UserMenu.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,250 +14,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="153" column="4" selection-start-line="153" selection-start-column="4" selection-end-line="153" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/TemplateGui.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-        <entry file="file://$PROJECT_DIR$/src/com/project/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="649">
-              <caret line="43" column="52" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="43" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/ViewAccounts.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1495">
-              <caret line="208" column="22" lean-forward="true" selection-start-line="208" selection-start-column="22" selection-end-line="208" selection-end-column="22" />
-        <entry file="file://$PROJECT_DIR$/src/com/project/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="59" column="34" lean-forward="true" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/Booking.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-125">
-              <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
-        <entry file="file://$PROJECT_DIR$/src/com/project/AdminViewOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/OrderHistory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="74" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-        <entry file="file://$PROJECT_DIR$/src/com/project/AdminCreation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/ViewBookings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
         <entry file="file://$PROJECT_DIR$/src/com/project/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/mariadb.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Arquillian JUnit Test Class" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>booking</find>
-      <find>getus</find>
-      <find>logged</find>
-      <find>880</find>
-      <find>model</find>
-      <find>dialog</find>
-      <find>dialogbut</find>
-      <find>table</find>
-      <find>sette</find>
-      <find>txtAmount</find>
-      <find>date</find>
-      <find>user_</find>
-      <find>setd</find>
-      <find>setT</find>
-      <find>foodItem</find>
-      <find>db_connector</find>
-      <find>user</find>
-    </findStrings>
-    <dirStrings>
-      <dir>C:\Users\jake.bowles\Documents\FriendlyToms\FriendlyTomsProject\src\com\project</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/GenericGui.java" />
-        <option value="$PROJECT_DIR$/src/com/project/TemplateGui.form" />
-        <option value="$PROJECT_DIR$/src/com/project/CreateAccount.form" />
-        <option value="$PROJECT_DIR$/src/com/project/AdminCreation.form" />
-        <option value="$PROJECT_DIR$/src/com/project/Checkout.form" />
-        <option value="$PROJECT_DIR$/src/ManageStock.java" />
-        <option value="$PROJECT_DIR$/src/com/project/Basket.form" />
-        <option value="$PROJECT_DIR$/src/com/project/ManageAccounts.form" />
-        <option value="$PROJECT_DIR$/src/com/project/accountManagement.java" />
-        <option value="$PROJECT_DIR$/src/com/project/OrderHistory.form" />
-        <option value="$PROJECT_DIR$/src/com/project/FoodMenu.form" />
-        <option value="$PROJECT_DIR$/src/com/tests/MainTests.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/TableBookingTest.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/LoginFormTest.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/MariaTest.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/TemplateTest.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/OrderHistoryTest.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/FoodMenuTest.java" />
-        <option value="$PROJECT_DIR$/src/com/project/LoginForm.java" />
-        <option value="$PROJECT_DIR$/src/com/project/TemplateGui.java" />
-        <option value="$PROJECT_DIR$/src/com/project/AdminCreation.java" />
-        <option value="$PROJECT_DIR$/src/com/project/AdminViewOrder.java" />
-        <option value="$PROJECT_DIR$/src/com/project/Booking.java" />
-        <option value="$PROJECT_DIR$/src/com/project/DatabaseHash.java" />
-        <option value="$PROJECT_DIR$/src/com/project/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/project/mariadb.java" />
-        <option value="$PROJECT_DIR$/src/com/project/User.java" />
-        <option value="$PROJECT_DIR$/src/com/project/AdminMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/project/Basket.java" />
-        <option value="$PROJECT_DIR$/src/com/project/CreateAccount.java" />
-        <option value="$PROJECT_DIR$/src/com/project/FoodMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/project/ManageAccounts.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/BookingTest.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/FoodOrderTest.java" />
-        <option value="$PROJECT_DIR$/src/com/project/ManageStock.form" />
-        <option value="$PROJECT_DIR$/src/com/project/ManageStock.java" />
-        <option value="$PROJECT_DIR$/src/com/project/AddMenuItem.form" />
-        <option value="$PROJECT_DIR$/src/com/project/FoodOrder.java" />
-        <option value="$PROJECT_DIR$/src/com/project/FoodOrder.form" />
-        <option value="$PROJECT_DIR$/src/com/project/TableBooking.form" />
-        <option value="$PROJECT_DIR$/src/com/project/Basket.java" />
-        <option value="$PROJECT_DIR$/src/com/project/AddMenuItem.java" />
-        <option value="$PROJECT_DIR$/src/com/project/ViewBookings.form" />
-        <option value="$PROJECT_DIR$/src/com/project/OrderHistory.java" />
-        <option value="$PROJECT_DIR$/src/com/project/UserMenu.form" />
-        <option value="$PROJECT_DIR$/src/com/project/TableBooking.java" />
-        <option value="$PROJECT_DIR$/src/com/project/ViewBookings.java" />
-        <option value="$PROJECT_DIR$/src/com/project/UserMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/project/AdminMenu.form" />
-        <option value="$PROJECT_DIR$/src/com/project/AdminMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/project/User.java" />
-        <option value="$PROJECT_DIR$/src/com/project/Product.java" />
-        <option value="$PROJECT_DIR$/src/com/project/AddMenuItem.java" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -275,6 +58,29 @@
             <path>
               <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -289,85 +95,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="AddMenuItem" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminMenu" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="Basket" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="CreateAccount" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="FoodOrder" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="TableBooking" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="TemplateGui" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="UserMenu" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewBookings" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
@@ -377,44 +104,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="friendlytomsproject" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561497213173" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/junit-4.13-beta-3.jar!/" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.tests" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561585933836" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -428,7 +123,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.project.Main" />
       <module name="FriendlyTomsProject" />
@@ -442,75 +137,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FriendlyTomsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.tests.FoodOrderTest" />
-      <option name="METHOD_NAME" value="test_that_all_drink_dropdown_has_right_amount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_object_type" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FriendlyTomsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.tests.OrderHistoryTest" />
-      <option name="METHOD_NAME" value="test_that_admin_users_can_see_admin_columns_with_object_type" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_resultset_type" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FriendlyTomsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.tests.OrderHistoryTest" />
-      <option name="METHOD_NAME" value="test_that_admin_users_can_see_admin_columns_with_resultset_type" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.tests in FriendlyTomsProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FriendlyTomsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tests" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" />
-        <item itemvalue="JUnit.com.tests in FriendlyTomsProject" />
-        <item itemvalue="JUnit.OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_object_type" />
-        <item itemvalue="JUnit.OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_resultset_type" />
       </list>
     </recent_temporary>
   </component>
@@ -519,876 +148,74 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="97401e9f-1559-4455-8081-76c68f1d89db" name="Default Changelist" comment="" />
-      <created>1552997091153</created>
+      <changelist id="7568b733-e8b3-447b-b100-fe5bccff3566" name="Default Changelist" comment="" />
+      <created>1561585252911</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1552997091153</updated>
-      <workItem from="1552997092832" duration="2089000" />
-      <workItem from="1553095493544" duration="1016000" />
-      <workItem from="1553465517730" duration="3514000" />
-      <workItem from="1553593879453" duration="9738000" />
-      <workItem from="1554211981729" duration="2030000" />
-      <workItem from="1555426028479" duration="1890000" />
-      <workItem from="1555613314293" duration="1402000" />
-      <workItem from="1557827602480" duration="407000" />
-      <workItem from="1557864795649" duration="2291000" />
-      <workItem from="1557938861185" duration="11294000" />
-      <workItem from="1558346391521" duration="8010000" />
-      <workItem from="1558875939224" duration="6235000" />
-      <workItem from="1559416641078" duration="9237000" />
-      <workItem from="1559588456803" duration="14824000" />
-      <workItem from="1560100099960" duration="6166000" />
-      <workItem from="1560177754585" duration="11276000" />
-      <workItem from="1560364650181" duration="6786000" />
-      <workItem from="1560436914793" duration="2459000" />
-      <workItem from="1560439436899" duration="234000" />
-      <workItem from="1560439725471" duration="401000" />
-      <workItem from="1560445345280" duration="14270000" />
-      <workItem from="1560543407034" duration="13442000" />
-      <workItem from="1561229253886" duration="7771000" />
-      <workItem from="1561478077817" duration="2216000" />
-      <workItem from="1561493311717" duration="3818000" />
-      <workItem from="1561300920820" duration="10190000" />
-      <workItem from="1561473345747" duration="12000" />
-      <workItem from="1561473392367" duration="19000" />
-      <workItem from="1561478997838" duration="12774000" />
+      <updated>1561585252911</updated>
+      <workItem from="1561585260859" duration="324000" />
+      <workItem from="1561585608675" duration="325000" />
     </task>
-    <task id="LOCAL-00001" summary="Added some basic logic to the booking form">
-      <created>1557865896566</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1557865896566</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Finished the table booking form">
-      <created>1558348332131</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1558348332131</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Starting logic for Stock Management">
-      <created>1558354328958</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1558354328958</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Getting the basket working">
-      <created>1558881238409</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1558881238409</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Cracking on with the order stuff">
-      <created>1559420917836</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1559420917836</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Cracking on with the order stuff. Added order history">
-      <created>1559483947534</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1559483947534</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Got the order to minus the stock stuff too">
-      <created>1559593947370</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1559593947370</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Added sitting checks for table booking">
-      <created>1559656425862</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1559656425862</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added account management">
-      <created>1560184339111</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1560184339115</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Added some sick user order stuff">
-      <created>1560279532518</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1560279532518</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Added account management">
-      <created>1560368968843</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1560368968843</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Created some unit tests - this adds a load.&#10;&#10;So that I remember - You will need Junit 4 and &quot;Hamcrest&quot;.&#10;&#10;Download files should look like:&#10;- &quot;hamcrest-2.1.jar&quot;&#10;- &quot;junit-4.13-beta-3.jar&quot;&#10;&#10;These need to be added in project structure. Ctrl+Alt+Shift+S and then modules &gt; dependencies. &#10;&#10;Good luck xx">
-      <created>1560452184614</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1560452184615</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Started added comments">
-      <created>1560598498284</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1560598498284</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Added all comments.">
-      <created>1560613702852</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1560613702852</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Adding in the form for Adding menu items">
-      <created>1561242898532</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1561242898532</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Admins can now add product (OO version)">
-      <created>1561501409515</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1561501409515</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="OrderHistoryTest_test_that_admin_users_can_see_admin_columns_with_object_type - 2019.06.14 at 14h 57m 09s.xml">
-      <configuration name="OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_object_type" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OrderHistoryTest_test_that_admin_users_can_see_admin_columns_with_object_type - 2019.06.14 at 14h 58m 16s.xml">
-      <configuration name="OrderHistoryTest.test_that_admin_users_can_see_admin_columns_with_object_type" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_tests_in_FriendlyTomsProject - 2019.06.14 at 15h 00m 49s.xml">
-      <configuration name="com.tests in FriendlyTomsProject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FoodOrderTest_test_that_all_drink_dropdown_has_right_amount - 2019.06.14 at 22h 10m 01s.xml">
-      <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FoodOrderTest_test_that_all_drink_dropdown_has_right_amount - 2019.06.14 at 22h 12m 26s.xml">
-      <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FoodOrderTest_test_that_all_drink_dropdown_has_right_amount - 2019.06.14 at 22h 15m 23s.xml">
-      <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FoodOrderTest_test_that_all_drink_dropdown_has_right_amount - 2019.06.14 at 22h 17m 40s.xml">
-      <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_tests_in_FriendlyTomsProject - 2019.06.15 at 11h 30m 39s.xml">
-      <configuration name="com.tests in FriendlyTomsProject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_tests_in_FriendlyTomsProject - 2019.06.15 at 11h 30m 52s.xml">
-      <configuration name="com.tests in FriendlyTomsProject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FoodOrderTest_test_that_all_drink_dropdown_has_right_amount - 2019.06.15 at 16h 47m 03s.xml">
-      <configuration name="FoodOrderTest.test_that_all_drink_dropdown_has_right_amount" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161143000" />
-  </component>
-  <component name="TodoView" selected-index="4">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="649000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" order="0" />
-      <window_info id="UI Designer" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.20196672" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32733223" />
-      <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50075644" side_tool="true" weight="0.2536825" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.049099836" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49924356" visible="true" weight="0.20785597" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.44517186" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32405892" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.3289689" />
-      <window_info anchor="right" id="Theme Preview" order="0" />
-      <window_info anchor="right" id="Database" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.32995737" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.24962178" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="UI Designer" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.18532526" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32733223" />
-      <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50075644" side_tool="true" weight="0.2536825" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32569557" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49924356" visible="true" weight="0.16202946" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.23567921" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32569557" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.3289689" />
-      <window_info anchor="right" id="Theme Preview" order="0" />
-      <window_info anchor="right" id="Database" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.32995737" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.24962178" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added some basic logic to the booking form" />
-    <MESSAGE value="Finished the table booking form" />
-    <MESSAGE value="Starting logic for Stock Management" />
-    <MESSAGE value="Getting the basket working" />
-    <MESSAGE value="Cracking on with the order stuff" />
-    <MESSAGE value="Cracking on with the order stuff. Added order history" />
-    <MESSAGE value="Got the order to minus the stock stuff too" />
-    <MESSAGE value="Added sitting checks for table booking" />
-    <MESSAGE value="Added some sick user order stuff" />
-    <MESSAGE value="Added account management" />
-    <MESSAGE value="Created some unit tests - this adds a load.&#10;&#10;So that I remember - You will need Junit 4 and &quot;Hamcrest&quot;.&#10;&#10;Download files should look like:&#10;- &quot;hamcrest-2.1.jar&quot;&#10;- &quot;junit-4.13-beta-3.jar&quot;&#10;&#10;These need to be added in project structure. Ctrl+Alt+Shift+S and then modules &gt; dependencies. &#10;&#10;Good luck xx" />
-    <MESSAGE value="Started added comments" />
-    <MESSAGE value="Added all comments." />
-    <MESSAGE value="Adding in the form for Adding menu items" />
-    <MESSAGE value="Added better guis" />
-    <MESSAGE value="Added better guis :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added better guis :)" />
-    <MESSAGE value="Admins can now add product (OO version)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admins can now add product (OO version)" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="((SelectResultSet)sittingReturn).protocol" custom="org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
-    <option name="sizePresets">
-      <list>
-        <SizePreset>
-          <option name="caption" value="Phone" />
-          <option name="height" value="568" />
-          <option name="width" value="320" />
-        </SizePreset>
-        <SizePreset>
-          <option name="caption" value="Tablet" />
-          <option name="height" value="1024" />
-          <option name="width" value="768" />
-        </SizePreset>
-        <SizePreset>
-          <option name="caption" value="Desktop" />
-          <option name="height" value="900" />
-          <option name="width" value="1440" />
-        </SizePreset>
-      </list>
-    </option>
-  </component>
-  <component name="designer2.settings">
-    <option name="applicationTheme" value="Autodetect" />
-    <option name="autodetectServerAddress" value="true" />
-    <option name="componentTheme" value="LUMO" />
-    <option name="serverIp" value="localhost" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.desktop/javax/swing/JTabbedPane.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tests.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tests/MainTests.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/ClassLoader.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/security/SecureClassLoader.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/loader/BuiltinClassLoader.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tests/LoginFormTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tests/OrderHistoryTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tests/MariaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" column="62" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tests/FoodMenuTest.java" />
-    <entry file="jar://$USER_HOME$/Downloads/junit-4.13-beta-3.jar!/org/junit/Assert.class" />
-    <entry file="file://$PROJECT_DIR$/src/com/tests/TemplateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="55" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/mariadb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="96" column="40" selection-start-line="96" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/DatabaseHash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="38" column="16" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminViewOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="e#113#114#0" expanded="true" />
-            <element signature="e#169#170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminCreation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="97" selection-start-line="4" selection-start-column="97" selection-end-line="4" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/DeleteAccounts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ViewAccounts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tests/BookingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="102" selection-start-line="10" selection-start-column="102" selection-end-line="10" selection-end-column="102" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tests/FoodOrderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.java">
-    <entry file="file://$PROJECT_DIR$/src/com/project/DeleteAccounts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="36" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/DeleteAccounts.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/TemplateGui.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.java">
-    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1474#1475#0" expanded="true" />
-            <element signature="e#1672#1673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Validation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2159">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2873">
-          <caret line="176" column="82" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tests/TableBookingTest.java">
-    <entry file="file://$PROJECT_DIR$/src/com/tests/BookingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Basket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="104" column="79" selection-start-line="104" selection-start-column="79" selection-end-line="104" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ManageAccounts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="104" column="35" selection-start-line="101" selection-start-column="12" selection-end-line="104" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ViewBookings.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ManageAccounts.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ViewAccounts.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/OrderHistory.java">
-    <entry file="file://$PROJECT_DIR$/src/com/tests/FoodOrderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="74" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Booking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1495">
-          <caret line="208" column="22" lean-forward="true" selection-start-line="208" selection-start-column="22" selection-end-line="208" selection-end-column="22" />
-    <entry file="file://$PROJECT_DIR$/src/com/project/DeleteAccounts.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/TemplateGui.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="33" column="11" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="33" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ViewBookings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-    <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1960#1961#0" expanded="true" />
-            <element signature="e#2005#2006#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Basket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="130" column="139" selection-start-line="130" selection-start-column="131" selection-end-line="130" selection-end-column="139" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/ManageAccounts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="95" column="125" selection-start-line="95" selection-start-column="125" selection-end-line="95" selection-end-column="125" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/TemplateGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-    <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/UserMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="91" column="32" lean-forward="true" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
-    <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/mariadb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3383">
-          <caret line="206" column="28" selection-start-line="206" selection-start-column="28" selection-end-line="206" selection-end-column="46" />
-          <caret line="205" column="28" selection-start-line="205" selection-start-column="28" selection-end-line="205" selection-end-column="46" />
-          <caret line="200" column="28" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="46" />
-          <caret line="199" column="28" selection-start-line="199" selection-start-column="28" selection-end-line="199" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Booking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/TableBooking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="153" column="4" selection-start-line="153" selection-start-column="4" selection-end-line="153" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminViewOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/CreateAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="59" column="34" lean-forward="true" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="43" column="52" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="43" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AdminCreation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>FriendlyTomsProject</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>mariadb-java-client-2.3.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
