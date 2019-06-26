@@ -20,13 +20,15 @@
           <text value="Name"/>
         </properties>
       </component>
-      <component id="e3c65" class="javax.swing.JTextField" binding="txtname">
+      <component id="e3c65" class="javax.swing.JTextField" binding="txtName">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="ac0c9" class="javax.swing.JLabel">
         <constraints>
@@ -43,7 +45,7 @@
           <grid row="6" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="Submit"/>
         </properties>
       </component>
       <component id="dae57" class="javax.swing.JLabel">
@@ -69,14 +71,6 @@
         <properties>
           <text value="URL of image"/>
         </properties>
-      </component>
-      <component id="c073a" class="javax.swing.JTextField" binding="txtCalories">
-        <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties/>
       </component>
       <component id="fdafa" class="javax.swing.JLabel">
         <constraints>
@@ -128,7 +122,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="a8874" class="javax.swing.JComboBox" binding="cmbCategory">
+      <component id="a8874" class="javax.swing.JComboBox" binding="cboCategory">
         <constraints>
           <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -137,6 +131,12 @@
       <component id="7ca51" class="javax.swing.JSpinner" binding="spnStock">
         <constraints>
           <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="8a367" class="javax.swing.JSpinner" binding="spnCalories">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
