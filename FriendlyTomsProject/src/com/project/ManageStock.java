@@ -42,7 +42,7 @@ public class ManageStock extends TemplateGui {
         pane = new JScrollPane(table);
         panelMain.add(pane, BorderLayout.CENTER);
         panelMain.add(btnUpdate, BorderLayout.SOUTH);
-        panelMain.add(btnAddMenuItem, BorderLayout.SOUTH);
+        panelMain.add(btnAddMenuItem, BorderLayout.PAGE_END);
 
         frame.add(panelMain, BorderLayout.CENTER);
         DisplayGenericElements();
