@@ -49,7 +49,12 @@ public class Basket extends TemplateGui {
         btnOrder.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                makeOrder();
+
+                Checkout checkout = new Checkout();
+                checkout.displayCheckout();
+                frame.dispose();
+
+                /*makeOrder();
                 Object[] options = {"Yes, print receipt",
                         "No, thanks"};
                 int n = JOptionPane.showOptionDialog(frame,
@@ -64,7 +69,7 @@ public class Basket extends TemplateGui {
                 database.prepared_write_query("DELETE FROM basket");
                 UserMenu userMenu = new UserMenu();
                 userMenu.displayUserMenu();
-                frame.dispose();
+                frame.dispose();*/
 
             }
         });
