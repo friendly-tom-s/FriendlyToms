@@ -4,9 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.sql.ResultSet;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
+
+import static java.time.LocalTime.parse;
 
 /**
  * This class is used to book tables. It can only be accessed by the users.
@@ -41,7 +44,7 @@ public class TableBooking extends TemplateGui {
         DisplayGenericElements();
         frame.setSize(350, 450);
         checkAvailabilityButton.addActionListener(e -> {
-            String date = cboDay.getSelectedItem() + "/" + (cboMonth.getSelectedIndex() + 1) + "/" + cboYear.getSelectedItem();
+            String date = getDate();
             checkDate(date);
             showAvailableSeats();
         });
@@ -58,10 +61,15 @@ public class TableBooking extends TemplateGui {
     public Boolean validateBooking(String dateTime, String dateFormat) {
         DateFormat format = new SimpleDateFormat(dateFormat);
         format.setLenient(false);
-        Date date = new Date(dateTime);
+        //Date date = new Date(dateTime);
         Date today = new Date();
+        Date date = null;
 
-        format.format(date);
+        try {
+            date=format.parse(dateTime);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         if (date.after(today)) {
             return true;
         } else {
@@ -70,22 +78,27 @@ public class TableBooking extends TemplateGui {
         }
     }
 
-    /**
-     * The data is collected and checked using other functions within this class. If all is validated and returns as true
-     * then the entry will be added to the DB.
-     */
-    private void bookingLogic() {
+    public String getDate(){
         int month = cboMonth.getSelectedIndex();
         String monthString;
         if (month < 10) {
             monthString = "0" + (cboMonth.getSelectedIndex() + 1);
         } else {
-            monthString = String.valueOf(cboMonth.getSelectedIndex());
+            monthString = String.valueOf(cboMonth.getSelectedIndex() + 1);
         }
         String date = cboDay.getSelectedItem() + "/" + monthString + "/" + cboYear.getSelectedItem();
-        if (validateBooking(date, "dd/MM/yy").equals(true) &&
+        return date;
+    }
+
+    /**
+     * The data is collected and checked using other functions within this class. If all is validated and returns as true
+     * then the entry will be added to the DB.
+     */
+    private void bookingLogic() {
+
+        if (validateBooking(getDate(), "dd/MM/yy").equals(true) &&
                 checkSittingAvailability(getCboStringValue()).equals(true)) {
-            booking.setDate(date);
+            booking.setDate(getDate());
             booking.setName(txtName.getText());
             booking.setAmount(Objects.requireNonNull(cboAmount.getSelectedItem()).toString());
             int dialogButton = JOptionPane.YES_NO_OPTION;
