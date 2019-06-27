@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7568b733-e8b3-447b-b100-fe5bccff3566" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/ManageStock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FriendlyTomsProject/com/project/ManageStock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/AddMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/AddMenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/ManageStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/ManageStock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/project/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/Basket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/project/Checkout.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/Checkout.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/project/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/Checkout.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,70 +16,90 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="425">
+              <caret line="53" column="29" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="54" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/TemplateGui.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.form">
+          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.java">
+        <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+            <state relative-caret-position="656">
+              <caret line="66" column="11" lean-forward="true" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1953#1954#0" expanded="true" />
+                <element signature="e#2025#2026#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.form">
+        <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.java">
+        <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="-391">
               <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/mariadb.java">
+        <entry file="file://$PROJECT_DIR$/src/com/project/Basket.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/Basket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>model</find>
+      <find>getTo</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -92,6 +111,9 @@
         <option value="$PROJECT_DIR$/src/com/project/AddMenuItem.form" />
         <option value="$PROJECT_DIR$/src/com/project/AddMenuItem.java" />
         <option value="$PROJECT_DIR$/src/com/project/ManageStock.java" />
+        <option value="$PROJECT_DIR$/src/com/project/Checkout.form" />
+        <option value="$PROJECT_DIR$/src/com/project/Basket.java" />
+        <option value="$PROJECT_DIR$/src/com/project/Checkout.java" />
       </list>
     </option>
   </component>
@@ -105,8 +127,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,7 +173,31 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="LoginForm" type="e9f4de52:FormNode" />
+              <item name="Basket" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="Checkout" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="FoodMenu" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="FoodOrder" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
@@ -160,14 +206,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="ManageStock" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FriendlyTomsProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="TemplateGui" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="FriendlyTomsProject" type="b2602c69:ProjectViewProjectNode" />
@@ -182,7 +220,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561588888188" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561677003868" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -229,6 +267,7 @@
       <workItem from="1561585260859" duration="324000" />
       <workItem from="1561585608675" duration="325000" />
       <workItem from="1561587187478" duration="1694000" />
+      <workItem from="1561665467767" duration="5135000" />
     </task>
     <task id="LOCAL-00001" summary="Bug fixes to adding menu item">
       <created>1561588210295</created>
@@ -237,17 +276,23 @@
       <option name="project" value="LOCAL" />
       <updated>1561588210295</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Creating transaction (not working yet) dont merge">
+      <created>1561677034805</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1561677034805</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2343000" />
+    <option name="totallyTimeSpent" value="7478000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -256,7 +301,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -283,7 +328,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bug fixes to adding menu item" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes to adding menu item" />
+    <MESSAGE value="Creating transaction (not working yet) dont merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating transaction (not working yet) dont merge" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -296,19 +342,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/mariadb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/TemplateGui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
+        <state relative-caret-position="1394">
           <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -317,23 +359,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/LoginForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/src/com/project/mariadb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/AddMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="459">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/FoodOrder.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/Basket.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/FoodMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/ManageStock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+        <state relative-caret-position="425">
+          <caret line="53" column="29" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="54" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/Basket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/Checkout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="66" column="11" lean-forward="true" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#2025#2026#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
