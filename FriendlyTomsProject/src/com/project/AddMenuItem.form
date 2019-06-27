@@ -17,6 +17,8 @@
           </grid>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="Name"/>
         </properties>
       </component>
@@ -37,6 +39,8 @@
           </grid>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="Description"/>
         </properties>
       </component>
@@ -53,6 +57,9 @@
           <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <enabled value="true"/>
+          <font size="15" style="1"/>
+          <foreground color="-1"/>
           <text value="Add item to menu"/>
         </properties>
       </component>
@@ -61,6 +68,8 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="Calories"/>
         </properties>
       </component>
@@ -69,6 +78,8 @@
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="URL of image"/>
         </properties>
       </component>
@@ -77,6 +88,8 @@
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="Category"/>
         </properties>
       </component>
@@ -101,7 +114,9 @@
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Price"/>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
+          <text value="Price (£)"/>
         </properties>
       </component>
       <component id="7be3b" class="javax.swing.JLabel">
@@ -109,6 +124,8 @@
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="No in stock"/>
         </properties>
       </component>

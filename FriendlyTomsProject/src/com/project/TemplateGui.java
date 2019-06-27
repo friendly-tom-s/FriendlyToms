@@ -82,6 +82,10 @@ public class TemplateGui {
             FoodOrder foodOrder = new FoodOrder();
             foodOrder.displayFoodOrder();
         }
+        if (previousWin.equals("ManageStock")){
+            ManageStock manageStock = new ManageStock();
+            manageStock.DisplayStock();
+        }
         if(previousWin.equals("FoodMenu")){
             frame.dispose();
         }
