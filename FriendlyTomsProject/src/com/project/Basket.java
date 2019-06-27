@@ -115,8 +115,7 @@ public class Basket extends TemplateGui {
     }
 
     public int getTotalCost(){
-        int returnVar;
-        returnVar = totalCost;
+        int returnVar = totalCost;
         return returnVar;
     }
 
