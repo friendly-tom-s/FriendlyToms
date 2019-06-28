@@ -76,6 +76,11 @@ public class TableBooking extends TemplateGui {
         }
     }
 
+    /**
+     * This gets the selected date from the CBOs as according to their values.
+     * @return
+     * The date is returned.
+     */
     public String getDate(){
         int month = cboMonth.getSelectedIndex();
         String monthString;

@@ -31,13 +31,20 @@ public class UserMenu extends TemplateGui {
     public UserMenu(){
 
         super("User Menu", "Logout", "LoginForm");
-
     }
 
+    /**
+     * This sets the user that is currently logged in.
+     * @param loggedUser
+     * The user is taken from the login screen.
+     */
     public void setLoggedInUser(User loggedUser){
         this.loggedUser = loggedUser;
     }
 
+    /**
+     * The basket icon is taken from the internet.
+     */
     public void setIconImage(){
         Image image = null;
         try {
@@ -49,6 +56,9 @@ public class UserMenu extends TemplateGui {
         lblMenu.setIcon(new ImageIcon(image));
     }
 
+    /**
+     * Typical GUI set up method but the buttons used are styled buttons.
+     */
     public void displayUserMenu(){
         mainUserPanel.add(btnOrderFood);
         btnOrderFood.setUI(new StyledButtonUI());
