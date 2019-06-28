@@ -2,7 +2,6 @@ package com.project;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -52,7 +51,7 @@ public class OrderHistory extends TemplateGui {
     public OrderHistory(String guiName, String buttonVar, String previousWIn ){
         super(guiName, buttonVar, previousWIn);
         this.previousWIn= previousWIn;
-    }
+            }
 
     /**
      * This is the typical Gui creation method.
@@ -91,15 +90,12 @@ public class OrderHistory extends TemplateGui {
 
             }
         });
-        btnToday.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                Date date = new Date();
-                String preparedDate = dateFormat.format(date) + "%";
-                table.setModel(getOrder(getUserType(preparedDate)));
+        btnToday.addActionListener(e -> {
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            Date date = new Date();
+            String preparedDate1 = dateFormat.format(date) + "%";
+            table.setModel(getOrder(getUserType(preparedDate1)));
 
-            }
         });
 
     }
@@ -135,12 +131,10 @@ public class OrderHistory extends TemplateGui {
      */
     public Object[] getObject(){
         if(previousWIn.equals("AdminMenu")){
-            Object[] columns = {"FoodName","Date", "User", "Completed?"};
-            return columns;
+            return new Object[]{"FoodName","Date", "User", "Completed?"};
         }
         else{
-            Object[] columns = {"FoodName","Date"};
-            return columns;
+            return new Object[]{"FoodName","Date"};
         }
     }
 
@@ -163,6 +157,7 @@ public class OrderHistory extends TemplateGui {
                 String foodID = previousOrders.getString("foodItem");
                 String date = previousOrders.getString("order_date");
                 String user = previousOrders.getString("userID");
+                String complete = previousOrders.getString("completed");
                 foodNames = database.prepared_read_query("SELECT name FROM menu where menu_id=?", foodID);//Take this out the while loop and make it an array
                 String username = getUserName(user);
                 try {
@@ -170,7 +165,7 @@ public class OrderHistory extends TemplateGui {
                         String columnNameValue = foodNames.getString("name");
 
                         if(previousWIn.equals("AdminMenu")){
-                            String user_info[] = {columnNameValue, date, username};
+                            String user_info[] = {columnNameValue, date, username,complete };
                             model.addRow(user_info);
                         }
                         else{
