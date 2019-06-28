@@ -73,6 +73,28 @@ public class Basket extends TemplateGui {
 
             }
         });
+
+        btnDelete.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Object[] options = {"Yes, delete",
+                        "No, thanks"};
+                int n = JOptionPane.showOptionDialog(frame,
+                        "Are you sure you wish to delete this item?",
+                        "Delete Item",
+                        JOptionPane.YES_NO_CANCEL_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        options,
+                        options[1]);
+                if(n == 0) {
+                    deleteItem();
+                    table.setModel(getListItems());
+                    costLabel.setText("The cost of this basket is: £"+getTotalCost());
+
+                }
+            }
+        });
     }
 
     /**
@@ -103,11 +125,11 @@ public class Basket extends TemplateGui {
                         String prices = nameOfItems.getString("price");
                         overallTotalCost= totalCost + Integer.parseInt(prices);
                         setTotalCost(overallTotalCost);
-                        String user_info[] = {columnNameValue, prices};
+                        String user_info[] = {columnNameValue, "£"+prices};
                         model.addRow(user_info);
                     }
                 }
-                catch (Exception a){System.out.println("Something failed at 2");}//try
+                catch (Exception a){System.out.println("Something failed at 2" + a);}//try
             }
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
@@ -221,5 +243,21 @@ public class Basket extends TemplateGui {
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
         return foodItems;
+    }
+
+    private void deleteItem(){
+        int row = table.getSelectedRow();
+        String itemID= null;
+        ResultSet itemQuery = database.prepared_read_query("SELECT menu_id FROM menu WHERE name=? ",
+                table.getValueAt(row,0));
+        try{
+            while(itemQuery.next()){
+                itemID = itemQuery.getString("menu_id");
+            }
+        }
+        catch(Exception a){}
+
+        boolean delete = database.prepared_write_query("delete from basket WHERE itemID = ? LIMIT 1", itemID);
+
     }
 }
