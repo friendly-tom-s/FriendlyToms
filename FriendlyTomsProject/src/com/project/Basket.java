@@ -13,6 +13,9 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * This class is where the basket is viewed and the user has the option to complete their order
+ */
 public class Basket extends TemplateGui {
     private JPanel panel2;
     private JPanel penlTest = new JPanel(new BorderLayout());
@@ -110,13 +113,17 @@ public class Basket extends TemplateGui {
         return model;
     }
 
+
+    /**
+     * This get and set for total cost because this var is used elsewhere in the program.
+     * @param cost
+     */
     public void setTotalCost(int cost){
         totalCost = cost;
     }
 
     public int getTotalCost(){
-        int returnVar = totalCost;
-        return returnVar;
+        return totalCost;
     }
 
     /**
@@ -142,6 +149,13 @@ public class Basket extends TemplateGui {
         catch (Exception a){System.out.println("Something failed at 1");}//try
     }
 
+    /**
+     * This is where the user receipt is saved if they wish to do so.
+     *
+     * It adds all the items that the user ordered to the receipt as well as the total cost.
+     *
+     * It adds it to the user's desktop.
+     */
     private void printUserReceipt(){
         File file = new File(System.getProperty("user.home") + "/Desktop/FT_Receipt.txt");
 
@@ -154,24 +168,7 @@ public class Basket extends TemplateGui {
             }
         }
 
-        ResultSet listItems = database.prepared_read_query("SELECT itemID FROM basket");
-        String foodItems= "";
-
-        try {
-            while(listItems.next()) {
-                String columnValue = listItems.getString("itemID");
-                nameOfItems = database.prepared_read_query("SELECT name FROM menu where menu_id=?", columnValue);//Take this out the while loop and make it an array
-                try {
-                    while(nameOfItems.next()) {
-                        String columnNameValue = nameOfItems.getString("name");
-                        foodItems = foodItems + System.lineSeparator() + columnNameValue;
-                    }
-                }
-                catch (Exception a){System.out.println("Something failed at 2");}//try
-            }
-        }
-        catch (Exception a){System.out.println("Something failed at 1");}//try
-
+        // Write the receipt.
         FileWriter fw = null;
         try {
             fw = new FileWriter(file.getAbsoluteFile());
@@ -180,7 +177,7 @@ public class Basket extends TemplateGui {
         }
         BufferedWriter bw = new BufferedWriter(fw);
         try {
-            bw.write(foodItems);
+            bw.write(getFoodItems());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -190,8 +187,36 @@ public class Basket extends TemplateGui {
             e.printStackTrace();
         }
 
-        JOptionPane.showMessageDialog(null,"Receipt Saved!");
+        JOptionPane.showMessageDialog(null,"Receipt Saved to you desktop!");
 
+    }
 
+    /**
+     * This gets all the database items that the user ordered. As it the database is normalised this means that more
+     * statements are needed because it requires IDs across tables to work
+     *
+     * @return
+     * The string that will be added the receipt.
+     */
+    private String getFoodItems(){
+        ResultSet listItems = database.prepared_read_query("SELECT itemID FROM basket");
+        String foodItems= "";
+
+        try {
+            while(listItems.next()) {
+                String columnValue = listItems.getString("itemID");
+                nameOfItems = database.prepared_read_query("SELECT name FROM menu where menu_id=?", columnValue);
+                try {
+                    while(nameOfItems.next()) {
+                        String columnNameValue = nameOfItems.getString("name");
+                        foodItems = foodItems + System.lineSeparator() + columnNameValue;
+                    }
+                    foodItems = foodItems + System.lineSeparator() + "This came to a total of £"+getTotalCost();
+                }
+                catch (Exception a){System.out.println("Something failed at 2");}//try
+            }
+        }
+        catch (Exception a){System.out.println("Something failed at 1");}//try
+        return foodItems;
     }
 }

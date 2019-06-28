@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 /**
  * This class is used to create all user accounts. This is used for the admins and the users.
- *
+ * <p>
  * It is either accessed from the login screen or the admin menu.
  */
 
@@ -24,25 +24,19 @@ public class CreateAccount extends TemplateGui {
     private JTextField txtFirstName;
     private JTextField txtSurname;
     private User user = new User();
-    mariadb db_connector = new mariadb();
 
     /**
      * The constructor changes due to the fact that this clas is inherited for the admin creation meaning that the previous window
      * is not always the same. It needs to be assigned when the class/object is created.
      *
-     * @param guiName
-     * The name of the Gui, either Admin Creation or User Creation.
-     *
-     * @param buttonVar
-     * This will either be Main Menu or Back.
-     *
-     * @param previousWin
-     * This is either AdminMenu or LoginForm.
+     * @param guiName     The name of the Gui, either Admin Creation or User Creation.
+     * @param buttonVar   This will either be Main Menu or Back.
+     * @param previousWin This is either AdminMenu or LoginForm.
      */
     public CreateAccount(String guiName, String buttonVar, String previousWin) {
 
-        /**
-         * The TemplateGui constructor is given the variables from this constructor.
+        /*
+          The TemplateGui constructor is given the variables from this constructor.
          */
         super(guiName, buttonVar, previousWin);
 
@@ -50,23 +44,20 @@ public class CreateAccount extends TemplateGui {
 
     /**
      * If the admin radio button is selected then the user gets an admin status.
-     *
+     * <p>
      * Only if this class is accessed from the AdminMenu can the Admin Radio button be seen.
      */
-    public void setUserData(){
+    public void setUserData() {
         user.setUsername(txtUserName.getText());
-        user.setConfirmPassword(new String (pswPassword.getPassword()));
-        user.setPassword(new String (pswPassword.getPassword()));
+        user.setConfirmPassword(new String(pswPassword.getPassword()));
+        user.setPassword(new String(pswPassword.getPassword()));
         user.setEmail(txtEmail.getText());
         user.setFirst_name(txtFirstName.getText());
         user.setLast_name(txtSurname.getText());
 
-        if (rdoAdmin.isSelected())
-        {
+        if (rdoAdmin.isSelected()) {
             user.setAdminStatus(1);
-        }
-        else
-        {
+        } else {
             user.setAdminStatus(0);
         }
 
@@ -75,43 +66,44 @@ public class CreateAccount extends TemplateGui {
 
     /**
      * This makes sure that the entered details follow the correct regex scheme meaning that the username and password are validated.
-     *
+     * <p>
      * It then makes sure that the user does not already exist.
-     *
+     * <p>
      * If the user does not exist it adds the new user to the database.
      */
-    public void confirmUserData(){
+    public void confirmUserData() {
         Boolean checkUser = false;
         Boolean checkPw = false;
 
         boolean input_errors = false;
-        if(Pattern.matches("[a-zA-Z0-9]{3,20}", user.getPassword())) {
+        if (Pattern.matches("[a-zA-Z0-9]{3,20}", user.getPassword())) {
 
         } else {
 
             input_errors = true;
         }
         //validate password
-        if(Pattern.matches("[a-zA-Z0-9]{3,20}", user.getPassword())) {
+        if (Pattern.matches("[a-zA-Z0-9]{3,20}", user.getPassword())) {
 
         } else {
             input_errors = true;
         }
         //validate passwords match
-        if(Pattern.matches(user.getPassword(), user.getConfirm_password())) {
+        if (Pattern.matches(user.getPassword(), user.getConfirm_password())) {
         } else {
             input_errors = true;
         }
 
         //to check if user being created already exists
-        if(input_errors != true) {
+        if (!input_errors) {
             //READ CODE
-            ResultSet read_query = db_connector.prepared_read_query("SELECT user_id FROM users WHERE username=?", user.getUsername());
+            ResultSet read_query = database.prepared_read_query("SELECT " +
+                    "user_id FROM users WHERE username=?", user.getUsername());
 
             int user_id = 0;
 
             try {
-                if (!read_query.next()) {
+                if(!read_query.next()) {
 
                 } else {
                     user_id = read_query.getInt("user_id");
@@ -122,8 +114,10 @@ public class CreateAccount extends TemplateGui {
                 System.exit(1);
             }
         }
-
-        if(input_errors != true) {
+        /*
+        Creates the account if there are no errors.
+         */
+        if (!input_errors) {
 
             DatabaseHash PBKDF2_class = new DatabaseHash();
             JOptionPane.showMessageDialog(null, "Account Created.");
@@ -132,17 +126,18 @@ public class CreateAccount extends TemplateGui {
             frame.dispose();
 
             try {
-                String generatedSecuredPasswordHash = PBKDF2_class.generateStorngPasswordHash(user.getPassword());
+                String generatedSecuredPasswordHash = PBKDF2_class.generateStrongPasswordHash(user.getPassword());
                 String[] parts = generatedSecuredPasswordHash.split(":");
                 int iterations = Integer.parseInt(parts[0]);
                 String salt = parts[1];
                 String hash = parts[2];
                 //WRITE CODE
-                mariadb db_connector = new mariadb();
-                boolean write_query = db_connector.prepared_write_query("INSERT INTO users (username,salt,hash,is_admin, first_name, last_name) VALUES" +
-                        " (?, ?, ?, ?, ?, ?)", user.getUsername(), salt, hash, user.getAdminStatus(), user.getFirst_name(), user.getLast_name());
+                boolean write_query = database.prepared_write_query("" +
+                                "INSERT INTO users (username,salt,hash,is_admin, first_name, last_name) VALUES" +
+                                " (?, ?, ?, ?, ?, ?)", user.getUsername(), salt, hash, user.getAdminStatus(),
+                        user.getFirst_name(), user.getLast_name());
 
-            } catch (Exception NoSuchAlgorithmException){
+            } catch (Exception NoSuchAlgorithmException) {
                 System.exit(1);
             }//try
         }//input_errors
@@ -151,7 +146,7 @@ public class CreateAccount extends TemplateGui {
     /**
      * The Gui is created
      */
-    public void displayCreate(){
+    public void displayCreate() {
         DisplayGenericElements();
         //The rdoAdmin is only set True from the Admin Creation class.
         rdoAdmin.setVisible(false);
@@ -160,23 +155,36 @@ public class CreateAccount extends TemplateGui {
         btnCreate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(checkEntriesArePresent()){
+                if (checkEntriesArePresent()) {
                     setUserData();
                     confirmUserData();
-                }
-                else{
+                } else {
                     JOptionPane.showMessageDialog(null, "Please fill out all data fields");
                 }
             }
         });
     }
 
-    public boolean checkEntriesArePresent(){
+    /**
+     * This makes sure that all fields are completed.
+     *
+     * @return Pass or Fail.
+     */
+
+    private boolean checkEntriesArePresent() {
         Boolean check = true;
-        if(txtUserName.getText().equals("")){check= false;}
-        if(txtEmail.getText().equals("")){check= false;}
-        if(txtFirstName.getText().equals("")){check= false;}
-        if(txtSurname.getText().equals("")){check= false;}
+        if (txtUserName.getText().equals("")) {
+            check = false;
+        }
+        if (txtEmail.getText().equals("")) {
+            check = false;
+        }
+        if (txtFirstName.getText().equals("")) {
+            check = false;
+        }
+        if (txtSurname.getText().equals("")) {
+            check = false;
+        }
         return check;
     }
 }

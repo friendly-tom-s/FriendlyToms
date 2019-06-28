@@ -26,9 +26,7 @@ public class FoodMenu extends TemplateGui {
     private JScrollPane paneMain;
     private JScrollPane paneDessert;
     private JScrollPane paneDrink;
-    private String imageWebAddress;
     private String selectedItem;
-    private String selectedCategory;
 
 
     public FoodMenu(){super("Menu", "Back", "FoodOrder");

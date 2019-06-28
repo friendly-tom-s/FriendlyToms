@@ -9,8 +9,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
-import static java.time.LocalTime.parse;
-
 /**
  * This class is used to book tables. It can only be accessed by the users.
  */

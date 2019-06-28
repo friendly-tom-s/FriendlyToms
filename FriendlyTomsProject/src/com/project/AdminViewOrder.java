@@ -35,8 +35,8 @@ public class AdminViewOrder extends OrderHistory {
 
     }
 
-    public void updateSelectedValue() {
-        int row= 0;
+    private void updateSelectedValue() {
+        int row;
         try{
             row = table.getSelectedRow();
             String foodName = table.getValueAt(row, 0).toString();
@@ -54,14 +54,14 @@ public class AdminViewOrder extends OrderHistory {
 
     }
 
-    public String getDBValues(ResultSet query, String expectedValue){
+    private String getDBValues(ResultSet query, String expectedValue){
         String returnName = null;
         try {
             while (query.next()) {
                 returnName = query.getString(expectedValue);
             }
         }
-        catch(Exception a){}
+        catch(Exception ignored){}
 
         return returnName;
 

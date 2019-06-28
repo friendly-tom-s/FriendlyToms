@@ -7,17 +7,22 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 
+/**
+ * This class is used to encrypt the user passwords using salting and hashing.
+ */
 public class DatabaseHash {
 
-//    public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException
-//    {
-//        String  originalPassword = "password";
-//        String generatedSecuredPasswordHash = generateStorngPasswordHash(originalPassword);
-//        boolean matched = validatePassword("password", generatedSecuredPasswordHash);
-//        matched = validatePassword("password1", generatedSecuredPasswordHash);
-//    }
-
-    public String generateStorngPasswordHash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException
+    /**
+     * This is where the password hash is generated.
+     *
+     * @param password
+     * The password that the user has entered.
+     *
+     * @return
+     * The hash is returned.
+     *
+     */
+    public String generateStrongPasswordHash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException
     {
         int iterations = 1000;
         char[] chars = password.toCharArray();
@@ -28,6 +33,12 @@ public class DatabaseHash {
         byte[] hash = skf.generateSecret(spec).getEncoded();
         return iterations + ":" + toHex(salt) + ":" + toHex(hash);
     }
+
+    /**
+     * This gets the salt by using a provided string as the basis.
+     * @return
+     * The Salt is returned.
+     */
     private byte[] getSalt() throws NoSuchAlgorithmException
     {
         SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
@@ -36,7 +47,13 @@ public class DatabaseHash {
         return salt;
     }
 
-    //Hex to and from classes
+    /**
+     * This converts the salt (in array form) into Hex values.
+     * @param array
+     * This is the salt in an array form
+     * @return
+     * The salt in hex form.
+     */
     private String toHex(byte[] array) throws NoSuchAlgorithmException
     {
         BigInteger bi = new BigInteger(1, array);
@@ -49,6 +66,14 @@ public class DatabaseHash {
             return hex;
         }
     }
+
+    /**
+     * This converts back to the salt from hex.
+     * @param hex
+     * The hex value.
+     * @return
+     * Salt in array form
+     */
     private byte[] fromHex(String hex) throws NoSuchAlgorithmException
     {
         byte[] bytes = new byte[hex.length() / 2];
@@ -59,7 +84,17 @@ public class DatabaseHash {
         return bytes;
     }
 
-    //authenticate the password
+    /**
+     * This comapres the password in the databased against what the user has entered, it does this by comparing the salts that
+     * of the passwords.
+      * @param originalPassword
+     * Entered password by the user.
+     * @param storedPassword
+     * Password in the DB.
+     * @return
+     * Pass or fail.
+     *
+     */
     public boolean validatePassword(String originalPassword, String storedPassword) throws NoSuchAlgorithmException, InvalidKeySpecException
     {
         String[] parts = storedPassword.split(":");
