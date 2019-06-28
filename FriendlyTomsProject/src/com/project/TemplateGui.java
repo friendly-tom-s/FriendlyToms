@@ -13,9 +13,7 @@ import java.sql.ResultSet;
  */
 public class TemplateGui {
     protected JPanel panel1;
-    private JButton backButtonButton;
-    protected JPanel panel3;
-    protected JLabel labelHidden;
+    protected JButton backButtonButton;
     protected JFrame frame;
     private String previousWin;
     protected mariadb database = new mariadb();

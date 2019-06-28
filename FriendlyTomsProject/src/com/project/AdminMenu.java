@@ -31,7 +31,7 @@ public class AdminMenu extends TemplateGui {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AdminViewOrder adminViewOrder = new AdminViewOrder();
-                adminViewOrder.DisplayOrderHistory();
+                adminViewOrder.displayAdminElements();
                 frame.dispose();
             }
         });
