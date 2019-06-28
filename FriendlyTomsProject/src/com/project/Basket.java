@@ -22,6 +22,7 @@ public class Basket extends TemplateGui {
     private JButton btnOrder;
     private JTable table;
     private JLabel costLabel;
+    private JButton btnDelete;
     private ResultSet nameOfItems;
     private JScrollPane pane;
     private int totalCost;
@@ -44,8 +45,9 @@ public class Basket extends TemplateGui {
         pane = new JScrollPane(table);
         costLabel.setText("The cost of this basket is: £"+getTotalCost());
         penlTest.add(pane, BorderLayout.NORTH);
-        penlTest.add(costLabel, BorderLayout.CENTER);
+        penlTest.add(costLabel, BorderLayout.WEST);
         penlTest.add(btnOrder, BorderLayout.SOUTH);
+        penlTest.add(btnDelete, BorderLayout.EAST);
         frame.add(penlTest, BorderLayout.CENTER);
 
         DisplayGenericElements();
@@ -211,10 +213,11 @@ public class Basket extends TemplateGui {
                         String columnNameValue = nameOfItems.getString("name");
                         foodItems = foodItems + System.lineSeparator() + columnNameValue;
                     }
-                    foodItems = foodItems + System.lineSeparator() + "This came to a total of £"+getTotalCost();
+
                 }
                 catch (Exception a){System.out.println("Something failed at 2");}//try
             }
+            foodItems = foodItems + System.lineSeparator() + "This came to a total of £"+getTotalCost();
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
         return foodItems;
