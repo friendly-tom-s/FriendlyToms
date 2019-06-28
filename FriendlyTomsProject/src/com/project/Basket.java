@@ -50,9 +50,13 @@ public class Basket extends TemplateGui {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                /*Delete this checkout code and uncomment below to make basket work again*/
+
                 Checkout checkout = new Checkout();
                 checkout.displayCheckout();
                 frame.dispose();
+
+
 
                 /*makeOrder();
                 Object[] options = {"Yes, print receipt",
