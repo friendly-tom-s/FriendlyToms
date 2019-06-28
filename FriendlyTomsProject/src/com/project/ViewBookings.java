@@ -5,6 +5,9 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.sql.ResultSet;
 
+/**
+ * This is where the bookings are viewed from. This is for both admins and users.
+ */
 public class ViewBookings extends TemplateGui {
     private JTable tblBookings;
     private JPanel panel1;
@@ -17,6 +20,9 @@ public class ViewBookings extends TemplateGui {
         this.previousWin = previousAdminWin;
     }
 
+    /**
+     * Typical GUI setup with a table.
+     */
     public void DisplayViewBooking(){
         DisplayGenericElements();
         tblBookings.setModel(getBooking(getUserType()));
@@ -28,8 +34,10 @@ public class ViewBookings extends TemplateGui {
         frame.add(panelMain, BorderLayout.CENTER);
     }
 
-    public void setJtable(){}
-
+    /**
+     * This gets the type of user that is using the class.
+     * @return
+     */
     public ResultSet getUserType(){
 
         ResultSet previousBookings = null;
@@ -43,6 +51,11 @@ public class ViewBookings extends TemplateGui {
         return previousBookings;
     }
 
+    /**
+     * The columns depending on which users.
+     * @return
+     * Then columns in the Jtable.
+     */
     public Object[] getAdminUSerObject(){
         if(previousWin.equals("AdminMenu")){
             Object[] columns = {"Date","Amount", "Sitting", "User"};
@@ -54,6 +67,13 @@ public class ViewBookings extends TemplateGui {
         }
     }
 
+    /**
+     * This gets all the booking from the database and returns a DefaultTableModel that can be added to a JTable.
+     * @param previousBookings
+     * This gets the SQL statement dependning on the user type (Admin or User).
+     * @return
+     * This returns the table model that can be added to the JTable.
+     */
     public DefaultTableModel getBooking(ResultSet previousBookings) {
         DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(getAdminUSerObject());
