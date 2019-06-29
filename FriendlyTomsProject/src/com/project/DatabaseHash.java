@@ -92,7 +92,7 @@ public class DatabaseHash {
      * @param storedPassword
      * Password in the DB.
      * @return
-     * Pass or fail.
+     * Pass or Fail
      *
      */
     public boolean validatePassword(String originalPassword, String storedPassword) throws NoSuchAlgorithmException, InvalidKeySpecException

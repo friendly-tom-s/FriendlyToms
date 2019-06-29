@@ -5,6 +5,8 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import java.sql.ResultSet;
 
 
@@ -16,12 +18,16 @@ public class ManageAccounts extends TemplateGui {
     private JButton btnCreate;
     private JPanel panel2;
     private JTable table;
+    private JTextField txtUsername;
+    private JButton btnSearch;
     private AdminCreation adminCreation;
     private JScrollPane pane;
     private JPanel frame2 = new JPanel();
     DefaultTableModel model = new DefaultTableModel();
 
-    public ManageAccounts(){super("Manage Accounts", "Main Menu", "AdminMenu");}
+    public ManageAccounts(){super("Manage Accounts", "Main Menu", "AdminMenu");
+
+    }
 
     /**
      * This is a slightly different way of creating the Gui than with other classes due to the use of a JPanel and a JScrollPane.
@@ -32,8 +38,11 @@ public class ManageAccounts extends TemplateGui {
      */
     public void DisplayManageAccounts(){
         DisplayGenericElements();
-        setJtable();
+        frame.requestFocusInWindow();
+        setJtable("SELECT * FROM users");
         pane = new JScrollPane(table);
+        frame2.add(txtUsername);
+        frame2.add(btnSearch);
         frame2.add(pane);
         frame2.add(btnCreate);
         frame2.add(btnDelete);
@@ -55,6 +64,23 @@ public class ManageAccounts extends TemplateGui {
                 deleteSelectedItem();
             }
         });
+        txtUsername.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                super.focusGained(e);
+                txtUsername.setText("");
+            }
+        });
+
+        btnSearch.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+//                DefaultTableModel modelWipe = (DefaultTableModel) table.getModel();
+                model.setRowCount(0);
+
+                setJtable("SELECT * FROM users WHERE last_name = ?", txtUsername.getText());
+            }
+        });
     }
 
     /**
@@ -63,11 +89,17 @@ public class ManageAccounts extends TemplateGui {
      *
      * The data is set to the JTable using a model.
      */
-    public void setJtable(){
+    public void setJtable(String SQL, Object... parameters){
 
         Object[] columns = {"UID","username", "First Name", "Last Name"};
         model.setColumnIdentifiers(columns);
-        ResultSet read_query = database.prepared_read_query("SELECT * FROM users");
+        ResultSet read_query;
+        try{
+            read_query = database.prepared_read_query(SQL, parameters[0]);
+        }
+        catch (ArrayIndexOutOfBoundsException a){
+            read_query = database.prepared_read_query(SQL);
+        }
 
         try
         {
@@ -107,7 +139,7 @@ public class ManageAccounts extends TemplateGui {
                 ResultSet read_query = database.prepared_read_query("DELETE FROM users WHERE user_id=?", model.getValueAt(i, 0).toString());
                 // remove a row from jtable
                 model.removeRow(i);
-                setJtable();
+                setJtable("SELECT * FROM users");
             }
         }
         else{
