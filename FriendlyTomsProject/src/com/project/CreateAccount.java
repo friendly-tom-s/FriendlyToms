@@ -14,16 +14,17 @@ import java.util.regex.Pattern;
  */
 
 public class CreateAccount extends TemplateGui {
-    private JButton btnCreate;
-    private JTextField txtUserName;
-    private JTextField txtEmail;
-    private JPasswordField pswPassword;
-    private JPasswordField pswConfirm;
+    protected JButton btnCreate;
+    protected JTextField txtUserName;
+    protected JTextField txtEmail;
+    protected JPasswordField pswPassword;
+    protected JPasswordField pswConfirm;
     protected JPanel panel3;
     protected JRadioButton rdoAdmin;
-    private JTextField txtFirstName;
-    private JTextField txtSurname;
+    protected JTextField txtFirstName;
+    protected JTextField txtSurname;
     private User user = new User();
+    private String previousWin;
 
     /**
      * The constructor changes due to the fact that this clas is inherited for the admin creation meaning that the previous window
@@ -39,6 +40,7 @@ public class CreateAccount extends TemplateGui {
           The TemplateGui constructor is given the variables from this constructor.
          */
         super(guiName, buttonVar, previousWin);
+        this.previousWin =previousWin;
 
     }//create_account
 
@@ -71,7 +73,7 @@ public class CreateAccount extends TemplateGui {
      * <p>
      * If the user does not exist it adds the new user to the database.
      */
-    public void confirmUserData() {
+    public void confirmUserData(String SQL, boolean update) {
         Boolean checkUser = false;
         Boolean checkPw = false;
 
@@ -95,6 +97,7 @@ public class CreateAccount extends TemplateGui {
         }
 
         //to check if user being created already exists
+        if(!update){
         if (!input_errors) {
             //READ CODE
             ResultSet read_query = database.prepared_read_query("SELECT " +
@@ -103,7 +106,7 @@ public class CreateAccount extends TemplateGui {
             int user_id = 0;
 
             try {
-                if(!read_query.next()) {
+                if (!read_query.next()) {
 
                 } else {
                     user_id = read_query.getInt("user_id");
@@ -113,34 +116,40 @@ public class CreateAccount extends TemplateGui {
             } catch (Exception a) {
                 System.exit(1);
             }
-        }
+        }}
         /*
         Creates the account if there are no errors.
          */
         if (!input_errors) {
 
-            DatabaseHash PBKDF2_class = new DatabaseHash();
             JOptionPane.showMessageDialog(null, "Account Created.");
+            String salt = getEncrypt()[1];
+            String hash = getEncrypt()[2];
+            //WRITE CODE
+            boolean write_query = database.prepared_write_query(SQL, user.getUsername(), salt, hash, user.getAdminStatus(),
+                    user.getFirst_name(), user.getLast_name(), user.getEmail());
+            if(previousWin == "LoginForm"){
             LoginForm loginForm = new LoginForm();
-            loginForm.displayLogin();
+            loginForm.displayLogin();}
+            else{
+                ManageAccounts manageAccounts = new ManageAccounts();
+                manageAccounts.DisplayManageAccounts();
+            }
             frame.dispose();
 
-            try {
-                String generatedSecuredPasswordHash = PBKDF2_class.generateStrongPasswordHash(user.getPassword());
-                String[] parts = generatedSecuredPasswordHash.split(":");
-                int iterations = Integer.parseInt(parts[0]);
-                String salt = parts[1];
-                String hash = parts[2];
-                //WRITE CODE
-                boolean write_query = database.prepared_write_query("" +
-                                "INSERT INTO users (username,salt,hash,is_admin, first_name, last_name) VALUES" +
-                                " (?, ?, ?, ?, ?, ?)", user.getUsername(), salt, hash, user.getAdminStatus(),
-                        user.getFirst_name(), user.getLast_name());
-
-            } catch (Exception NoSuchAlgorithmException) {
-                System.exit(1);
-            }//try
         }//input_errors
+    }
+
+    public String[] getEncrypt() {
+        DatabaseHash PBKDF2_class = new DatabaseHash();
+        String[] parts = new String[0];
+        try {
+            String generatedSecuredPasswordHash = PBKDF2_class.generateStrongPasswordHash(user.getPassword());
+            parts = generatedSecuredPasswordHash.split(":");
+        } catch (Exception NoSuchAlgorithmException) {
+        }
+
+        return parts;
     }
 
     /**
@@ -157,7 +166,9 @@ public class CreateAccount extends TemplateGui {
             public void actionPerformed(ActionEvent e) {
                 if (checkEntriesArePresent()) {
                     setUserData();
-                    confirmUserData();
+                    confirmUserData("INSERT INTO users (username,salt,hash,is_admin, first_name, last_name, email) VALUES" +
+                                    " (?, ?, ?, ?, ?, ?, ?)", false);
+
                 } else {
                     JOptionPane.showMessageDialog(null, "Please fill out all data fields");
                 }
@@ -171,7 +182,7 @@ public class CreateAccount extends TemplateGui {
      * @return Pass or Fail.
      */
 
-    private boolean checkEntriesArePresent() {
+    public boolean checkEntriesArePresent() {
         Boolean check = true;
         if (txtUserName.getText().equals("")) {
             check = false;

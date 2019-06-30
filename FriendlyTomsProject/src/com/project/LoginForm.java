@@ -5,8 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
 import java.util.regex.Pattern;
 
 /**
@@ -152,7 +150,7 @@ public class LoginForm extends TemplateGui{
      * If the user is an admin they will be taken to the Admin Menu whereas if the user is a typical
      * user they will go to the User Menu.
      *
-     * If the credentials are incorrect a messagebox is shown.
+     * If the credentials are incorrect a message box is shown.
      */
     public void setUserAttributes(){
         user.setUsername(txtUsername.getText());

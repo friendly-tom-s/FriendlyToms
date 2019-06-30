@@ -3,10 +3,11 @@ package com.project;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.sql.ResultSet;
-
 
 /**
  * This class is used to manage all accounts, this is both admin and user accounts. It can only be accessed from the Admin Menu.
@@ -18,12 +19,14 @@ public class ManageAccounts extends TemplateGui {
     private JTable table;
     private JTextField txtUsername;
     private JButton btnSearch;
+    private JButton btnModify;
     private AdminCreation adminCreation;
     private JScrollPane pane;
     private JPanel frame2 = new JPanel();
     DefaultTableModel model = new DefaultTableModel();
 
     public ManageAccounts(){super("Manage Accounts", "Main Menu", "AdminMenu");
+
 
     }
 
@@ -43,6 +46,7 @@ public class ManageAccounts extends TemplateGui {
         frame2.add(btnSearch);
         frame2.add(pane);
         frame2.add(btnCreate);
+        frame2.add(btnModify);
         frame2.add(btnDelete);
         frame.add(frame2, BorderLayout.CENTER);
         frame.setSize(500, 570);
@@ -68,6 +72,23 @@ public class ManageAccounts extends TemplateGui {
 
             setJtable("SELECT * FROM users WHERE last_name = ?", txtUsername.getText());
         });
+
+        btnModify.addActionListener(e -> {
+            ModifyAccount modifyAccount = new ModifyAccount(newUser());
+            modifyAccount.DisplayModify();
+            frame.dispose();
+        });
+    }
+
+    public User newUser(){
+        User user = new User();
+        int row = table.getSelectedRow();
+        user.setFirst_name(table.getValueAt(row, 2).toString());
+        user.setLast_name(table.getValueAt(row, 3).toString());
+        user.setUsername(table.getValueAt(row, 1).toString());
+        user.setEmail(table.getValueAt(row, 4).toString());
+        user.setAdminStatus(Integer.parseInt(table.getValueAt(row, 5).toString()));
+        return user;
     }
 
     /**
@@ -78,7 +99,7 @@ public class ManageAccounts extends TemplateGui {
      */
     public void setJtable(String SQL, Object... parameters){
 
-        Object[] columns = {"UID","username", "First Name", "Last Name"};
+        Object[] columns = {"UID","username", "First Name", "Last Name","Email", "Admin?"};
         model.setColumnIdentifiers(columns);
         ResultSet read_query;
         try{
@@ -96,7 +117,9 @@ public class ManageAccounts extends TemplateGui {
                 String username = read_query.getString("username");
                 String first_name = read_query.getString("first_name");
                 String last_name = read_query.getString("last_name");
-                String[] user_info = {String.valueOf(menu_id), username, first_name, last_name};
+                String email = read_query.getString("email");
+                String admin_status = read_query.getString("is_admin");
+                String[] user_info = {String.valueOf(menu_id), username, first_name, last_name, email, admin_status};
                 model.addRow(user_info);
             }
         }

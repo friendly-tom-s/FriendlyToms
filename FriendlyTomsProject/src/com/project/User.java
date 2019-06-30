@@ -31,13 +31,13 @@ public class User {
 
     public void setEmail(String email){this.email = email;}
 
-    public void setPhone_number(String phone_number){this.phone_number = phone_number;}
-
     public void setAdminStatus(int adminStatus){this.adminStatus = adminStatus;}
 
     public String getUsername(){return username;}
 
     public String getPassword(){return password;}
+
+    public String getEmail(){return email;}
 
     public String getConfirm_password(){return confirm_password;}
 

@@ -3,8 +3,6 @@ package com.project;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Date;
 import java.sql.ResultSet;
 import java.text.DateFormat;
@@ -80,15 +78,12 @@ public class OrderHistory extends TemplateGui {
         panelMain.add(btnUpdate, BorderLayout.EAST);
         frame.setSize(500, 425);
         frame.add(panelMain, BorderLayout.CENTER);
-        btnUpdate.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                monthLogic((cboMonth.getSelectedItem()).toString());
-                searchYear = cboYear.getSelectedItem().toString();
-                String preparedDate = searchYear + "-"+ searchItem + "%";
-                table.setModel(getOrder(getUserType(preparedDate)));
+        btnUpdate.addActionListener(e -> {
+            monthLogic((cboMonth.getSelectedItem()).toString());
+            searchYear = cboYear.getSelectedItem().toString();
+            String preparedDate12 = searchYear + "-"+ searchItem + "%";
+            table.setModel(getOrder(getUserType(preparedDate12)));
 
-            }
         });
         btnToday.addActionListener(e -> {
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

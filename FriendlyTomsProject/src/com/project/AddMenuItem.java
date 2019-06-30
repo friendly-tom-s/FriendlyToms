@@ -3,6 +3,9 @@ package com.project;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * This class is used to create new items to be sold in the pub.
+ */
 public class AddMenuItem extends TemplateGui {
     private JPanel panel1;
     private JButton btnSubmit;
@@ -19,6 +22,9 @@ public class AddMenuItem extends TemplateGui {
         super("Menu", "Back", "ManageStock");
     }
 
+    /**
+     * Typical display GUI.
+     */
     public void DisplayAddMenuItem() {
         frame.add(panel1, BorderLayout.CENTER);
         DisplayGenericElements();
@@ -27,18 +33,24 @@ public class AddMenuItem extends TemplateGui {
         cboCategory.setModel(new DefaultComboBoxModel(categories));
 
         btnSubmit.addActionListener(e -> {
-            setProductData();
+            if(checkItemsArePresent()) {
+                setProductData();
 
-            String[] productParts = {(product.getName()), (product.getDescription()),
-                    (product.getCalories()), (product.getCategory()),
-                    (product.getPrice()), (product.getNoinstock()), (product.getUrl())};
+                String[] productParts = {(product.getName()), (product.getDescription()),
+                        (product.getCalories()), (product.getCategory()),
+                        (product.getPrice()), (product.getNoinstock()), (product.getUrl())};
 
-            JOptionPane.showMessageDialog(null, "Added new product to database");
+                JOptionPane.showMessageDialog(null, "Added new product to database");
 
-            writeToDB(productParts);
+                writeToDB(productParts);
+            }
+            else{JOptionPane.showMessageDialog(null, "Please enter all details");}
         });
     }
 
+    /**
+     * The new product object is set
+     */
     public void setProductData() {
 
         product.setName(txtName.getText());
@@ -50,6 +62,10 @@ public class AddMenuItem extends TemplateGui {
         product.setUrl(txtURL.getText());
     }
 
+    /**
+     * Database is written after validation has occurred.
+     * @param productParts
+     */
     public void writeToDB(String[] productParts) {
         try {
             database.prepared_write_query("INSERT INTO menu (name, description, calories," +
@@ -58,6 +74,34 @@ public class AddMenuItem extends TemplateGui {
 
         } catch (Exception ignored) {
         }
+    }
+
+    /**
+     * Checks all field have been entered.
+     * @return
+     * Pass or Fail
+     */
+    private boolean checkItemsArePresent(){
+        boolean check = true;
+        if(txtName.getText().equals("")){
+            check = false;
+        }
+        if(txtDescription.getText().equals("")){
+            check = false;
+        }
+        if(spnStock.getValue().equals("0")){
+            check = false;
+        }
+        if(txtPrice.getText().equals("")){
+            check = false;
+        }
+        if(spnCalories.getValue().equals("0")){
+            check = false;
+        }
+        if(txtURL.getText().equals("")){
+            check = false;
+        }
+        return check;
     }
 }
 

@@ -2,11 +2,8 @@ package com.project;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
+
 
 /**
  * This is accessed by the admins to monitor the stock that they use. They can add stock from here.
@@ -14,21 +11,14 @@ import java.util.ArrayList;
 
 public class ManageStock extends TemplateGui {
     private JPanel panel2;
-    private JComboBox cboItem;
-    DefaultTableModel model = new DefaultTableModel();
-    private JTextField txtAddStock;
-    private JButton btnAddStock;
-    private JLabel labAmount;
+    private DefaultTableModel model = new DefaultTableModel();
     private JButton btnAddMenuItem;
     private JTable table;
-    private JScrollPane pane;
     private JButton btnUpdate;
-    private ArrayList<String> main_items = new ArrayList<String>();
     private JPanel panelMain = new JPanel(new BorderLayout());
 
     public ManageStock() {
         super("Manage Stock", "Main Menu", "AdminMenu");
-
     }
 
     /**
@@ -39,7 +29,7 @@ public class ManageStock extends TemplateGui {
         Dimension dimension = new Dimension();
         dimension.setSize(500, 275);
         table.setPreferredScrollableViewportSize(dimension);
-        pane = new JScrollPane(table);
+        JScrollPane pane = new JScrollPane(table);
         panelMain.add(pane, BorderLayout.CENTER);
         panelMain.add(btnUpdate, BorderLayout.LINE_END);
         panelMain.add(btnAddMenuItem, BorderLayout.PAGE_END);
@@ -47,23 +37,13 @@ public class ManageStock extends TemplateGui {
         frame.add(panelMain, BorderLayout.CENTER);
         DisplayGenericElements();
 
-        btnAddMenuItem.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                AddMenuItem addMenuItem = new AddMenuItem();
-                addMenuItem.DisplayAddMenuItem();
-                frame.dispose();
-            }
+        btnAddMenuItem.addActionListener(e -> {
+            AddMenuItem addMenuItem = new AddMenuItem();
+            addMenuItem.DisplayAddMenuItem();
+            frame.dispose();
         });
 
-        btnUpdate.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                updateStock();
-            }
-        });
-
-
+        btnUpdate.addActionListener(e -> updateStock());
     }
 
     /**
