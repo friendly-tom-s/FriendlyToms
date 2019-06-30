@@ -198,7 +198,7 @@ public class Checkout extends TemplateGui {
                 }
                 catch (Exception a){System.out.println("Something failed at 2");}//try
             }
-            foodItems = date + foodItems + System.lineSeparator() + "This came to a total of £"+basket.getTotalCost();
+            foodItems = date + System.lineSeparator() + "-----------------------------" + foodItems + System.lineSeparator() + "This came to a total of £"+basket.getTotalCost();
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
         return foodItems;

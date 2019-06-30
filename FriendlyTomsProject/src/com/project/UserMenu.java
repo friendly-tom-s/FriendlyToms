@@ -66,7 +66,7 @@ public class UserMenu extends TemplateGui {
         mainUserPanel.add(lblText);
         setIconImage();
         mainUserPanel.add(lblMenu);
-        lblText.setText("Welcome to Friendly Tom's Pub. Here we are devoted to blah blah blah");
+        lblText.setText("Welcome to Friendly Tom's pub, the friendliest pub in the village.");
         frame.add(mainUserPanel, BorderLayout.CENTER);
         DisplayGenericElements();
         frame.setSize(520, 400);
