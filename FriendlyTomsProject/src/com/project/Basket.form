@@ -27,7 +27,7 @@
         <properties>
           <font size="14" style="1"/>
           <foreground color="-1"/>
-          <text value="Make Order"/>
+          <text value="Checkout"/>
         </properties>
       </component>
       <component id="bb28c" class="javax.swing.JTable" binding="table">

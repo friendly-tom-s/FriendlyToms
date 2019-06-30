@@ -114,7 +114,7 @@ public class LoginForm extends TemplateGui{
         CreateAccount createAccount = new CreateAccount("Create Account", "Back", "LoginForm");
         frame.add(panel2, BorderLayout.CENTER);
         DisplayGenericElements();
-        database.prepared_write_query("DELETE FROM basket");
+        database.prepared_write_query("DELETE FROM basket WHERE userID=?", getUser());
 
         btnLogin.addActionListener(new ActionListener() {
             @Override

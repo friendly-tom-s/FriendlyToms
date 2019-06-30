@@ -109,7 +109,7 @@ public class FoodOrder extends TemplateGui {
             try {
                 while(read_query.next()) {
                     String foodItem = read_query.getString("menu_id");
-                    database.prepared_write_query("INSERT INTO basket (itemID) VALUES (?)", foodItem);
+                    database.prepared_write_query("INSERT INTO basket (itemID, userID) VALUES (?,?)", foodItem, getUser());
                 }
             }
             catch (Exception a)
