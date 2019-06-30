@@ -129,15 +129,8 @@ public class Basket extends TemplateGui {
         return returnVar;
     }
 
-    /**
-     * When the user confirms that everything in the basket is what they want to order, the confirm order button gets everything from
-     * the basket table and adds them to the order table.
-     *
-     * The stock level is also reduced by however many items have been ordered.
-     *
-     * The basket is not cleared because this is already done when the user logs in.
-     */
-    private void makeOrder(){
+
+   /* private void makeOrder(){
         ResultSet listItems = database.prepared_read_query("SELECT * FROM basket");
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
@@ -150,7 +143,7 @@ public class Basket extends TemplateGui {
             }
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
-    }
+    }*/
 
     private void printUserReceipt(){
         File file = new File(System.getProperty("user.home") + "/Desktop/FT_Receipt.txt");
