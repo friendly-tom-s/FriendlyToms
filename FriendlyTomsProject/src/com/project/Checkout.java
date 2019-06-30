@@ -26,6 +26,7 @@ public class Checkout extends TemplateGui {
     private JTextField txtExpiry;
     private static final int TIME_VISIBLE = 2000;
     private ResultSet nameOfItems;
+    private DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
     public Checkout() {
         super("Checkout", "Back", "Basket");
@@ -35,7 +36,7 @@ public class Checkout extends TemplateGui {
     public void displayCheckout() {
         Basket basket = new Basket();
         basket.getListItems();
-        costLabel.setText("The cost of this basket is: £"+ basket.getTotalCost());
+        costLabel.setText("£"+basket.getTotalCost());
 
         int numbers_to_add_max = 99;
         for (int i = 1; i <= numbers_to_add_max; i++) {
@@ -108,7 +109,6 @@ public class Checkout extends TemplateGui {
      */
     private void makeOrder(){
         ResultSet listItems = database.prepared_read_query("SELECT * FROM basket WHERE userID=?", getUser());
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
 
         Integer tableNo = (Integer) cboTable.getSelectedItem();
@@ -126,14 +126,14 @@ public class Checkout extends TemplateGui {
     /**
      * This is where the user receipt is saved if they wish to do so.
      *
-     * It adds all the items that the user ordered to the receipt as well as the total cost.
+     * It adds the date, all items that the user ordered to the receipt as well as the total cost.
      *
      * It adds it to the user's desktop.
      */
     private void printUserReceipt(){
         File file = new File(System.getProperty("user.home") + "/Desktop/FT_Receipt.txt");
 
-        // if file doesnt exists, then create it
+        // if file doesnt exist, then create it
         if (!file.exists()) {
             try {
                 file.createNewFile();
@@ -180,6 +180,8 @@ public class Checkout extends TemplateGui {
         Basket basket = new Basket();
         basket.getListItems();
 
+        Date date = new Date();
+
         ResultSet listItems = database.prepared_read_query("SELECT itemID FROM basket WHERE userID=?", getUser());
         String foodItems= "";
 
@@ -196,7 +198,7 @@ public class Checkout extends TemplateGui {
                 }
                 catch (Exception a){System.out.println("Something failed at 2");}//try
             }
-            foodItems = foodItems + System.lineSeparator() + "This came to a total of £"+basket.getTotalCost();
+            foodItems = date + foodItems + System.lineSeparator() + "This came to a total of £"+basket.getTotalCost();
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
         return foodItems;

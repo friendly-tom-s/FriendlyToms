@@ -54,9 +54,21 @@ public class Basket extends TemplateGui {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                Checkout checkout = new Checkout();
-                checkout.displayCheckout();
-                frame.dispose();
+                if (totalCost > 0)
+                {
+                    Checkout checkout = new Checkout();
+                    checkout.displayCheckout();
+                    frame.dispose();
+                }
+                else
+                {
+                    JOptionPane pane = new JOptionPane("Basket is empty, please add an item first.", JOptionPane.WARNING_MESSAGE);
+                    JDialog dialog = pane.createDialog(null, "Error");
+                    dialog.setModal(false);
+                    dialog.setVisible(true);
+                }
+
+
 
             }
         });
