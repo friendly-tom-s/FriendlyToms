@@ -2,8 +2,6 @@ package com.project;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 /**
@@ -50,12 +48,9 @@ public class TemplateGui {
         frame.setSize(500, 400);
         frame.add(panel1,BorderLayout.SOUTH);
         frame.setVisible(true);
-        backButtonButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                previousWinLogic();
-            }
+        backButtonButton.addActionListener(e -> {
+            frame.dispose();
+            previousWinLogic();
         });
     }
 

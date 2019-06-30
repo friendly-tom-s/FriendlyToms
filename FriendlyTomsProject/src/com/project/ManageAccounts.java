@@ -3,15 +3,13 @@ package com.project;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.sql.ResultSet;
 
 
 /**
- * This class is used to mangage all accounts, this is both admin and user accounts. It can only be accessed from the Admin Menu.
+ * This class is used to manage all accounts, this is both admin and user accounts. It can only be accessed from the Admin Menu.
  */
 public class ManageAccounts extends TemplateGui {
     private JButton btnDelete;
@@ -47,23 +45,15 @@ public class ManageAccounts extends TemplateGui {
         frame2.add(btnCreate);
         frame2.add(btnDelete);
         frame.add(frame2, BorderLayout.CENTER);
-        frame.setSize(500, 550);
+        frame.setSize(500, 570);
 
-        btnCreate.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                adminCreation = new AdminCreation();
-                adminCreation.DisplayGui();
-                frame.dispose();
-            }
+        btnCreate.addActionListener(e -> {
+            adminCreation = new AdminCreation();
+            adminCreation.DisplayGui();
+            frame.dispose();
         });
 
-        btnDelete.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                deleteSelectedItem();
-            }
-        });
+        btnDelete.addActionListener(e -> deleteSelectedItem());
         txtUsername.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
@@ -72,14 +62,11 @@ public class ManageAccounts extends TemplateGui {
             }
         });
 
-        btnSearch.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        btnSearch.addActionListener(e -> {
 //                DefaultTableModel modelWipe = (DefaultTableModel) table.getModel();
-                model.setRowCount(0);
+            model.setRowCount(0);
 
-                setJtable("SELECT * FROM users WHERE last_name = ?", txtUsername.getText());
-            }
+            setJtable("SELECT * FROM users WHERE last_name = ?", txtUsername.getText());
         });
     }
 
@@ -109,7 +96,7 @@ public class ManageAccounts extends TemplateGui {
                 String username = read_query.getString("username");
                 String first_name = read_query.getString("first_name");
                 String last_name = read_query.getString("last_name");
-                String user_info[] = {String.valueOf(menu_id), username, first_name, last_name};
+                String[] user_info = {String.valueOf(menu_id), username, first_name, last_name};
                 model.addRow(user_info);
             }
         }

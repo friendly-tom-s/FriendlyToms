@@ -13,7 +13,6 @@ public class ViewBookings extends TemplateGui {
     private JPanel panel1;
     private String previousWin;
     private JPanel panelMain = new JPanel();
-    private JScrollPane pane;
 
     public ViewBookings(String previousAdminWin){
         super("View Bookings", "Back", previousAdminWin);
@@ -29,7 +28,7 @@ public class ViewBookings extends TemplateGui {
         Dimension dimension = new Dimension();
         dimension.setSize(480, 275);
         tblBookings.setPreferredScrollableViewportSize(dimension);
-        pane = new JScrollPane(tblBookings);
+        JScrollPane pane = new JScrollPane(tblBookings);
         panelMain.add(pane);
         frame.add(panelMain, BorderLayout.CENTER);
     }
@@ -58,12 +57,10 @@ public class ViewBookings extends TemplateGui {
      */
     public Object[] getAdminUSerObject(){
         if(previousWin.equals("AdminMenu")){
-            Object[] columns = {"Date","Amount", "Sitting", "User"};
-            return columns;
+            return new Object[]{"Date","Amount", "Sitting", "User"};
         }
         else{
-            Object[] columns = {"Date","Amount", "Sitting"};
-            return columns;
+            return new Object[]{"Date","Amount", "Sitting"};
         }
     }
 
@@ -85,10 +82,10 @@ public class ViewBookings extends TemplateGui {
                 String sitting = previousBookings.getString("sitting");
 
                 if (previousWin.equals("AdminMenu")) {
-                    String user_info[] = {bookingDate, amount, sitting, userName};
+                    String[] user_info = {bookingDate, amount, sitting, userName};
                     model.addRow(user_info);
                 } else {
-                    String user_info[] = {bookingDate, amount, sitting};
+                    String[] user_info = {bookingDate, amount, sitting};
                     model.addRow(user_info);
                 }
 

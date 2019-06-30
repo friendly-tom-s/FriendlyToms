@@ -165,11 +165,11 @@ public class OrderHistory extends TemplateGui {
                         String columnNameValue = foodNames.getString("name");
 
                         if(previousWIn.equals("AdminMenu")){
-                            String user_info[] = {columnNameValue, date, username,complete };
+                            String[] user_info = {columnNameValue, date, username, complete};
                             model.addRow(user_info);
                         }
                         else{
-                            String user_info[] = {columnNameValue, date};
+                            String[] user_info = {columnNameValue, date};
                             model.addRow(user_info);
                         }
                     }
