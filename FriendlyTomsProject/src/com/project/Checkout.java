@@ -116,7 +116,7 @@ public class Checkout extends TemplateGui {
         try {
             while(listItems.next()) {
                 String foodItem = listItems.getString("itemID");
-                database.prepared_write_query("INSERT INTO orders (order_date, userID, foodItem, tableNo) VALUES (?,?,?,?)", date, getUser(), foodItem, tableNo);
+                database.prepared_write_query("INSERT INTO orders (order_date, userID, foodItem, tableNo, completed) VALUES (?,?,?,?, ?)", date, getUser(), foodItem, tableNo, "No");
                 database.prepared_write_query("UPDATE menu SET stock = stock - 1 WHERE menu_id = ?", foodItem);
             }
         }

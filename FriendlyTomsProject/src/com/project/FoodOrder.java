@@ -32,12 +32,12 @@ public class FoodOrder extends TemplateGui {
     private String calories;
     private String description;
     private String category;
-    private ArrayList<String> main_items=new ArrayList<String>();
+    private ArrayList<String> main_items = new ArrayList<String>();
     private int basketValue;
     private Basket basket = new Basket();
     private String totalcost;
 
-    public FoodOrder(){
+    public FoodOrder() {
         super("Food Order", "Main Menu", "UserMenu");
     }
 
@@ -53,11 +53,11 @@ public class FoodOrder extends TemplateGui {
 
         //This gets the selected items from the combo boxes and adds them to an array.
         btnOrder.addActionListener(e -> {
-            String[] chosenItems = {(cboStarter.getSelectedItem()).toString(),(cboMain.getSelectedItem()).toString(),
-                    (cboDessert.getSelectedItem()).toString(),(cboDrink.getSelectedItem()).toString()};
+            String[] chosenItems = {(cboStarter.getSelectedItem()).toString(), (cboMain.getSelectedItem()).toString(),
+                    (cboDessert.getSelectedItem()).toString(), (cboDrink.getSelectedItem()).toString()};
 
             addItemsToDatabase(chosenItems);
-            JOptionPane.showMessageDialog(null,"Added to your basket!");
+            JOptionPane.showMessageDialog(null, "Added to your basket!");
             setTotalcost();
 
         });
@@ -79,14 +79,13 @@ public class FoodOrder extends TemplateGui {
     /**
      * This moves every item in the array into the basket table in the database.
      *
-     * @param chosenItems
-     * This is the array of chosen items.
+     * @param chosenItems This is the array of chosen items.
      */
-    public void addItemsToDatabase(String[] chosenItems){
-        boolean catchFail = true;
-        for (String var:chosenItems
-             ) {
-            switch (var){
+    public void addItemsToDatabase(String[] chosenItems) {
+        for (String var : chosenItems
+        ) {
+            boolean catchFail = true;
+            switch (var) {
                 case "<BREAK>":
                     catchFail = false;
                     break;
@@ -104,27 +103,28 @@ public class FoodOrder extends TemplateGui {
                     break;
             }
 
-            if(catchFail == false){break;}
-            ResultSet read_query =database.prepared_read_query("SELECT menu_id FROM menu WHERE name =?", var);
-            try {
-                while(read_query.next()) {
-                    String foodItem = read_query.getString("menu_id");
-                    database.prepared_write_query("INSERT INTO basket (itemID, userID) VALUES (?,?)", foodItem, getUser());
-                }
-            }
-            catch (Exception a)
-            {break;}//try
+            if (catchFail == true) {
+                ResultSet read_query = database.prepared_read_query("SELECT menu_id FROM menu WHERE name =?", var);
+                try {
+                    while (read_query.next()) {
+                        String foodItem = read_query.getString("menu_id");
+                        database.prepared_write_query("INSERT INTO basket (itemID, userID) VALUES (?,?)", foodItem, getUser());
+                    }
+                } catch (Exception a) {
+                    break;
+                }//try}
 
+            }
         }
     }
 
-    public void setTotalcost(){
+    public void setTotalcost() {
         DefaultTableModel throwawayRS = basket.getListItems();
         totalcost = String.valueOf(basket.getTotalCost());
-        basketAmount.setText("£"+totalcost);
+        basketAmount.setText("£" + totalcost);
     }
 
-    public void setIconImage(){
+    public void setIconImage() {
         Image image = null;
         try {
             URL url = new URL("http://chittagongit.com/download/107277");
@@ -132,15 +132,15 @@ public class FoodOrder extends TemplateGui {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        basketIcon.setIcon(new ImageIcon(image.getScaledInstance(25,25,Image.SCALE_DEFAULT)));
+        basketIcon.setIcon(new ImageIcon(image.getScaledInstance(25, 25, Image.SCALE_DEFAULT)));
     }
 
     /**
      * A switch statement is used to sort all foods into the correct combo box depending on their category.
-     *
+     * <p>
      * I.e Starter, Main, Dessert or Drink.
      */
-    public void setFoodTypes(){
+    public void setFoodTypes() {
         ResultSet foodQuery = database.prepared_read_query("SELECT * FROM menu");
         cboMain.addItem("Main");
         cboStarter.addItem("Starter");
@@ -148,7 +148,7 @@ public class FoodOrder extends TemplateGui {
         cboDrink.addItem("Drink");
 
         try {
-            while(foodQuery.next()) {
+            while (foodQuery.next()) {
                 name = foodQuery.getString("name");
                 main_items.add(name);
                 System.out.println(name);
@@ -156,7 +156,7 @@ public class FoodOrder extends TemplateGui {
                 calories = foodQuery.getString("calories");
                 category = foodQuery.getString("category");
 
-                switch (category){
+                switch (category) {
                     case "Main":
                         cboMain.addItem(name);
                         break;
@@ -172,9 +172,7 @@ public class FoodOrder extends TemplateGui {
 
                 }
             }
-        }
-        catch (Exception a)
-        {
+        } catch (Exception a) {
             System.err.println("Got an exception!");
             System.err.println(a.getMessage());
         }//try
@@ -184,10 +182,9 @@ public class FoodOrder extends TemplateGui {
      * This was created for the test. This is a bad and inefficient way of writing unit tests but the code was not written in the correct
      * way to start with. This is called using a reflection.
      *
-     * @return
-     * Returns the amount of items in the combo box.
+     * @return Returns the amount of items in the combo box.
      */
-    public int returnValuesOfDrinkCBO(){
+    public int returnValuesOfDrinkCBO() {
         return cboDrink.getItemCount();
     }
 }
