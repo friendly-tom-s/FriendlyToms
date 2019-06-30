@@ -79,9 +79,11 @@ public class ManageStock extends TemplateGui {
             if (dialogResult == 0) {
                 databaseLogic();
             }
-
     }
 
+    /**
+     * This updates the database with the entered stock value.
+     */
     public void databaseLogic(){
         int row = table.getSelectedRow();
         String nameVar = table.getValueAt(row, 0).toString();
@@ -90,6 +92,9 @@ public class ManageStock extends TemplateGui {
         setJtable();
     }
 
+    /**
+     * This updates the JTable with the DB data. It is used to keep data up to date.
+     */
     public void setJtable(){
 
         Object[] columns = {"Food", "Stock"};

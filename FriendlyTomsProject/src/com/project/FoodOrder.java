@@ -39,7 +39,6 @@ public class FoodOrder extends TemplateGui {
 
     public FoodOrder(){
         super("Food Order", "Main Menu", "UserMenu");
-
     }
 
     /**

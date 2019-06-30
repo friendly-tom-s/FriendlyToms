@@ -2,10 +2,7 @@ package com.project;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.text.View;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
 
@@ -14,14 +11,12 @@ import java.net.URL;
  */
 public class UserMenu extends TemplateGui {
     private JButton btnOrderFood;
-    private StyledButtonUI testButton = new StyledButtonUI();
     private JButton btnHistory;
     private JButton btnBook;
     private JPanel panel2;
     private JLabel lblText;
     private JLabel lblMenu;
     private JButton btnBooking;
-    private LoginForm LoginForm;
     private FoodOrder FoodOrder;
     private TableBooking TableBooking;
     private OrderHistory orderHistory;
@@ -31,13 +26,20 @@ public class UserMenu extends TemplateGui {
     public UserMenu(){
 
         super("User Menu", "Logout", "LoginForm");
-
     }
 
+    /**
+     * This sets the user that is currently logged in.
+     * @param loggedUser
+     * The user is taken from the login screen.
+     */
     public void setLoggedInUser(User loggedUser){
         this.loggedUser = loggedUser;
     }
 
+    /**
+     * The basket icon is taken from the internet.
+     */
     public void setIconImage(){
         Image image = null;
         try {
@@ -49,6 +51,9 @@ public class UserMenu extends TemplateGui {
         lblMenu.setIcon(new ImageIcon(image));
     }
 
+    /**
+     * Typical GUI set up method but the buttons used are styled buttons.
+     */
     public void displayUserMenu(){
         mainUserPanel.add(btnOrderFood);
         btnOrderFood.setUI(new StyledButtonUI());
@@ -66,39 +71,27 @@ public class UserMenu extends TemplateGui {
         DisplayGenericElements();
         frame.setSize(520, 400);
 
-        btnOrderFood.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                FoodOrder = new FoodOrder();
-                FoodOrder.displayFoodOrder();
-                frame.dispose();
-            }
+        btnOrderFood.addActionListener(e -> {
+            FoodOrder = new FoodOrder();
+            FoodOrder.displayFoodOrder();
+            frame.dispose();
         });
 
-        btnBook.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                TableBooking = new TableBooking();
-                TableBooking.displayTableBooking();
-                frame.dispose();
-            }
+        btnBook.addActionListener(e -> {
+            TableBooking = new TableBooking();
+            TableBooking.displayTableBooking();
+            frame.dispose();
         });
 
-        btnHistory.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                orderHistory = new OrderHistory("Order History", "Back", "UserMenu");
-                orderHistory.DisplayOrderHistory();
-                frame.dispose();
-            }
+        btnHistory.addActionListener(e -> {
+            orderHistory = new OrderHistory("Order History", "Back", "UserMenu");
+            orderHistory.DisplayOrderHistory();
+            frame.dispose();
         });
-        btnBooking.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ViewBookings viewBookings = new ViewBookings("UserMenu");
-                viewBookings.DisplayViewBooking();
-                frame.dispose();
-            }
+        btnBooking.addActionListener(e -> {
+            ViewBookings viewBookings = new ViewBookings("UserMenu");
+            viewBookings.DisplayViewBooking();
+            frame.dispose();
         });
     }
 }

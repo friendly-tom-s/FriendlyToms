@@ -5,7 +5,10 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 import java.sql.ResultSet;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 /**
  * This class is used to get all the orders made by a user or all the orders made in total.
@@ -15,11 +18,15 @@ import java.sql.ResultSet;
 public class OrderHistory extends TemplateGui {
     private JList lstOrderDetails;
     private JPanel panel2;
-    private JPanel panelMain = new JPanel(new BorderLayout());
-    private JTable table;
+    protected JPanel panelMain = new JPanel(new BorderLayout());
+    protected JTable table;
     private JComboBox cboMonth;
     private JComboBox cboYear;
     private JButton btnUpdate;
+    private JButton btnToday;
+    private JRadioButton rdoComplete;
+    protected JButton btnComplete;
+    private JComboBox cboDay;
     private ResultSet previousOrders;
     private ResultSet foodNames;
     private String previousWIn;
@@ -27,7 +34,6 @@ public class OrderHistory extends TemplateGui {
     private JScrollPane pane;
     private String searchItem = "%";
     private String searchYear = "2019";
-
 
     /**
      * Because this class is inherited the constructor is slightly different; when the object is created it can be either
@@ -45,16 +51,15 @@ public class OrderHistory extends TemplateGui {
     public OrderHistory(String guiName, String buttonVar, String previousWIn ){
         super(guiName, buttonVar, previousWIn);
         this.previousWIn= previousWIn;
-
-    }
+            }
 
     /**
      * This is the typical Gui creation method.
      */
     public void DisplayOrderHistory(){
         DisplayGenericElements();
-        //ResultSet userType = getUserType();
-        table.setModel(getOrder(getUserType()));
+        String preparedDate = searchYear + "-"+ searchItem + "%";
+        table.setModel(getOrder(getUserType(preparedDate)));
         Dimension dimension = new Dimension();
         dimension.setSize(500, 275);
         table.setPreferredScrollableViewportSize(dimension);
@@ -70,17 +75,27 @@ public class OrderHistory extends TemplateGui {
         cboMonth.setModel(new DefaultComboBoxModel(itemsMonth));
         panelMain.add(pane, BorderLayout.SOUTH);
         panelMain.add(cboMonth, BorderLayout.WEST);
+        panelMain.add(btnToday, BorderLayout.PAGE_START);
         panelMain.add(cboYear, BorderLayout.CENTER);
         panelMain.add(btnUpdate, BorderLayout.EAST);
+        frame.setSize(500, 425);
         frame.add(panelMain, BorderLayout.CENTER);
         btnUpdate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 monthLogic((cboMonth.getSelectedItem()).toString());
                 searchYear = cboYear.getSelectedItem().toString();
-                table.setModel(getOrder(getUserType()));
+                String preparedDate = searchYear + "-"+ searchItem + "%";
+                table.setModel(getOrder(getUserType(preparedDate)));
 
             }
+        });
+        btnToday.addActionListener(e -> {
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            Date date = new Date();
+            String preparedDate1 = dateFormat.format(date) + "%";
+            table.setModel(getOrder(getUserType(preparedDate1)));
+
         });
 
     }
@@ -95,8 +110,7 @@ public class OrderHistory extends TemplateGui {
      * If the user is a standard user they will only get orders with their userID. This variable is assigned from the
      * TemplateGui and the getUser method.
      */
-    public ResultSet getUserType(){
-        String preparedDate = searchYear + "-"+ searchItem + "%";
+    public ResultSet getUserType(String preparedDate){
         if(previousWIn.equals("AdminMenu")){
             previousOrders = database.prepared_read_query("SELECT * FROM orders WHERE order_date LIKE ?", preparedDate);
         }
@@ -117,12 +131,10 @@ public class OrderHistory extends TemplateGui {
      */
     public Object[] getObject(){
         if(previousWIn.equals("AdminMenu")){
-            Object[] columns = {"FoodName","Date", "User"};
-            return columns;
+            return new Object[]{"FoodName","Date", "User", "Completed?"};
         }
         else{
-            Object[] columns = {"FoodName","Date"};
-            return columns;
+            return new Object[]{"FoodName","Date"};
         }
     }
 
@@ -145,6 +157,7 @@ public class OrderHistory extends TemplateGui {
                 String foodID = previousOrders.getString("foodItem");
                 String date = previousOrders.getString("order_date");
                 String user = previousOrders.getString("userID");
+                String complete = previousOrders.getString("completed");
                 foodNames = database.prepared_read_query("SELECT name FROM menu where menu_id=?", foodID);//Take this out the while loop and make it an array
                 String username = getUserName(user);
                 try {
@@ -152,11 +165,11 @@ public class OrderHistory extends TemplateGui {
                         String columnNameValue = foodNames.getString("name");
 
                         if(previousWIn.equals("AdminMenu")){
-                            String user_info[] = {columnNameValue, date, username};
+                            String[] user_info = {columnNameValue, date, username, complete};
                             model.addRow(user_info);
                         }
                         else{
-                            String user_info[] = {columnNameValue, date};
+                            String[] user_info = {columnNameValue, date};
                             model.addRow(user_info);
                         }
                     }
@@ -211,4 +224,6 @@ public class OrderHistory extends TemplateGui {
                 break;
         }
     }
+
+
 }

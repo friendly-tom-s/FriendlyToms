@@ -13,12 +13,16 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * This class is where the basket is viewed and the user has the option to complete their order
+ */
 public class Basket extends TemplateGui {
     private JPanel panel2;
     private JPanel penlTest = new JPanel(new BorderLayout());
     private JButton btnOrder;
     private JTable table;
     private JLabel costLabel;
+    private JButton btnDelete;
     private ResultSet nameOfItems;
     private JScrollPane pane;
     private int totalCost;
@@ -41,8 +45,9 @@ public class Basket extends TemplateGui {
         pane = new JScrollPane(table);
         costLabel.setText("The cost of this basket is: £"+getTotalCost());
         penlTest.add(pane, BorderLayout.NORTH);
-        penlTest.add(costLabel, BorderLayout.CENTER);
+        penlTest.add(costLabel, BorderLayout.WEST);
         penlTest.add(btnOrder, BorderLayout.SOUTH);
+        penlTest.add(btnDelete, BorderLayout.EAST);
         frame.add(penlTest, BorderLayout.CENTER);
 
         DisplayGenericElements();
@@ -77,6 +82,28 @@ public class Basket extends TemplateGui {
 
             }
         });
+
+        btnDelete.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Object[] options = {"Yes, delete",
+                        "No, thanks"};
+                int n = JOptionPane.showOptionDialog(frame,
+                        "Are you sure you wish to delete this item?",
+                        "Delete Item",
+                        JOptionPane.YES_NO_CANCEL_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        options,
+                        options[1]);
+                if(n == 0) {
+                    deleteItem();
+                    table.setModel(getListItems());
+                    costLabel.setText("The cost of this basket is: £"+getTotalCost());
+
+                }
+            }
+        });
     }
 
     /**
@@ -107,11 +134,11 @@ public class Basket extends TemplateGui {
                         String prices = nameOfItems.getString("price");
                         overallTotalCost= totalCost + Integer.parseInt(prices);
                         setTotalCost(overallTotalCost);
-                        String user_info[] = {columnNameValue, prices};
+                        String user_info[] = {columnNameValue, "£"+prices};
                         model.addRow(user_info);
                     }
                 }
-                catch (Exception a){System.out.println("Something failed at 2");}//try
+                catch (Exception a){System.out.println("Something failed at 2" + a);}//try
             }
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
@@ -119,14 +146,17 @@ public class Basket extends TemplateGui {
         return model;
     }
 
+
+    /**
+     * This get and set for total cost because this var is used elsewhere in the program.
+     * @param cost
+     */
     public void setTotalCost(int cost){
         totalCost = cost;
     }
 
     public int getTotalCost(){
-        int returnVar;
-        returnVar = totalCost;
-        return returnVar;
+        return totalCost;
     }
 
 
@@ -145,6 +175,13 @@ public class Basket extends TemplateGui {
         catch (Exception a){System.out.println("Something failed at 1");}//try
     }*/
 
+    /**
+     * This is where the user receipt is saved if they wish to do so.
+     *
+     * It adds all the items that the user ordered to the receipt as well as the total cost.
+     *
+     * It adds it to the user's desktop.
+     */
     private void printUserReceipt(){
         File file = new File(System.getProperty("user.home") + "/Desktop/FT_Receipt.txt");
 
@@ -157,24 +194,7 @@ public class Basket extends TemplateGui {
             }
         }
 
-        ResultSet listItems = database.prepared_read_query("SELECT itemID FROM basket");
-        String foodItems= "";
-
-        try {
-            while(listItems.next()) {
-                String columnValue = listItems.getString("itemID");
-                nameOfItems = database.prepared_read_query("SELECT name FROM menu where menu_id=?", columnValue);//Take this out the while loop and make it an array
-                try {
-                    while(nameOfItems.next()) {
-                        String columnNameValue = nameOfItems.getString("name");
-                        foodItems = foodItems + System.lineSeparator() + columnNameValue;
-                    }
-                }
-                catch (Exception a){System.out.println("Something failed at 2");}//try
-            }
-        }
-        catch (Exception a){System.out.println("Something failed at 1");}//try
-
+        // Write the receipt.
         FileWriter fw = null;
         try {
             fw = new FileWriter(file.getAbsoluteFile());
@@ -183,7 +203,7 @@ public class Basket extends TemplateGui {
         }
         BufferedWriter bw = new BufferedWriter(fw);
         try {
-            bw.write(foodItems);
+            bw.write(getFoodItems());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -193,8 +213,53 @@ public class Basket extends TemplateGui {
             e.printStackTrace();
         }
 
-        JOptionPane.showMessageDialog(null,"Receipt Saved!");
+        JOptionPane.showMessageDialog(null,"Receipt Saved to you desktop!");
 
+    }
+
+    /**
+     * This gets all the database items that the user ordered. As it the database is normalised this means that more
+     * statements are needed because it requires IDs across tables to work
+     *
+     * @return
+     * The string that will be added the receipt.
+     */
+    private String getFoodItems(){
+        ResultSet listItems = database.prepared_read_query("SELECT itemID FROM basket");
+        String foodItems= "";
+
+        try {
+            while(listItems.next()) {
+                String columnValue = listItems.getString("itemID");
+                nameOfItems = database.prepared_read_query("SELECT name FROM menu where menu_id=?", columnValue);
+                try {
+                    while(nameOfItems.next()) {
+                        String columnNameValue = nameOfItems.getString("name");
+                        foodItems = foodItems + System.lineSeparator() + columnNameValue;
+                    }
+
+                }
+                catch (Exception a){System.out.println("Something failed at 2");}//try
+            }
+            foodItems = foodItems + System.lineSeparator() + "This came to a total of £"+getTotalCost();
+        }
+        catch (Exception a){System.out.println("Something failed at 1");}//try
+        return foodItems;
+    }
+
+    private void deleteItem(){
+        int row = table.getSelectedRow();
+        String itemID= null;
+        ResultSet itemQuery = database.prepared_read_query("SELECT menu_id FROM menu WHERE name=? ",
+                table.getValueAt(row,0));
+        try{
+            while(itemQuery.next()){
+                itemID = itemQuery.getString("menu_id");
+            }
+        }
+        catch(Exception a){}
+
+        boolean delete = database.prepared_write_query("delete from basket WHERE itemID = ? LIMIT 1", itemID);
 
     }
 }

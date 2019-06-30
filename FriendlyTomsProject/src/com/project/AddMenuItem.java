@@ -2,9 +2,6 @@ package com.project;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.sql.ResultSet;
 
 public class AddMenuItem extends TemplateGui {
     private JPanel panel1;
@@ -17,40 +14,32 @@ public class AddMenuItem extends TemplateGui {
     private JSpinner spnStock;
     private JSpinner spnCalories;
     private Product product = new Product();
-    mariadb db_connector = new mariadb();
-
-    private JPanel panelMain = new JPanel(new BorderLayout());
-
 
     public AddMenuItem() {
         super("Menu", "Back", "ManageStock");
-
     }
 
     public void DisplayAddMenuItem() {
         frame.add(panel1, BorderLayout.CENTER);
         DisplayGenericElements();
 
-        String[] categories = new String[] {"Starter", "Main", "Dessert", "Drink"};
+        String[] categories = new String[]{"Starter", "Main", "Dessert", "Drink"};
         cboCategory.setModel(new DefaultComboBoxModel(categories));
 
-        btnSubmit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                setProductData();
+        btnSubmit.addActionListener(e -> {
+            setProductData();
 
-                String[] productParts = {(product.getName()),(product.getDescription()),
-                        (product.getCalories()),(product.getCategory()),
-                        (product.getPrice()),(product.getNoinstock()),(product.getUrl())};
+            String[] productParts = {(product.getName()), (product.getDescription()),
+                    (product.getCalories()), (product.getCategory()),
+                    (product.getPrice()), (product.getNoinstock()), (product.getUrl())};
 
-                JOptionPane.showMessageDialog(null,"Added new product to database");
+            JOptionPane.showMessageDialog(null, "Added new product to database");
 
             writeToDB(productParts);
-            }
         });
     }
 
-    public void setProductData(){
+    public void setProductData() {
 
         product.setName(txtName.getText());
         product.setDescription(txtDescription.getText());
@@ -61,14 +50,14 @@ public class AddMenuItem extends TemplateGui {
         product.setUrl(txtURL.getText());
     }
 
-    public void writeToDB(String[] productParts){
-            try {
-               mariadb db_connector = new mariadb();
+    public void writeToDB(String[] productParts) {
+        try {
+            database.prepared_write_query("INSERT INTO menu (name, description, calories," +
+                    " category, stock, price, webaddress) VALUES (?,?,?,?,?,?,?)", productParts[0],
+                    productParts[1], productParts[2], productParts[3], productParts[4], productParts[5], productParts[6]);
 
-                   db_connector.prepared_write_query("INSERT INTO menu (name, description, calories, category, stock, price, webaddress) VALUES (?,?,?,?,?,?,?)", productParts[0], productParts[1], productParts[2], productParts[3], productParts[4], productParts[5], productParts[6]);
-
-               }
-            catch(Exception a){}
+        } catch (Exception ignored) {
+        }
     }
 }
 
