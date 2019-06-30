@@ -51,32 +51,24 @@ public class FoodOrder extends TemplateGui {
         setFoodTypes();
         frame.add(panel2, BorderLayout.CENTER);
 
-        btnOrder.addActionListener(new ActionListener() {
-            @Override
-            //This gets the selected items from the combo boxes and adds them to an array.
-            public void actionPerformed(ActionEvent e) {
-                String[] chosenItems = {(cboStarter.getSelectedItem()).toString(),(cboMain.getSelectedItem()).toString(),
-                        (cboDessert.getSelectedItem()).toString(),(cboDrink.getSelectedItem()).toString()};
-                addItemsToDatabase(chosenItems);
-                JOptionPane.showMessageDialog(null,"Added to your basket!");
-                setTotalcost();
+        //This gets the selected items from the combo boxes and adds them to an array.
+        btnOrder.addActionListener(e -> {
+            String[] chosenItems = {(cboStarter.getSelectedItem()).toString(),(cboMain.getSelectedItem()).toString(),
+                    (cboDessert.getSelectedItem()).toString(),(cboDrink.getSelectedItem()).toString()};
 
-            }
+            addItemsToDatabase(chosenItems);
+            JOptionPane.showMessageDialog(null,"Added to your basket!");
+            setTotalcost();
+
         });
-        btnBasket.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                basket.displayElements();
-                frame.dispose();
-            }
+        btnBasket.addActionListener(e -> {
+            basket.displayElements();
+            frame.dispose();
         });
-        btnMenu.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                FoodMenu foodMenu = new FoodMenu();
-                foodMenu.displayMenu();
-                frame.dispose();
-            }
+        btnMenu.addActionListener(e -> {
+            FoodMenu foodMenu = new FoodMenu();
+            foodMenu.displayMenu();
+            frame.dispose();
         });
 
         DisplayGenericElements();
@@ -91,8 +83,28 @@ public class FoodOrder extends TemplateGui {
      * This is the array of chosen items.
      */
     public void addItemsToDatabase(String[] chosenItems){
+        boolean catchFail = true;
         for (String var:chosenItems
              ) {
+            switch (var){
+                case "<BREAK>":
+                    catchFail = false;
+                    break;
+                case "Main":
+                    catchFail = false;
+                    break;
+                case "Starter":
+                    catchFail = false;
+                    break;
+                case "Dessert":
+                    catchFail = false;
+                    break;
+                case "Drink":
+                    catchFail = false;
+                    break;
+            }
+
+            if(catchFail == false){break;}
             ResultSet read_query =database.prepared_read_query("SELECT menu_id FROM menu WHERE name =?", var);
             try {
                 while(read_query.next()) {
@@ -130,6 +142,10 @@ public class FoodOrder extends TemplateGui {
      */
     public void setFoodTypes(){
         ResultSet foodQuery = database.prepared_read_query("SELECT * FROM menu");
+        cboMain.addItem("Main");
+        cboStarter.addItem("Starter");
+        cboDessert.addItem("Dessert");
+        cboDrink.addItem("Drink");
 
         try {
             while(foodQuery.next()) {
