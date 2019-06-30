@@ -85,6 +85,10 @@ public class TemplateGui {
         if(previousWin.equals("FoodMenu")){
             frame.dispose();
         }
+        if(previousWin.equals("Basket")){
+            Basket basket = new Basket();
+            basket.displayElements();
+        }
     }
 
     /**
