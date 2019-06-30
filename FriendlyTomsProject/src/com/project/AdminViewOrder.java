@@ -32,9 +32,11 @@ public class AdminViewOrder extends OrderHistory {
             String preparedDate = "2019" + "-"+ "%";
             table.setModel(getOrder(getUserType(preparedDate)));
         });
-
     }
 
+    /**
+     * The admin can update the selected item, this is done from here.
+     */
     private void updateSelectedValue() {
         int row;
         try{
@@ -51,9 +53,17 @@ public class AdminViewOrder extends OrderHistory {
         catch (Exception a){JOptionPane.showMessageDialog(null, "Please fill out the correct data field");
         }
 
-
     }
 
+    /**
+     * Used to get a single item from a DB.
+     * @param query
+     * SQL command
+     * @param expectedValue
+     * Column name
+     * @return
+     * The single value
+     */
     private String getDBValues(ResultSet query, String expectedValue){
         String returnName = null;
         try {

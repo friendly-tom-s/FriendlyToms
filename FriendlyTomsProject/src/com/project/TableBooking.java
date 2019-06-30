@@ -57,18 +57,18 @@ public class TableBooking extends TemplateGui {
      * @return A boolen is returned that states if the date is correct or not.
      */
     public Boolean validateBooking(String dateTime, String dateFormat) {
-        DateFormat format = new SimpleDateFormat(dateFormat);
+        DateFormat format = new SimpleDateFormat(dateFormat + " HH:mm:ss");
         format.setLenient(false);
         //Date date = new Date(dateTime);
         Date today = new Date();
         Date date = null;
 
         try {
-            date=format.parse(dateTime);
+            date=format.parse(dateTime+" 23:59:59");
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        if (date.after(today)) {
+        if (!date.before(today)) {
             return true;
         } else {
             JOptionPane.showMessageDialog(null, "Invalid date. Try again");

@@ -22,9 +22,7 @@ public class OrderHistory extends TemplateGui {
     private JComboBox cboYear;
     private JButton btnUpdate;
     private JButton btnToday;
-    private JRadioButton rdoComplete;
     protected JButton btnComplete;
-    private JComboBox cboDay;
     private ResultSet previousOrders;
     private ResultSet foodNames;
     private String previousWIn;

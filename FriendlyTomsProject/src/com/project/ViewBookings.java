@@ -3,7 +3,12 @@ package com.project;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.ResultSet;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * This is where the bookings are viewed from. This is for both admins and users.
@@ -11,6 +16,7 @@ import java.sql.ResultSet;
 public class ViewBookings extends TemplateGui {
     private JTable tblBookings;
     private JPanel panel1;
+    private JButton btnToday;
     private String previousWin;
     private JPanel panelMain = new JPanel();
 
@@ -24,28 +30,47 @@ public class ViewBookings extends TemplateGui {
      */
     public void DisplayViewBooking(){
         DisplayGenericElements();
-        tblBookings.setModel(getBooking(getUserType()));
+        tblBookings.setModel(getBooking(getUserType("%")));
         Dimension dimension = new Dimension();
         dimension.setSize(480, 275);
         tblBookings.setPreferredScrollableViewportSize(dimension);
         JScrollPane pane = new JScrollPane(tblBookings);
+        panelMain.add(btnToday);
         panelMain.add(pane);
         frame.add(panelMain, BorderLayout.CENTER);
+        frame.setSize(515, 400);
+        btnToday.addActionListener(e -> {
+            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yy");
+            Date date = new Date();
+            String preparedDate1 = dateFormat.format(date);
+            tblBookings.setModel(getBooking(getUserType(preparedDate1)));
+        });
     }
 
     /**
      * This gets the type of user that is using the class.
      * @return
      */
-    public ResultSet getUserType(){
+    public ResultSet getUserType(String date){
 
         ResultSet previousBookings = null;
-        if(previousWin.equals("AdminMenu")){
-            previousBookings = database.prepared_read_query("SELECT * FROM bookings");
+        if(date =="%"){
+            if(previousWin.equals("AdminMenu")){
+                previousBookings = database.prepared_read_query("SELECT * FROM bookings");
+            }
+            if (previousWin.equals("UserMenu")){
+                previousBookings = database.prepared_read_query("SELECT * FROM bookings WHERE name = ?"
+                        , getUserName(getUser()));
+            }
         }
-        if (previousWin.equals("UserMenu")){
-            previousBookings = database.prepared_read_query("SELECT * FROM bookings WHERE name = ?"
-                    , getUserName(getUser()));
+        else {
+            if (previousWin.equals("AdminMenu")) {
+                previousBookings = database.prepared_read_query("SELECT * FROM bookings WHERE date = ?", date);
+            }
+            if (previousWin.equals("UserMenu")) {
+                previousBookings = database.prepared_read_query("SELECT * FROM bookings WHERE name = ? AND date = ?"
+                        , getUserName(getUser()), date);
+            }
         }
         return previousBookings;
     }
