@@ -15,6 +15,8 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="Total Price:"/>
         </properties>
       </component>
@@ -29,6 +31,8 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="Table Number"/>
         </properties>
       </component>
@@ -37,7 +41,9 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Please Enter Payment Details Below"/>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
+          <text value="Payment Details:"/>
         </properties>
       </component>
       <component id="18774" class="javax.swing.JLabel">
@@ -45,6 +51,8 @@
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="Cardholder Name"/>
         </properties>
       </component>
@@ -53,6 +61,8 @@
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="Card Number"/>
         </properties>
       </component>
@@ -61,6 +71,8 @@
           <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="Expiry Date (MM/YY)"/>
         </properties>
       </component>
@@ -69,6 +81,8 @@
           <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font size="12" style="1"/>
+          <foreground color="-1"/>
           <text value="CVV Code"/>
         </properties>
       </component>
@@ -96,12 +110,6 @@
         </constraints>
         <properties/>
       </component>
-      <component id="708e6" class="javax.swing.JComboBox" binding="cboExpiry">
-        <constraints>
-          <grid row="6" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties/>
-      </component>
       <component id="dd525" class="javax.swing.JButton" binding="btnPay">
         <constraints>
           <grid row="8" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -112,9 +120,12 @@
       </component>
       <component id="fcff6" class="javax.swing.JLabel">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <enabled value="true"/>
+          <font size="15" style="1"/>
+          <foreground color="-1"/>
           <text value="Checkout and Pay"/>
         </properties>
       </component>
@@ -123,8 +134,18 @@
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font size="12"/>
+          <foreground color="-1"/>
           <text value="£0.00"/>
         </properties>
+      </component>
+      <component id="b960f" class="javax.swing.JTextField" binding="txtExpiry">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
       </component>
     </children>
   </grid>
