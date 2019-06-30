@@ -123,8 +123,9 @@ public class CreateAccount extends TemplateGui {
         if (!input_errors) {
 
             JOptionPane.showMessageDialog(null, "Account Created.");
-            String salt = getEncrypt()[1];
-            String hash = getEncrypt()[2];
+            String[] parts = getEncrypt();
+            String salt = parts[1];
+            String hash = parts[2];
             //WRITE CODE
             boolean write_query = database.prepared_write_query(SQL, user.getUsername(), salt, hash, user.getAdminStatus(),
                     user.getFirst_name(), user.getLast_name(), user.getEmail());

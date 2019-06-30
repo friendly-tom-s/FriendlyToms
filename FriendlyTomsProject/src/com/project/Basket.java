@@ -18,7 +18,6 @@ import java.util.Date;
  */
 public class Basket extends TemplateGui {
     private JPanel panel2;
-    private JPanel penlTest = new JPanel(new BorderLayout());
     private JButton btnOrder;
     private JTable table;
     private JLabel costLabel;
@@ -44,11 +43,11 @@ public class Basket extends TemplateGui {
         table.setPreferredScrollableViewportSize(dimension);
         pane = new JScrollPane(table);
         costLabel.setText("The cost of this basket is: £"+getTotalCost());
-        penlTest.add(pane, BorderLayout.NORTH);
-        penlTest.add(costLabel, BorderLayout.WEST);
-        penlTest.add(btnOrder, BorderLayout.SOUTH);
-        penlTest.add(btnDelete, BorderLayout.EAST);
-        frame.add(penlTest, BorderLayout.CENTER);
+        panelMainBorder.add(pane, BorderLayout.NORTH);
+        panelMainBorder.add(costLabel, BorderLayout.WEST);
+        panelMainBorder.add(btnOrder, BorderLayout.SOUTH);
+        panelMainBorder.add(btnDelete, BorderLayout.EAST);
+        frame.add(panelMainBorder, BorderLayout.CENTER);
 
         DisplayGenericElements();
         btnOrder.addActionListener(new ActionListener() {

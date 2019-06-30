@@ -35,7 +35,6 @@ public class FoodOrder extends TemplateGui {
     private ArrayList<String> main_items = new ArrayList<String>();
     private int basketValue;
     private Basket basket = new Basket();
-    private String totalcost;
 
     public FoodOrder() {
         super("Food Order", "Main Menu", "UserMenu");
@@ -120,7 +119,7 @@ public class FoodOrder extends TemplateGui {
 
     public void setTotalcost() {
         DefaultTableModel throwawayRS = basket.getListItems();
-        totalcost = String.valueOf(basket.getTotalCost());
+        String totalcost = String.valueOf(basket.getTotalCost());
         basketAmount.setText("£" + totalcost);
     }
 

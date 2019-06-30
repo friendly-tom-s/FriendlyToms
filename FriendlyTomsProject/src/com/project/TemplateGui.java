@@ -17,6 +17,9 @@ public class TemplateGui {
     protected mariadb database = new mariadb();
     private String userid;
     private String userName;
+    protected JPanel panelMain = new JPanel();
+    protected JPanel panelMainBorder = new JPanel(new BorderLayout());
+
 
     /**
      * When the class is inherited and the constructor is created each GUI needs to provide the relevant details

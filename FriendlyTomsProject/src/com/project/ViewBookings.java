@@ -18,7 +18,6 @@ public class ViewBookings extends TemplateGui {
     private JPanel panel1;
     private JButton btnToday;
     private String previousWin;
-    private JPanel panelMain = new JPanel();
 
     public ViewBookings(String previousAdminWin){
         super("View Bookings", "Back", previousAdminWin);

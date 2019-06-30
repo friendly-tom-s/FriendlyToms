@@ -16,7 +16,6 @@ import java.text.SimpleDateFormat;
 public class OrderHistory extends TemplateGui {
     private JList lstOrderDetails;
     private JPanel panel2;
-    protected JPanel panelMain = new JPanel(new BorderLayout());
     protected JTable table;
     private JComboBox cboMonth;
     private JComboBox cboYear;
@@ -69,13 +68,13 @@ public class OrderHistory extends TemplateGui {
             cboYear.addItem(yearNum);
         }
         cboMonth.setModel(new DefaultComboBoxModel(itemsMonth));
-        panelMain.add(pane, BorderLayout.SOUTH);
-        panelMain.add(cboMonth, BorderLayout.WEST);
-        panelMain.add(btnToday, BorderLayout.PAGE_START);
-        panelMain.add(cboYear, BorderLayout.CENTER);
-        panelMain.add(btnUpdate, BorderLayout.EAST);
+        panelMainBorder.add(pane, BorderLayout.SOUTH);
+        panelMainBorder.add(cboMonth, BorderLayout.WEST);
+        panelMainBorder.add(btnToday, BorderLayout.PAGE_START);
+        panelMainBorder.add(cboYear, BorderLayout.CENTER);
+        panelMainBorder.add(btnUpdate, BorderLayout.EAST);
         frame.setSize(500, 425);
-        frame.add(panelMain, BorderLayout.CENTER);
+        frame.add(panelMainBorder, BorderLayout.CENTER);
         btnUpdate.addActionListener(e -> {
             monthLogic((cboMonth.getSelectedItem()).toString());
             searchYear = cboYear.getSelectedItem().toString();

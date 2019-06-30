@@ -15,7 +15,6 @@ public class ManageStock extends TemplateGui {
     private JButton btnAddMenuItem;
     private JTable table;
     private JButton btnUpdate;
-    private JPanel panelMain = new JPanel(new BorderLayout());
 
     public ManageStock() {
         super("Manage Stock", "Main Menu", "AdminMenu");
@@ -30,11 +29,11 @@ public class ManageStock extends TemplateGui {
         dimension.setSize(500, 275);
         table.setPreferredScrollableViewportSize(dimension);
         JScrollPane pane = new JScrollPane(table);
-        panelMain.add(pane, BorderLayout.CENTER);
-        panelMain.add(btnUpdate, BorderLayout.LINE_END);
-        panelMain.add(btnAddMenuItem, BorderLayout.PAGE_END);
-
+        panelMain.add(pane);
+        panelMain.add(btnUpdate);
+        panelMain.add(btnAddMenuItem);
         frame.add(panelMain, BorderLayout.CENTER);
+        frame.setSize(510, 410);
         DisplayGenericElements();
 
         btnAddMenuItem.addActionListener(e -> {

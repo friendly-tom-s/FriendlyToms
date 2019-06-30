@@ -22,7 +22,6 @@ public class ManageAccounts extends TemplateGui {
     private JButton btnModify;
     private AdminCreation adminCreation;
     private JScrollPane pane;
-    private JPanel frame2 = new JPanel();
     DefaultTableModel model = new DefaultTableModel();
 
     public ManageAccounts(){super("Manage Accounts", "Main Menu", "AdminMenu");
@@ -42,13 +41,13 @@ public class ManageAccounts extends TemplateGui {
         frame.requestFocusInWindow();
         setJtable("SELECT * FROM users");
         pane = new JScrollPane(table);
-        frame2.add(txtUsername);
-        frame2.add(btnSearch);
-        frame2.add(pane);
-        frame2.add(btnCreate);
-        frame2.add(btnModify);
-        frame2.add(btnDelete);
-        frame.add(frame2, BorderLayout.CENTER);
+        panelMain.add(txtUsername);
+        panelMain.add(btnSearch);
+        panelMain.add(pane);
+        panelMain.add(btnCreate);
+        panelMain.add(btnModify);
+        panelMain.add(btnDelete);
+        frame.add(panelMain, BorderLayout.CENTER);
         frame.setSize(500, 570);
 
         btnCreate.addActionListener(e -> {

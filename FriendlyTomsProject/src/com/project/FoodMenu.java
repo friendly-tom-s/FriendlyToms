@@ -19,7 +19,6 @@ public class FoodMenu extends TemplateGui {
     private JTable tblMain;
     private JTable tblDessert;
     private JTable tblDrink;
-    private JPanel panelMain = new JPanel(new BorderLayout());
     private JTabbedPane tabbedPane1;
     private JButton imageButton;
     private JScrollPane paneStarter;
@@ -66,8 +65,8 @@ public class FoodMenu extends TemplateGui {
         paneDrink = new JScrollPane(tblDrink);
         tabbedPane1.add("Drinks", paneDrink);
 
-        panelMain.add(tabbedPane1, BorderLayout.NORTH);
-        panelMain.add(imageButton);
+        panelMainBorder.add(tabbedPane1, BorderLayout.NORTH);
+        panelMainBorder.add(imageButton);
 
         imageButton.addActionListener(new ActionListener() {
             @Override
@@ -78,7 +77,7 @@ public class FoodMenu extends TemplateGui {
             }
         });
 
-        frame.add(panelMain);
+        frame.add(panelMainBorder);
     }
 
     /**
