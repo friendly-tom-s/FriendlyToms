@@ -184,6 +184,6 @@ public class FoodOrder extends TemplateGui {
      * @return Returns the amount of items in the combo box.
      */
     public int returnValuesOfDrinkCBO() {
-        return cboDrink.getItemCount();
+        return cboDrink.getItemCount() - 1;
     }
 }

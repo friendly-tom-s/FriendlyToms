@@ -20,7 +20,7 @@ public class FoodOrderTest {
 
         int cboCompare = foodOrder.returnValuesOfDrinkCBO();
 
-        assertEquals(getAmountInDatabase("drink"), cboCompare);
+        assertEquals(getAmountInDatabase("Drink"), cboCompare);
 
     }
 
