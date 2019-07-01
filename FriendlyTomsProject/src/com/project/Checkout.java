@@ -20,15 +20,15 @@ public class Checkout extends TemplateGui {
     private JComboBox cboTable;
     private JTextField txtCVV;
     private JTextField txtCardNumber;
-    private JTextField txtName;
     private JButton btnPay;
     private JPanel panel1;
     private JTextField txtExpiry;
-    private JComboBox comboBox1;
+    private JComboBox cboCard;
     private JButton btnSave;
     private static final int TIME_VISIBLE = 2000;
     private ResultSet nameOfItems;
     private DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
 
     public Checkout() {
         super("Checkout", "Back", "Basket");
@@ -40,6 +40,7 @@ public class Checkout extends TemplateGui {
         Basket basket = new Basket();
         basket.getListItems();
         costLabel.setText("£"+basket.getTotalCost());
+        setCardDetails();
 
         int numbers_to_add_max = 99;
         for (int i = 1; i <= numbers_to_add_max; i++) {
@@ -105,9 +106,62 @@ public class Checkout extends TemplateGui {
         btnSave.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+            writeCardDetails();
+                JOptionPane pane = new JOptionPane("New card successfully added!", JOptionPane.INFORMATION_MESSAGE);
+                JDialog dialog = pane.createDialog(null, "Success");
+                dialog.setModal(false);
+                dialog.setVisible(true);
             }
         });
+    }
+
+    public void setCardDetails() {
+
+        AES aes = new AES();
+        String key = "FriendlyTomsDeserve98%";
+
+
+
+        ResultSet cardQuery = database.prepared_read_query("SELECT * FROM carddetails WHERE userID=?", getUser());
+
+
+        try {
+            while (cardQuery.next()) {
+
+
+                String encryptedcardNo = cardQuery.getString("cardNo");
+                String decryptedCardNo = aes.decrypt(encryptedcardNo, key);
+
+                int cardNo = Integer.parseInt(decryptedCardNo);
+                int last5Digits = cardNo % 100000;
+                //main_items.add(name);
+
+                cboCard.addItem(last5Digits);
+            }
+        } catch (Exception a) {
+            System.err.println("Got an exception!");
+            System.err.println(a.getMessage());
+        }//try
+    }
+
+    private void writeCardDetails(){
+        String newCardNo = txtCardNumber.getText();
+        String newExpiry = txtExpiry.getText();
+
+        AES aes = new AES();
+        String key = "FriendlyTomsDeserve98%";
+        String encryptedCardNo = aes.encrypt(newCardNo, key);
+        String encryptedExpiry = aes.encrypt(newExpiry, key);
+
+
+        try {
+
+
+                database.prepared_write_query("INSERT INTO carddetails (userID, cardNo, expiry) VALUES (?,?,?)", getUser(), encryptedCardNo, encryptedExpiry);
+
+            }
+
+        catch (Exception a){System.out.println("Something failed at 1");}//try
     }
     /**
      * When the user confirms that everything in the basket is what they want to order and have made payment, the confirm order button gets everything from
@@ -195,6 +249,8 @@ public class Checkout extends TemplateGui {
         ResultSet listItems = database.prepared_read_query("SELECT itemID FROM basket WHERE userID=?", getUser());
         String foodItems= "";
 
+        String cardNo = cboCard.getSelectedItem().toString();
+
         try {
             while(listItems.next()) {
                 String columnValue = listItems.getString("itemID");
@@ -208,7 +264,7 @@ public class Checkout extends TemplateGui {
                 }
                 catch (Exception a){System.out.println("Something failed at 2");}//try
             }
-            foodItems = date + System.lineSeparator() + "-----------------------------" + foodItems + System.lineSeparator() + "This came to a total of £"+basket.getTotalCost();
+            foodItems = date + System.lineSeparator() + "-----------------------------" + foodItems + System.lineSeparator() + "This came to a total of £"+basket.getTotalCost() + System.lineSeparator() + "Payment taken from card ending in: "+cardNo;
         }
         catch (Exception a){System.out.println("Something failed at 1");}//try
         return foodItems;
