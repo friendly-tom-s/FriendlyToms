@@ -35,15 +35,16 @@ public class ViewBookings extends TemplateGui {
         tblBookings.setPreferredScrollableViewportSize(dimension);
         JScrollPane pane = new JScrollPane(tblBookings);
         panelMain.add(btnToday);
-        panelMain.add(pane);
-        frame.add(panelMain, BorderLayout.CENTER);
-        frame.setSize(515, 400);
         btnToday.addActionListener(e -> {
             DateFormat dateFormat = new SimpleDateFormat("dd/MM/yy");
             Date date = new Date();
             String preparedDate1 = dateFormat.format(date);
             tblBookings.setModel(getBooking(getUserType(preparedDate1)));
         });
+        panelMain.add(pane);
+        frame.add(panelMain, BorderLayout.CENTER);
+        frame.setSize(515, 400);
+
     }
 
     /**
