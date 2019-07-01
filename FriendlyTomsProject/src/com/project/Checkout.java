@@ -24,12 +24,15 @@ public class Checkout extends TemplateGui {
     private JButton btnPay;
     private JPanel panel1;
     private JTextField txtExpiry;
+    private JComboBox comboBox1;
+    private JButton btnSave;
     private static final int TIME_VISIBLE = 2000;
     private ResultSet nameOfItems;
     private DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
     public Checkout() {
         super("Checkout", "Back", "Basket");
+
 
     }
 
@@ -95,6 +98,13 @@ public class Checkout extends TemplateGui {
                 Timer myTimer = new Timer(delay, taskPerformer);
                 myTimer.setRepeats(false);
                 myTimer.start();
+
+            }
+        });
+
+        btnSave.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
             }
         });
