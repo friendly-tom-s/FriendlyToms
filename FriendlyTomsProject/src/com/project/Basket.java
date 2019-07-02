@@ -76,22 +76,27 @@ public class Basket extends TemplateGui {
         btnDelete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Object[] options = {"Yes, delete",
-                        "No, thanks"};
-                int n = JOptionPane.showOptionDialog(frame,
-                        "Are you sure you wish to delete this item?",
-                        "Delete Item",
-                        JOptionPane.YES_NO_CANCEL_OPTION,
-                        JOptionPane.QUESTION_MESSAGE,
-                        null,
-                        options,
-                        options[1]);
-                if(n == 0) {
-                    deleteItem();
-                    table.setModel(getListItems());
-                    costLabel.setText("The cost of this basket is: £"+getTotalCost());
+                try{
+                    Object[] options = {"Yes, delete",
+                            "No, thanks"};
+                    int n = JOptionPane.showOptionDialog(frame,
+                            "Are you sure you wish to delete this item?",
+                            "Delete Item",
+                            JOptionPane.YES_NO_CANCEL_OPTION,
+                            JOptionPane.QUESTION_MESSAGE,
+                            null,
+                            options,
+                            options[1]);
+                    if(n == 0) {
+                        deleteItem();
+                        table.setModel(getListItems());
+                        costLabel.setText("The cost of this basket is: £"+getTotalCost());
 
+                    }
+                }catch (ArrayIndexOutOfBoundsException a ){
+                    JOptionPane.showMessageDialog(null, "Please fill select a row");
                 }
+
             }
         });
     }

@@ -2,6 +2,10 @@ package com.project;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import java.sql.ResultSet;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -28,7 +32,10 @@ public class TableBooking extends TemplateGui {
     private int sittingThree = 0;
 
 
-    public TableBooking() {super("Table Booking", "Main Menu", "UserMenu");}
+    public TableBooking() {super("Table Booking", "Main Menu", "UserMenu");
+
+
+    }
 
     /**
      * This is a typical display Gui method.
@@ -47,6 +54,15 @@ public class TableBooking extends TemplateGui {
             showAvailableSeats();
         });
         btnBook.addActionListener(e -> bookingLogic());
+
+        cboAmount.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(cboAmount.getItemAt(0).equals("Amount")) {
+                    cboAmount.removeItemAt(0);
+                }
+            }
+        });
     }
 
     /**
@@ -220,7 +236,7 @@ public class TableBooking extends TemplateGui {
         String[] days = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "24", "25", "26", "27", "28", "29", "30", "31"};
         String[] month = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         String[] year = {"19", "20", "21", "22", "22", "23", "24"};
-        String[] tableNums = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+        String[] tableNums = {"Amount", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
         comboBox1.addItem("Sitting 1. 12:00 - 14:00");
         comboBox1.addItem("Sitting 2. 18:00 - 20:00");
         comboBox1.addItem("Sitting 3. 20:05 - 22:00");
