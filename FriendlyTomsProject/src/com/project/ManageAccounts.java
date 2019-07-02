@@ -73,9 +73,14 @@ public class ManageAccounts extends TemplateGui {
         });
 
         btnModify.addActionListener(e -> {
-            ModifyAccount modifyAccount = new ModifyAccount(newUser());
-            modifyAccount.DisplayModify();
-            frame.dispose();
+            try{
+                int failVar = table.getSelectedRow();
+                ModifyAccount modifyAccount = new ModifyAccount(newUser());
+                modifyAccount.DisplayModify();
+                frame.dispose();
+            }catch(ArrayIndexOutOfBoundsException a){
+                JOptionPane.showMessageDialog(null, "Please fill out all data fields");
+            }
         });
     }
 
@@ -152,7 +157,7 @@ public class ManageAccounts extends TemplateGui {
             }
         }
         else{
-            System.out.println("Row Delete Error: no row is selected");
+            JOptionPane.showMessageDialog(null, "Please select a user");
         }
     }
 }
