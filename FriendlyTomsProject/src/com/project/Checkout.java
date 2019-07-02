@@ -120,10 +120,7 @@ public class Checkout extends TemplateGui {
         AES aes = new AES();
         String key = "FriendlyTomsDeserve98%";
 
-
-
         ResultSet cardQuery = database.prepared_read_query("SELECT * FROM carddetails WHERE userID=?", getUser());
-
 
         try {
             while (cardQuery.next()) {

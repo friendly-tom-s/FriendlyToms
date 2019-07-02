@@ -29,12 +29,13 @@ public class ManageStock extends TemplateGui {
         dimension.setSize(500, 275);
         table.setPreferredScrollableViewportSize(dimension);
         JScrollPane pane = new JScrollPane(table);
+        panelMain.setSize(520, 490);
         panelMain.add(pane);
         panelMain.add(btnUpdate);
         panelMain.add(btnAddMenuItem);
         frame.add(panelMain, BorderLayout.CENTER);
-        frame.setSize(510, 410);
         DisplayGenericElements();
+        frame.setSize(560, 410);
 
         btnAddMenuItem.addActionListener(e -> {
             AddMenuItem addMenuItem = new AddMenuItem();
