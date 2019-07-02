@@ -19,7 +19,7 @@ public class AddMenuItem extends TemplateGui {
     private Product product = new Product();
 
     public AddMenuItem() {
-        super("Menu", "Back", "ManageStock");
+        super("Add Menu Item", "Back", "ManageStock");
     }
 
     /**

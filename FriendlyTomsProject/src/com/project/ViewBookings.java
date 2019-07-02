@@ -106,11 +106,13 @@ public class ViewBookings extends TemplateGui {
                 String amount = previousBookings.getString("amount");
                 String sitting = previousBookings.getString("sitting");
 
+                String time = getSittingtime(sitting);
+
                 if (previousWin.equals("AdminMenu")) {
-                    String[] user_info = {bookingDate, amount, sitting, userName};
+                    String[] user_info = {bookingDate, amount, time, userName};
                     model.addRow(user_info);
                 } else {
-                    String[] user_info = {bookingDate, amount, sitting};
+                    String[] user_info = {bookingDate, amount, time};
                     model.addRow(user_info);
                 }
 
@@ -119,5 +121,35 @@ public class ViewBookings extends TemplateGui {
             System.out.println("Something failed at 1");
         }//try
         return model;
+    }
+    /**
+     * This gets the ID of the booking and turns it into an actual sitting time
+     * @param sitting
+     * This gets the sitting ID
+     * @return time
+     * This returns the time that was selected by the user
+     */
+    public String getSittingtime(String sitting){
+        String time = null;
+        switch(sitting) {
+            case "1":
+                time = "12:00 - 14:00";
+
+            break;
+
+            case "2":
+                time = "18:00 - 20:00";
+
+                break;
+
+            case "3":
+                time = "20:05 - 22:00";
+
+                break;
+
+        }
+
+        return time;
+
     }
 }
