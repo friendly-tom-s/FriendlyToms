@@ -11,7 +11,6 @@ import java.sql.ResultSet;
  */
 public class AdminViewOrder extends OrderHistory {
 
-    private JPanel panelNew = new JPanel(new BorderLayout());
 
     public AdminViewOrder() {
 
@@ -21,11 +20,11 @@ public class AdminViewOrder extends OrderHistory {
     public void displayAdminElements() {
         DisplayOrderHistory();
         frame.remove(panelMain);
-        panelNew.add(panelMain, BorderLayout.NORTH);
-        panelNew.add(btnComplete, BorderLayout.CENTER);
+        panelMainBorder.add(panelMain, BorderLayout.NORTH);
+        panelMainBorder.add(btnComplete, BorderLayout.CENTER);
         frame.remove(panelMain);
-        frame.add(panelNew, BorderLayout.CENTER);
-        frame.setSize(500, 450);
+        frame.add(panelMainBorder, BorderLayout.CENTER);
+        frame.setSize(500, 440);
 
         btnComplete.addActionListener(e -> {
             updateSelectedValue();
