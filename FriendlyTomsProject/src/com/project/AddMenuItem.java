@@ -37,8 +37,7 @@ public class AddMenuItem extends TemplateGui {
                 setProductData();
 
                 String[] productParts = {(product.getName()), (product.getDescription()),
-                        (product.getCalories()), (product.getCategory()),
-                        (product.getPrice()), (product.getNoinstock()), (product.getUrl())};
+                        (product.getCalories()), (product.getCategory()), (product.getNoinstock()), (product.getPrice()), (product.getUrl())};
 
                 JOptionPane.showMessageDialog(null, "Added new product to database");
 
