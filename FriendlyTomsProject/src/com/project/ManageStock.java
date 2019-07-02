@@ -43,7 +43,16 @@ public class ManageStock extends TemplateGui {
             frame.dispose();
         });
 
-        btnUpdate.addActionListener(e -> updateStock());
+        btnUpdate.addActionListener(e -> {
+            try{
+                int failVar = table.getSelectedRow();
+                updateStock();
+
+            }catch(ArrayIndexOutOfBoundsException a){
+                JOptionPane.showMessageDialog(null, "Please fill out a data field");
+            }
+
+        });
     }
 
     /**
