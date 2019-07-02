@@ -37,7 +37,11 @@ public class Checkout extends TemplateGui {
 
 
     }
-
+    /**
+     * A typical class that inherits the generic elements from the template gui.
+     * It sets the form to be ready with the saved card details, table numbers and the total cost of the order.
+     *
+     */
     public void displayCheckout() {
         Basket basket = new Basket();
         basket.getListItems();
@@ -124,12 +128,10 @@ public class Checkout extends TemplateGui {
         });
     }
     /**
-     * This function
-     *
-     *
-     * A boolean is returned containing either True or False.
-     *
+     * This function gets all the cards saved for the user from the database and places into the card ComboBox.
+     * It decrypts the number and gets the last 5 digits to display for security reasons.
      */
+
     public void setCardDetails() {
 
             AES aes = new AES();
@@ -160,13 +162,19 @@ public class Checkout extends TemplateGui {
 
     }
 
-
+    /**
+     * This function writes a new card to the database which the user has entered.
+     * The details entered are each checked to ensure that they are formatted correctly as card details.
+     * Before it is entered into the DB, AES encryption is used for security.
+     */
 
     private void writeCardDetails(){
 
         boolean input_errors = verifyCardInput();
         if(input_errors != false){
-            System.err.println("Enter real details!");
+            JOptionPane pane1 = new JOptionPane("Please enter valid card details", JOptionPane.WARNING_MESSAGE);
+            JDialog dialog = pane1.createDialog(null, "Error");
+            dialog.setVisible(true);
         }
         else {
             String newCardNo = txtCardNumber.getText();
@@ -186,15 +194,23 @@ public class Checkout extends TemplateGui {
             } catch (Exception a) {
                 System.out.println("Something failed at 1");
             }//try
-            JOptionPane pane = new JOptionPane("New card successfully added!", JOptionPane.INFORMATION_MESSAGE);
-            JDialog dialog = pane.createDialog(null, "Success");
+            JOptionPane pane2 = new JOptionPane("New card successfully added! Please select from the card drop down.", JOptionPane.INFORMATION_MESSAGE);
+            JDialog dialog = pane2.createDialog(null, "Success");
             dialog.setModal(false);
             dialog.setVisible(true);
+            cboCard.removeAllItems();
+            txtCardNumber.setText("");
+            txtExpiry.setText("");
+            txtCVV.setText("");
+            setCardDetails();
         }
     }
 
     /**
-     * This functions makes sure that the text has been entered into the text boxes
+     * This function uses regex to make sure that the details have been entered correctly into the text boxes
+     * Credit card number must be 16 digits
+     * Expiry must be in the format MM/YY
+     * CVV must be three digits long
      *
      * @return
      * A boolean is returned containing either True or False.
@@ -252,7 +268,7 @@ public class Checkout extends TemplateGui {
     /**
      * This is where the user receipt is saved if they wish to do so.
      *
-     * It adds the date, all items that the user ordered to the receipt as well as the total cost.
+     * It adds the date, all items that the user ordered to the receipt, the total cost and the last 5 digits of the card used.
      *
      * It adds it to the user's desktop.
      */
