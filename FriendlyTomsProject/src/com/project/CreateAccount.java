@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 /**
@@ -165,14 +166,18 @@ public class CreateAccount extends TemplateGui {
         btnCreate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (checkEntriesArePresent()) {
-                    setUserData();
-                    confirmUserData("INSERT INTO users (username,salt,hash,is_admin, first_name, last_name, email) VALUES" +
-                                    " (?, ?, ?, ?, ?, ?, ?)", false);
+                if(checkPWMatch()) {
 
-                } else {
-                    JOptionPane.showMessageDialog(null, "Please fill out all data fields");
+                    if (checkEntriesArePresent()) {
+                        setUserData();
+                        confirmUserData("INSERT INTO users (username,salt,hash,is_admin, first_name, last_name, email) VALUES" +
+                                " (?, ?, ?, ?, ?, ?, ?)", false);
+
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Please fill out all data fields");
+                    }
                 }
+                else{JOptionPane.showMessageDialog(null, "Passwords don't match!");}
             }
         });
     }
@@ -197,6 +202,15 @@ public class CreateAccount extends TemplateGui {
         if (txtSurname.getText().equals("")) {
             check = false;
         }
+
         return check;
+    }
+
+    public boolean checkPWMatch(){
+
+        if(Arrays.equals(pswPassword.getPassword(), pswConfirm.getPassword())){
+            return true;
+        }
+        else{return false;}
     }
 }
