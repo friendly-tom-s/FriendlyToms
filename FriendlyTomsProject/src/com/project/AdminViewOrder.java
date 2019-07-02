@@ -21,10 +21,12 @@ public class AdminViewOrder extends OrderHistory {
         DisplayOrderHistory();
         frame.remove(panelMain);
         panelMainBorder.add(panelMain, BorderLayout.NORTH);
-        panelMainBorder.add(btnComplete, BorderLayout.CENTER);
+        panelMainBorder.remove(btnUpdate);
+        panelMainBorder.add(btnUpdate, BorderLayout.CENTER);
+        panelMainBorder.add(btnComplete, BorderLayout.EAST);
         frame.remove(panelMain);
         frame.add(panelMainBorder, BorderLayout.CENTER);
-        frame.setSize(500, 440);
+        frame.setSize(500, 420);
 
         btnComplete.addActionListener(e -> {
             updateSelectedValue();
@@ -41,6 +43,7 @@ public class AdminViewOrder extends OrderHistory {
         try{
             row = table.getSelectedRow();
             String foodName = table.getValueAt(row, 0).toString();
+            table.setValueAt("YES", row, 3);
             String userValue = table.getValueAt(row, 3).toString();
             String date = table.getValueAt(row, 1).toString();
             String username = table.getValueAt(row, 2).toString();

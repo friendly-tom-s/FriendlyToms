@@ -19,7 +19,7 @@ public class OrderHistory extends TemplateGui {
     protected JTable table;
     private JComboBox cboMonth;
     private JComboBox cboYear;
-    private JButton btnUpdate;
+    protected JButton btnUpdate;
     private JButton btnToday;
     protected JButton btnComplete;
     private ResultSet previousOrders;
@@ -73,7 +73,7 @@ public class OrderHistory extends TemplateGui {
         panelMainBorder.add(btnToday, BorderLayout.PAGE_START);
         panelMainBorder.add(cboYear, BorderLayout.CENTER);
         panelMainBorder.add(btnUpdate, BorderLayout.EAST);
-        frame.setSize(500, 425);
+        frame.setSize(500, 435);
         frame.add(panelMainBorder, BorderLayout.CENTER);
         btnUpdate.addActionListener(e -> {
             monthLogic((cboMonth.getSelectedItem()).toString());
